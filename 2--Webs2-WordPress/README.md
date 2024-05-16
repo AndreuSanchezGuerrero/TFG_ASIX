@@ -1,4 +1,4 @@
-![Image WordPress](../.Images/wordpress_10.webp)
+![Portada WordPress](../.Images/wordpress_10.webp)
 
 <br><br>
 
@@ -41,4 +41,28 @@
 
 # INTRODUCCIÓ.
 
-### Context del projecte.
+## Context del projecte.
+
+<p>Aquest projecte es desenvolupa en el marc d'una col·laboració interna entre dos departaments clau de la nostra organització:</p>
+
+- El departament de Desenvolupament (MASDEV).
+- El departament de maquinari i infraestructures (MASTECH). 
+
+<p>L'objectiu principal és crear una botiga online utilitzant WordPress, que permeti a MASTECH vendre els seus productes tecnològics de manera eficient i accessible.</p>
+
+## Descripció del projecte.
+
+<p>En aquest projecte, el departament MASDEV s'ha encarregat del disseny, el desenvolupament i la implementació d'una plataforma de comerç electrònic per al departament MASTECH. Aquesta botiga en línia està dissenyada per oferir una experiència d'usuari òptima, facilitant la navegació i la compra de productes de maquinari.</p>
+
+## Què és WordPress?
+
+<p>WordPress és un sistema de gestió de continguts (CMS) de codi obert que permet crear i gestionar llocs web de manera senzilla i eficient.</p>
+
+## Característiques principals de Wordpress
+
+![Característiques principals WordPress](../.Images/Caracteristiques_principals_wordpress.png)
+
+## Avantatges i desavantatges de Wordpress
+
+![Característiques principals WordPress](../.Images/Caracteristiques_principals_wordpress.png)
+

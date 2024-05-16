@@ -56,7 +56,12 @@
 
 ## Què és WordPress?
 
-<p>WordPress és un sistema de gestió de continguts (CMS) de codi obert que permet crear i gestionar llocs web de manera senzilla i eficient.</p>
+<p>WordPress és un sistema de gestió de continguts (CMS) de codi obert que permet crear i gestionar llocs web de manera senzilla i eficient mitjançant l'ús de temes i plugins.</p>
+
+<p>Hi ha dues versions principals:</p>
+
+- WordPress.org --> la versió autoallotjada.
+- WordPress.com --> la versió allotjada per Automattic.
 
 ## Característiques principals de Wordpress
 
@@ -64,5 +69,14 @@
 
 ## Avantatges i desavantatges de Wordpress
 
-![Característiques principals WordPress](../.Images/Caracteristiques_principals_wordpress.png)
+![Característiques principals WordPress](../.Images/Avantatges_Desavantatges.png)
+
+<br><br>
+
+# Desenvolupament del Projecte.
+
+## Instal·lació
+El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) utilitzant la pila LAMP (Linux, Apache, MySQL, PHP).  Al següent enllaç es detalla el procés d'instal·lació: [Procés d'instal·lació](./instal·lacio.md)
+
+## Estructura de continguts 
 

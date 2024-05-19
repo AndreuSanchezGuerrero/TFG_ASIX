@@ -8,7 +8,6 @@
 
 ![Captura 2 template](../.Images/wordpress/Template%202.png)
 
-<p>Finalmente en la barra de la derecha podemos poner nombres de temas como forma de filtrar
-</p>
+<p>Finalment a la barra de la dreta podem posar noms de temes com a forma de filtrar</p>
 
 ![Captura 3 template](../.Images/wordpress/Template%203.png)

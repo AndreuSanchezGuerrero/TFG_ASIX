@@ -24,6 +24,4 @@
 
 ![Captura 6](../.Images/wordpress/plugins%206.png)
 
-<p> </p>
-<p> </p>
-<p> </p>
+

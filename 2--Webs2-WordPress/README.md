@@ -25,9 +25,10 @@
 - [Multilingüisme al CMS](#multilingüisme-al-cms)
 
 ### Conclusions
-- Resultats Obtinguts
-- Problemes trobats i solucions
-- Potencials Millores Futures
+- [Resultats Obtinguts](#resultats-obtinguts)
+- [Problemes trobats i solucions](#problemes-trobats-i-solucions)
+- [Potencials Millores Futures](#potencials-millores-futures)
+- [Conclusió final](#)
 
 <br><br>
 
@@ -98,8 +99,6 @@ El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) u
 4. Finalitzar Compra
 5. Preguntes
 
-(Tením un plugin que tradueix la pàgina al castellà, per això es llegeix en castellà)
-
 <br>
 
 ![Menú Wordpress](../.Images/wordpress/menu_wordpress.png)  
@@ -113,7 +112,7 @@ El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) u
   - Nom d'usuari --> ***mas***
 - Autor: Permís per escriure i gestionar els seus propis articles.
   - Nom d'usuari: Autor
-- Publicador: Capacidad para publicar y gestionar contenido.
+- Publicador: Capacitat per publicar i gestionar contingut.
   - Nom d'usuari: Publicador
 
 ![Usuaris](../.Images/wordpress/Usuaris.png)
@@ -150,8 +149,6 @@ El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) u
 
 ![Components](../.Images/wordpress/components.png)
 
-[]
-
 ## Creació d'Articles i Pàgines
 
 <p>Articles --> Es van crear 15 articles, cadascun amb detalls específics.</p>
@@ -164,7 +161,7 @@ El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) u
 
 ![Articles](../.Images/wordpress/articles.png)
 
-<p>Páginas --> Es van crear les pàgines clau següents:</p>
+<p>Pàgines --> Es van crear les pàgines clau següents:</p>
 
 1. Inici: Presentació general de la botiga.
 2. Botiga: Llistat complet de productes disponibles.
@@ -233,3 +230,77 @@ El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) u
 - Ajustaments de traducció manual per millorar la precisió en català i castellà.
 - Configuració d'idiomes al tauler d'administració de Weglot.
 
+# Conclusions
+
+## Resultats Obtinguts
+
+<p>El projecte ha permès desenvolupar una botiga en línia funcional per al departament MASTECH, utilitzant WordPress com a plataforma de gestió de continguts. Entre els principals èxits destaquen:</p>
+
+### Creació d'una Botiga en Línia
+
+- Implementació d'una estructura de categories i subcategories que facilita la navegació i la cerca de productes per part dels usuaris.
+- Publicació de 15 articles de productes amb descripcions detallades, imatges, informació d'estoc i preus.
+- Configuració d'una plantilla atractiva i personalitzable, "Shuttle iShop", que millora l'experiència d'usuari.
+
+### Optimització de l'Experiència de l'Usuari
+
+- Configuració de menús intuïtius i widgets útils per a la navegació.
+- Implementació d'un sistema de multilingüisme, permetent la visualització de la botiga en català i castellà mitjançant el plugin Weglot.
+- Integració de funcionalitats addicionals com xat en viu, fòrums de discussió i programació de cites.
+
+### Gestió Eficient del Contingut i la Seguretat
+
+- Configuració de rols i permisos per a una gestió segura i organitzada del contingut.
+- Instal·lació de plugins de seguretat com Wordfence per protegir la botiga en línia de amenaces.
+- Utilització de plugins de memòria cau i estadístiques per millorar el rendiment i monitoritzar el trànsit web.
+
+## Problemes Trobats i Solucions
+
+<p>Durant el desenvolupament del projecte, es van presentar diversos desafiaments que van ser abordats de la següent manera:</p>
+
+### Rendiment del Lloc Web
+
+- Desafiament: Lentitud en la càrrega de pàgines a causa de la quantitat de plugins instal·lats.
+- Solució: Instal·lació i configuració de LiteSpeed Cache per optimitzar la velocitat de càrrega i el rendiment del lloc.
+
+### Compatibilitat de Plugins:
+
+- Desafiament: Conflictes entre certs plugins que afectaven la funcionalitat del lloc.
+- Solució: Desactivar els plugins conflictius, buscar alternatives compatibles i mantenir actualitzats tots els components del lloc.
+
+### Traduccions Inexactes
+
+- Desafiament: Inexactituds en les traduccions automàtiques proporcionades per Weglot.
+- Solució: Realitzar ajustos manuals en les traduccions per assegurar la precisió i claredat del contingut en ambdós idiomes.
+
+## Potencials Millores Futures
+
+<p>El projecte ha establert una base sòlida per a la botiga en línia de MASTECH, però existeixen diverses àrees en les que es poden implementar millores per augmentar la seva funcionalitat i eficiència:</p>
+
+### Optimització SEO:
+
+- Implementar tècniques avançades de SEO per millorar la visibilitat del lloc en motors de cerca.
+- Utilitzar plugins com Yoast SEO per optimitzar el contingut i les metaetiquetes.
+
+### Integració amb Sistemes de Pagament Addicionals:
+
+- Ampliar les opcions de pagament disponibles a la botiga per incloure mètodes com PayPal, Stripe i transferències bancàries.
+
+### Màrqueting i Promocions:
+
+- Implementar eines de màrqueting com Mailchimp per gestionar campanyes de correu electrònic i butlletins.
+- Configurar promocions i descomptes automàtics mitjançant plugins de WooCommerce.
+
+### Automatització de Processos:
+
+- Integrar sistemes de gestió d'inventari i logística per automatitzar l'actualització d'estoc i la gestió d'enviaments.
+- Implementar funcionalitats d'intel·ligència artificial per a recomanacions de productes basades en el comportament de l'usuari.
+
+### Millora de l'Experiència de l'Usuari:
+
+- Afegir funcions avançades com cerca predictiva i filtrat dinàmic de productes.
+- Desenvolupar una aplicació mòbil complementària per oferir una experiència de compra omnicanal.
+
+## Conclusió final
+
+<p>Aquest projecte ha demostrat la viabilitat i efectivitat d'utilitzar WordPress com a plataforma per desenvolupar una botiga en línia robusta i funcional. La col·laboració entre els departaments MASDEV i MASTECH ha estat fonamental per a l'èxit del projecte, i les lliçons apreses durant el procés proporcionen una base valuosa per a futurs desenvolupaments i millores. La botiga en línia resultant no només satisfà les necessitats actuals del departament MASTECH, sinó que també està preparada per escalar i adaptar-se a noves oportunitats i desafiaments en el futur.</p>

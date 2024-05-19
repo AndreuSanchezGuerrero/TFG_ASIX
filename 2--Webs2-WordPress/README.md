@@ -299,7 +299,7 @@ El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) u
 ### Millora de l'Experiència de l'Usuari:
 
 - Afegir funcions avançades com cerca predictiva i filtrat dinàmic de productes.
-- Desenvolupar una aplicació mòbil complementària per oferir una experiència de compra omnicanal.
+- Desenvolupar una aplicació mòbil complementària per oferir una experiència de compra.
 
 ## Conclusió final
 

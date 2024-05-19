@@ -1,0 +1,75 @@
+# Índice de Contenidos
+
+### Introducció
+- [Context del Projecte](#context-del-projecte)
+- [Descripció del projecte](#descripció-del-projecte)
+- [Objectius del Projecte](#objectius-del-projecte)
+- [Qué és PowerApps?](#qué-és-powerapps)
+- [Característiques Principals de PowerApps](#característiques-principals-de-powerapps)
+- [Avantatges i Desavantatges de PowerApps](#avantatges-i-desavantatges-de-powerapps)
+
+
+
+    Desarrollo del Proyecto
+        Instalación y Configuración de PowerApps
+        Estructura de Contenidos
+            Listas
+            Pantallas
+            Botones y Formularios
+        Configuración y Gestión de Usuarios
+        Integración de Funcionalidades
+            Listas de Datos
+            Gestión de Profesores y Títulos Académicos
+        Implementación de Seguridad y Permisos
+
+    Explicación Técnica
+        Detalles de la Configuración de PowerApps
+        Procedimientos de Desarrollo y Configuración
+        Descripción de la Estructura de Datos
+        Descripción de Pantallas y Funcionalidades
+
+    Conclusiones
+        Resultados Obtinguts
+        Problemes Trobats i Solucions
+        Potencials Millores Futures
+
+    Anexos
+        Captures de Pantalla
+        Documentació Addicional
+
+# Introducció
+
+
+## Context del Projecte
+
+<p>El present projecte sorgeix com a resposta a la sol·licitud d'un institut educatiu que buscava una solució tecnològica per simplificar i optimitzar la gestió de les matrícules dels seus professors. En aquest context, es va identificar la necessitat de desenvolupar una aplicació que permetés manejar de manera eficient i centralitzada la informació relativa a les altes i els títols acadèmics dels professors. Per això, es va decidir utilitzar Microsoft PowerApps, una eina de desenvolupament d'aplicacions de baix codi que permet la creació ràpida de solucions personalitzades i adaptades a les necessitats específiques de la institució. </p>
+
+## Descripció del Projecte
+
+<p>El projecte consisteix en el desenvolupament d'una aplicació a PowerApps que facilita la gestió de les altes dels professors de l'institut. L'aplicació permet registrar nous professors i gestionar els seus títols acadèmics de forma senzilla i estructurada. A més, proporciona funcionalitats per modificar i eliminar registres existents, assegurant que la informació estigui sempre actualitzada i sigui accessible de manera segura.</p>
+
+## Objectius del Projecte
+
+1. Desenvolupar una Aplicació Funcional:
+
+    - Crear una aplicació en PowerApps que centralitzi la gestió de les altes dels professors.
+
+2. Millorar l'Eficiència dels Processos:
+        
+    - Simplificar els procediments administratius relacionats amb la gestió d'altes, reduint els temps de processament i minimitzant els errors.
+    
+3. Facilitar l'Accés i la Gestió de la Informació:
+        
+    - Permetre un fàcil accés i maneig de la informació dels professors i els seus títols acadèmics.
+    
+4. Assegurar la Integritat i Seguretat de les Dades:
+    - No hi ha seguretat explicita, però en haver-se creat a l'entorn de sapalomera.net, només es pot accedir a través d'un compte amb sapalomera.net.
+
+## Qué és PowerApps?
+
+PowerApps és una plataforma de desenvolupament d'aplicacions empresarials de Microsoft que permet als usuaris construir aplicacions mòbils i web personalitzades sense necessitat de tenir habilitats de programació avançades. Forma part de la suite Microsoft Power Platform, que també inclou Power BI i Power Automate. PowerApps permet als usuaris connectar les seves aplicacions a dades emmagatzemades a la plataforma Microsoft 365 o en diverses fonts de dades externes, utilitzant una interfície d'usuari senzilla de lliscar i deixar anar.
+
+## Característiques Principals de PowerApps
+
+## Avantatges i desavantatges de PowerApps
+

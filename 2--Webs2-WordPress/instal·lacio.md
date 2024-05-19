@@ -1,5 +1,14 @@
 # Procés d'instal·lació WordPress
 
+### Requisits del Sistema
+
+- Servidor: Linux (Ubuntu 22.04)
+- Servidor web: Apache
+- Base de dades: MySQL
+- Llenguatge de programació: PHP
+- Memòria RAM: Mínim 512MB (1GB recomanat)
+- Espai en disc: Mínim 1GB per a la instal·lació bàsica, més espai addicional per a contingut.
+
 ### Instal.lem les dependencies necessaries
 
 ```bash

@@ -80,7 +80,11 @@ PowerApps és una plataforma de desenvolupament d'aplicacions empresarials de Mi
 
 ## Característiques Principals de PowerApps
 
+![Característiques Principals de PowerApps](../.Images/powerapps/caracteristiques_principals.png)
+
 ## Avantatges i desavantatges de PowerApps
+
+![Avantatges i desavantatges de PowerApps](../.Images/powerapps/adventatges_i_desavantatges.png)
 
 <br><br><br>
 
@@ -134,7 +138,7 @@ PowerApps és una plataforma de desenvolupament d'aplicacions empresarials de Mi
 
 <p>Cada perfil de professor en la galeria està equipat amb dues opcions addicionals: </p>
 
-Eliminar Professor --> Aquest botó permet eliminar de manera segura el perfil del professor seleccionat després de confirmar l'acció.
+Botó eliminar professor --> Aquest botó permet eliminar de manera segura el perfil del professor seleccionat després de confirmar l'acció.
 
 ![Eliminar professor](../.Images/powerapps/boto_eliminar_profe.png)
 
@@ -142,11 +146,9 @@ Eliminar Professor --> Aquest botó permet eliminar de manera segura el perfil d
 
 <p>ThisItem és el professor des del qual s'ha clicat el botó d'eliminar</p>
 
-
-
 <br><br>
 
-Veure Títols --> Aquest botó dirigeix a l'usuari a una pantalla detallada on es poden consultar tots els títols acadèmics vinculats amb el professor.
+Botó veure títols --> Aquest botó dirigeix a l'usuari a una pantalla detallada on es poden consultar tots els títols acadèmics vinculats amb el professor.
 
 ![Veure Títols](../.Images/powerapps/boto_veure_titols.png)
 
@@ -155,6 +157,34 @@ Veure Títols --> Aquest botó dirigeix a l'usuari a una pantalla detallada on e
 <p>En clicar el botó, s'accedeix directament a la pantalla 'TitolsProfessor' sense cap transició visual. Encara que no observeu cap canvi immediat, cal especificar aquest paràmetre per permetre la configuració següent: s'inicialitza la variable 'selecteditem' assignant-li el valor de ThisItem. Aquesta variable és crucial, ja que s'utilitza per transferir les dades del professor seleccionat d'una pantalla a una altra, assegurant la continuïtat i la precisió de la informació en l'aplicació.</p>
 
 **<p>[Prem aquí per viatjar a 'Titols Professor' i simular el comportament del botó](./titols_professors.md)</p>**
+
+<br><br>
+
+<p>Click al perfil del professor --> Quan fem clic en el perfil d'un professor, s'obre la pantalla "Veure Professor".</p>
+
+![Veure Professor](../.Images/powerapps/veure_profe_codi2.png)
+
+Definim l'origen de dades en la llista de professors, establint per defecte el mode de només lectura. L'element que es mostra s'obté mitjançant la funció LookUp, la qual cerca dins de la llista professors, utilitzant com a criteri que la ID del registre coincideixi amb la ID de 'selecteditem'.
+
+**<p>[Prem aquí per viatjar a 'Veure professors' i simular el comportament del botó](./veure_profesors.md)</p>**
+
+<br><br>
+
+Botó afegir professor --> Accedeix a la pantalla 'AfegirProfessor' i inicialitza un nou formulari anomenat 'FormNouProfe'.
+
+![Botó afegir professor](../.Images/powerapps/boto_afegir_profe.png)
+
+[Prem aquí per viatjar a 'Afegir professor' i simular el comportament del botó]()
+
+<br><br>
+
+Botó afegir títols a professors --> Accedeix a la pantalla 'AfegirTitolProfessor' i inicialitza un nou formulari denominat 'FormAfegirTitolProfe'.
+
+![Botó afegir professor](../.Images/powerapps/boto_afegir_titol.png)
+
+
+
+
 
 
 

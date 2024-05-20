@@ -174,13 +174,16 @@ Botó afegir professor --> Accedeix a la pantalla 'AfegirProfessor' i inicialitz
 
 ![Botó afegir professor](../.Images/powerapps/boto_afegir_profe.png)
 
-[Prem aquí per viatjar a 'Afegir professor' i simular el comportament del botó]()
+**[Prem aquí per viatjar a 'Afegir professor' i simular el comportament del botó](./afegir_profe.md)**
 
 <br><br>
 
 Botó afegir títols a professors --> Accedeix a la pantalla 'AfegirTitolProfessor' i inicialitza un nou formulari denominat 'FormAfegirTitolProfe'.
 
-![Botó afegir professor](../.Images/powerapps/boto_afegir_titol.png)
+![Botó afegir títols](../.Images/powerapps/boto_afegir_titol.png)
+
+**[Prem aquí per viatjar a 'Afegir títols' i simular el comportament del botó](./afegir_titol.md)**
+
 
 
 

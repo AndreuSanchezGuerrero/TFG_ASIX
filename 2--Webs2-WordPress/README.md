@@ -28,7 +28,7 @@
 - [Resultats Obtinguts](#resultats-obtinguts)
 - [Problemes trobats i solucions](#problemes-trobats-i-solucions)
 - [Potencials Millores Futures](#potencials-millores-futures)
-- [Conclusió final](#)
+- [Conclusió final](#conclusió-final)
 
 <br><br>
 

@@ -1,6 +1,9 @@
 # Índice de Contenidos
 
+![PowerApps Portada](../.Images/powerapps/portada.jpeg)
+
 ### Introducció
+
 - [Context del Projecte](#context-del-projecte)
 - [Descripció del projecte](#descripció-del-projecte)
 - [Objectius del Projecte](#objectius-del-projecte)
@@ -8,7 +11,11 @@
 - [Característiques Principals de PowerApps](#característiques-principals-de-powerapps)
 - [Avantatges i Desavantatges de PowerApps](#avantatges-i-desavantatges-de-powerapps)
 
+### Desenvolupament del Projecte
 
+- [Instal·lació i Configuració de PowerApps](#installació-i-configuració-de-powerapps)
+- [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
+- []()
 
     Desarrollo del Proyecto
         Instalación y Configuración de PowerApps
@@ -36,6 +43,8 @@
     Anexos
         Captures de Pantalla
         Documentació Addicional
+
+<br><br><br>
 
 # Introducció
 
@@ -72,4 +81,87 @@ PowerApps és una plataforma de desenvolupament d'aplicacions empresarials de Mi
 ## Característiques Principals de PowerApps
 
 ## Avantatges i desavantatges de PowerApps
+
+<br><br><br>
+
+# Desenvolupament del projecte
+
+## Instal·lació i Configuració de PowerApps
+
+<p>Accés a PowerApps:</p>
+
+- Accedir a PowerApps a través de l'Office 365 o Microsoft 365 amb credencials d'usuari autoritzat.
+- Navegar fins a l'apartat de PowerApps des de l'inici de la suite d'Office 365.
+
+<p>Creació de l'Aplicació:</p>
+
+- Iniciar una nova aplicació des de zero seleccionant l'opció "Creació d'una aplicació en blanc" per a una major flexibilitat en el disseny.
+- Configurar el nom de l'aplicació i les opcions bàsiques relacionades amb el rendiment i l'accessibilitat.
+
+## Estructura de Continguts i Dades
+
+### LListes
+
+![Totes les nostres llistes](../.Images/powerapps/llistes_totes.png)
+        
+<br>
+
+<p>Professors --> Llista per emmagatzemar les dades personals dels professors.</p>
+
+![Llista de professors](../.Images/powerapps/llista_professors.png)
+
+<br>
+
+<p>Títols Acadèmics --> Llista on es guarden tots els diferents títols acadèmics.</p>
+
+![Títols Acadèmics](../.Images/powerapps/llista_titols.png)
+
+<br>
+
+<p>Titols Professors --> Llista que fa el paper de taula intermitja. Registre professor + títol acadèmic.</p>
+
+![Títols Professors](../.Images/powerapps/llista_titols_professors.png)
+
+<br>
+
+### Pantalles, interacció i navegació
+
+<p>Pantalla Principal de l'Aplicació --> Aquesta és la pantalla d'inici de l'aplicació, on es mostra una galeria visual de tots els professors. A la part inferior de la pantalla, hi ha dos botons principals: un per afegir nous títols acadèmics als professors existents, i un altre per registrar nous professors a l'aplicació.</p> 
+
+![Pantalla principal](../.Images/powerapps/pantalla_profes.png)
+
+<br><br>
+
+<p>Cada perfil de professor en la galeria està equipat amb dues opcions addicionals: </p>
+
+Eliminar Professor --> Aquest botó permet eliminar de manera segura el perfil del professor seleccionat després de confirmar l'acció.
+
+![Eliminar professor](../.Images/powerapps/boto_eliminar_profe.png)
+
+![Eliminar Professor](../.Images/powerapps/remove_professor.png)
+
+<p>ThisItem és el professor des del qual s'ha clicat el botó d'eliminar</p>
+
+
+
+<br><br>
+
+Veure Títols --> Aquest botó dirigeix a l'usuari a una pantalla detallada on es poden consultar tots els títols acadèmics vinculats amb el professor.
+
+![Veure Títols](../.Images/powerapps/boto_veure_titols.png)
+
+![botó Títols](../.Images/powerapps/boto_titols_academics.png)
+
+<p>En clicar el botó, s'accedeix directament a la pantalla 'TitolsProfessor' sense cap transició visual. Encara que no observeu cap canvi immediat, cal especificar aquest paràmetre per permetre la configuració següent: s'inicialitza la variable 'selecteditem' assignant-li el valor de ThisItem. Aquesta variable és crucial, ja que s'utilitza per transferir les dades del professor seleccionat d'una pantalla a una altra, assegurant la continuïtat i la precisió de la informació en l'aplicació.</p>
+
+**<p>[Prem aquí per viatjar a 'Titols Professor' i simular el comportament del botó](./titols_professors.md)</p>**
+
+
+
+
+
+
+
+
+
 

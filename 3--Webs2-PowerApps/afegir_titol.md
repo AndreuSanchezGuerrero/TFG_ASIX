@@ -4,7 +4,23 @@
 
 ![Afegir titols a professors](../.Images/powerapps/afegir_titols_profes.png)
 
+<br>
+
+<p>Botó de guardar dades --> Envia el formulari a la llista de títols acadèmics i guarda l'informació</p>
+
+![Guardar](../.Images/powerapps/afegir_titols_profes%20-%20copia%20(2).png)
+
+![Guardar](../.Images/powerapps/submit.png)
+
+<p>Si les dades són introduïdes correctament, l'aplicació retorna a la pantalla anterior.</p>
+
+![On succes](../.Images/powerapps/onsucces.png)
+
+<br>
+
 <p>Botó d'afegir títol --> Canvia a la pantalla 'AfegirTitol' i inicialitza un nou formulari denominat 'FormAfegirTitol'.</p>
 
-![](../.Images/powerapps/)
+![Botó d'afegir títol](../.Images/powerapps/afegir_titols_profes%20-%20copia.png)
+
+![Botó d'afegir títol](../.Images/powerapps/afegir_titol.png)
 

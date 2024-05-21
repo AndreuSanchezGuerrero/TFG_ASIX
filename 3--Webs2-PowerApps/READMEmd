@@ -15,39 +15,20 @@
 
 - [Instal·lació i Configuració de PowerApps](#installació-i-configuració-de-powerapps)
 - [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
-- []()
+    - [Llistes](#llistes)
+    - [Pantalles, Interacció i Navegació](#pantalles-interacció-i-navegació)
 
-    Desarrollo del Proyecto
-        Instalación y Configuración de PowerApps
-        Estructura de Contenidos
-            Listas
-            Pantallas
-            Botones y Formularios
-        Configuración y Gestión de Usuarios
-        Integración de Funcionalidades
-            Listas de Datos
-            Gestión de Profesores y Títulos Académicos
-        Implementación de Seguridad y Permisos
+### Conclusió
 
-    Explicación Técnica
-        Detalles de la Configuración de PowerApps
-        Procedimientos de Desarrollo y Configuración
-        Descripción de la Estructura de Datos
-        Descripción de Pantallas y Funcionalidades
+- [Conclusió](#conclusió-1)
 
-    Conclusiones
-        Resultados Obtinguts
-        Problemes Trobats i Solucions
-        Potencials Millores Futures
+### Fitxa Tècnica
 
-    Anexos
-        Captures de Pantalla
-        Documentació Addicional
+- [Fitxa Tècnica](#fitxa-tècnica-1)
 
 <br><br><br>
 
 # Introducció
-
 
 ## Context del Projecte
 
@@ -101,6 +82,8 @@ PowerApps és una plataforma de desenvolupament d'aplicacions empresarials de Mi
 
 - Iniciar una nova aplicació des de zero seleccionant l'opció "Creació d'una aplicació en blanc" per a una major flexibilitat en el disseny.
 - Configurar el nom de l'aplicació i les opcions bàsiques relacionades amb el rendiment i l'accessibilitat.
+
+<br>
 
 ## Estructura de Continguts i Dades
 
@@ -184,17 +167,44 @@ Botó afegir títols a professors --> Accedeix a la pantalla 'AfegirTitolProfess
 
 **[Prem aquí per viatjar a 'Afegir títols' i simular el comportament del botó](./afegir_titol.md)**
 
+<br><br><br>
 
+# Conclusió
 
+<p>El projecte desenvolupat ha complert amb èxit els objectius establerts, proporcionant una aplicació funcional per a la gestió d'altes dels professors de l'institut. Utilitzant PowerApps, hem creat una eina eficient i fàcil d'usar que centralitza la informació dels professors i els seus títols acadèmics. La col·laboració entre els departaments de sistemes de l'institut i el nostre equip de desenvolupament ha estat essencial per comprendre les necessitats específiques i oferir una solució adaptada.
 
+Durant el desenvolupament, hem superat diversos desafiaments tècnics, com la integració de dades.
 
+Aquest projecte no només millora la gestió administrativa de l'institut, sinó que també proporciona una base sòlida per a futurs desenvolupaments i expansions de funcionalitats.</p>
 
+<br><br><br>
 
+# Fitxa Tècnica 
 
+<p>Nom de l'Aplicació: Alta professorat</p>
 
+</p>Plataforma Utilitzada: Microsoft PowerApps</p>
 
+<p>Integracions:</p>
 
+- Llistes de SharePoint per a l'emmagatzematge de dades
 
+<p>Funcionalitats Principals:</p>
 
+- Registre i gestió de professors
+- Gestió de títols acadèmics
+- Navegació intuïtiva amb pantalles dedicades per a cada funcionalitat
 
+<p>Desenvolupament i Implementació:</p>
 
+- Creació de l'aplicació a través de PowerApps.
+- Utilització de formularis i galeries per a la visualització i entrada de dades.
+- Implementació de botons per a accions específiques (afegir, editar, eliminar, etc.).
+- Configuració de permisos i seguretat per a protegir la informació sensible.
+
+<p>Avantatges de l'Aplicació:</p>
+
+- Facilita la gestió centralitzada de la informació dels professors.
+- Millora l'eficiència dels processos administratius.
+- Proporciona una interfície d'usuari intuïtiva i fàcil d'utilitzar.
+- Assegura la integritat i seguretat de les dades gràcies a que l'aplicació és de Microsoft.

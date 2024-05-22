@@ -93,3 +93,4 @@
 - **Login.php:** Aquesta pàgina és la interfície d'inici de sessió per als conserges del sistema de gestió de professors. Permet als usuaris autoritzats accedir al sistema introduint les seves credencials (usuari i contrasenya). El formulari està enllaçat amb un altre PHP anomenat validaciLogin.php on es comproven les dades introduides per el conserge. 
     - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/login.php)
     ![login.php](../.Images/webs1/login.php.png)
+- 

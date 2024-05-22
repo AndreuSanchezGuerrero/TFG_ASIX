@@ -86,11 +86,21 @@
 
 ## Instal·lació i Configuració
 
-<p>La nostre aplicació està instal·lada en un Ubuntu Server (versió 22.04 LTS) utilitzant la pila LAMP (Linux, Apache, MySQL, PHP). Al següent enllaç es detalla el procés d'instal·lació: [Procés d'instal·lació](./LAMP.md)</p>
+<p>La nostre aplicació està instal·lada en un Ubuntu Server (versió 22.04 LTS) utilitzant la pila LAMP (Linux, Apache, MySQL, PHP). Al següent enllaç es detalla el procés d'instal·lació:</p> 
+
+[Procés d'instal·lació](./LAMP.md)
 
 ## Estructura de Continguts i Dades
 
-- **Login.php:** Aquesta pàgina és la interfície d'inici de sessió per als conserges del sistema de gestió de professors. Permet als usuaris autoritzats accedir al sistema introduint les seves credencials (usuari i contrasenya). El formulari està enllaçat amb un altre PHP anomenat validaciLogin.php on es comproven les dades introduides per el conserge. 
+### Procés d'Inserció d'un Professor per part del Conserge
+
+![Esquema conserge](../.Images/webs1/Esquema_conserge.png)
+
+- **Login.php:** El conserge accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduides per el conserge. 
     - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/login.php)
+    - Imatge de login.php
     ![login.php](../.Images/webs1/login.php.png)
-- 
+- **validacioLogin.php:** Quan el conserge envia el formulari, les dades són enviades al servidor a través del fitxer validacioLogin.php. Aquest script PHP comprova les credencials del conserge a la base de dades MySQL per verificar si són correctes. Si les credencials són vàlides, el conserge és redirigit a la pàgina de creació de professors **(crearProfe.html)**. Si hi ha algun error, es mostra un missatge d'error adequat.
+    - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/validacioLogin.php)
+- **crearProfe.html:** Un cop autenticat, el conserge accedeix a la pàgina de creació de professors. Aquesta pàgina conté un formulari on el conserge pot introduir les dades del nou professor, com ara el nom, l'email i altres dades pertinents.
+

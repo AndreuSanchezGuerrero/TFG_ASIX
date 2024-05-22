@@ -87,7 +87,10 @@
 # Desenvolupament del Projecte.
 
 ## Instal·lació
-El nostre WordPress està instal·lat en un servidor Linux (versió 22.04 LTS) utilitzant la pila LAMP (Linux, Apache, MySQL, PHP).  Al següent enllaç es detalla el procés d'instal·lació: [Procés d'instal·lació](./instal·lacio.md)
+
+<p>El nostre WordPress està instal·lat en un Ubuntu Server (versió 22.04 LTS) utilitzant la pila LAMP (Linux, Apache, MySQL, PHP).  Al següent enllaç es detalla el procés d'instal·lació:</p> 
+
+[Procés d'instal·lació](./instal·lacio.md)
 
 ## Menú de navegació
 

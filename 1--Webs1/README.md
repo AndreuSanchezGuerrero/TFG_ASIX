@@ -24,7 +24,7 @@
 - [Conclusió final](#conclusió-final)
 
 ### Fitxa Tècnica
-- [Fitxa Tècnica](#fitxa-tècnica)
+- [Fitxa Tècnica](#fitxa-tècnica-1)
 
 <br><br><br>
 

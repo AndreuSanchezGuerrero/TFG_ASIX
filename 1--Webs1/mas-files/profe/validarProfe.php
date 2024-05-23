@@ -1,4 +1,5 @@
 <?php
+// S'inclou el fitxer getNomTipusTitol.php que conté llistes de tipus i noms de títols.
 include '../comu/getNomTipusTitol.php';
 
 // Funcio per validar si la data pasada per parametre es anterior a la data actual
@@ -17,6 +18,7 @@ function validarData($date, $format = 'Y-m-d'): bool {
     return $d && $d->format($format) === $date;
 }
 
+// Emmagatzema els missatges d'error per a cada camp.
 $error_messages = array(
     'dni' => '',
     'nom' => '',
@@ -33,28 +35,39 @@ $error_messages = array(
     'acord' => '',
 );
 
+// Variables de Control: insertNomTitol1 i insertNomTitol2 per determinar si s'han d'inserir nous noms de títols acadèmics.
+// Codi de Validació: S'obté del formulari POST.
 $insertNomTitol1 = false;
 $insertNomTitol2 = false;
 $codiValicacio = $_POST['codiValidacio'];
 
+
 try {
+    
+    // Es carrega el fitxer de connexió a la base de dades (connexio.php).
     require_once "../comu/connexio.php";
 
-    // Obtenim el nom,cognoms,email i telefon del professor assignat al codi de validacio passat per POST
+    // Obté les dades del professor associades al codi de validació (nom,cognoms,email i telefon) passat per POST. 
     $select = $connexio->prepare("SELECT nom,cognom1,cognom2,email,telefon FROM professors WHERE codi_validacio = :codi_validacio");
     $select->execute(array(':codi_validacio' => $codiValicacio));
     $results = $select->fetch(PDO::FETCH_ASSOC);
 
+    // Si no es troben resultats, redirigeix a errorCodi.html.
     if (empty($results)) {
         header("Location: /errorCodi");
-    } else {
-        // Comprova per cada camp si no esta buit i si esta ben introduit (format,mida,etc...)
+    } 
+    
+    // Si es troben resultats, continua amb la validació dels camps.
+    // Comprova per cada camp si no esta buit i si esta ben introduit (format,mida,etc...)
+    else {
+        // Comprova el format del DNI i que no estigui buit.
         if (!preg_match("/^[0-9]{8}[A-Z]$/",$_POST['dni'])){
             $error_messages['dni'] = "DNI incorrecte" . "<br>";
         } elseif (empty($_POST['dni'])) {
             $error_messages['dni'] = "DNI no pot estar buit" . "<br>";
         }
 
+        // Comprova que coincideixin amb els valors a la base de dades i que no estiguin buits.
         if ($results['nom'] != $_POST['nom']) {
             $error_messages['nom'] = "El nom introduit no coincideix amb la BBDD" . "<br>";
         } elseif (empty($_POST['nom'])) {
@@ -73,6 +86,8 @@ try {
             $error_messages['cognom2'] = "Segon cognom no pot estar buit" . "<br>";
         }
 
+
+        // Comprova el format i que la data sigui anterior a la data actual.
         if (!validarData($_POST['dataNaixement'])) {
             $error_messages['dataNaixement'] = "Format data de naixement incorrecte" . "<br>";
         } elseif (!validarDataAbans($_POST['dataNaixement'])) {
@@ -81,6 +96,7 @@ try {
             $error_messages['dataNaixement'] = "Data naixement no pot estar buida" . "<br>";
         }
 
+        // Validació de la Foto: Comprova que s'hagi pujat una foto, que sigui PNG i que tingui una mida adequada.
         if (!isset($_FILES['foto'])) {
             $error_messages['foto'] = "No s'ha pujat cap foto" . "<br>";
         } elseif (exif_imagetype($_FILES['foto']['tmp_name']) != IMAGETYPE_PNG) {
@@ -89,6 +105,7 @@ try {
             $error_messages['foto'] = "La foto pujada no pot pesar menys de 0 B";
         }
 
+        // Validació de l'Email i Telèfon: Comprova que coincideixin amb els valors a la base de dades i que no estiguin buits.
         if ($results['email'] != $_POST['email']) {
             $error_messages['email'] = "El email introduit no coincideix amb la BBDD" . "<br>";
         } elseif (empty($_POST['email'])) {
@@ -101,6 +118,7 @@ try {
             $error_messages['telefon'] = "Telefon no pot estar buit" . "<br>";
         }
 
+        // Validació dels Títols Acadèmics: Comprova que els títols acadèmics seleccionats siguin vàlids o que s'hagi introduït un nou nom de títol si l'opció és "altres". 
         if ($_POST['tipusTitol1'] === "selecciona") {
             $error_messages['tipusTitol1'] = "Has de seleccionar el tipus d'estudi" . "<br>";
         } elseif (!in_array($_POST['tipusTitol1'],$tipusTitols)) {
@@ -141,6 +159,7 @@ try {
             }
         }
 
+        // Acceptació de l'Acord de Privacitat: Comprova que s'hagi acceptat l'acord de privacitat.
         if (!filter_has_var(INPUT_POST,'acord')) {
             $error_messages['acord'] = "Has d'acceptar l'acord de privacitat" . "<br>";
         }
@@ -159,6 +178,7 @@ try {
                                         ':codiValidacio' => $codiValicacio,
                                         ':email' => $_POST['email']));
 
+                                                    
             $selectTitol = $connexio->prepare("SELECT id FROM titols_academics WHERE tipus_titol = :tipus AND nom_titol = :nom");
 
             // Comprova si fa falta introduir el nom del titol (perque el camp 'campAltres1' no esta buit i el camp 'nomTitol1' es 'altres') i posa la variable $nomTitol amb el valor que li pertoca

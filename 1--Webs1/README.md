@@ -6,27 +6,17 @@
 - [Context del Projecte](#context-del-projecte)
 - [Descripció del projecte](#descripció-del-projecte)
 - [Objectius del Projecte](#objectius-del-projecte)
-- [Què és WordPress?](#què-és-wordpress)
-- [Característiques Principals de WordPress](#característiques-principals-de-wordpress)
-- [Avantatges i Desavantatges de WordPress](#avantatges-i-desavantatges-de-wordpress)
+- [Què és el nostre projecte?](#què-és-el-nostre-projecte)
+- [Tecnologies Usades](#tecnologies-usades)
+- [Avantatges i Desavantatges](#avantatges-i-desavantatges)
 
-### Desenvolupament del Projecte.
-- [Instal·lació](#installació)
-- [Menú de navegació](#menú-de-navegació)
-- [Gestió d'usuaris](#gestió-dusuaris)
-- [Categories i Subcategories](#categories-i-subcategories)
-- [Creació d'Articles i Pàgines](#creació-darticles-i-pàgines)
-- [Selecció i Configuració de la Plantilla](#selecció-i-configuració-de-la-plantilla)
-- [Instal·lació i Configuració de Plugins](#installació-i-configuració-de-plugins)
-  - [Plugins per a Funcionalitats del Portal](#plugins-per-a-funcionalitats-del-portal)
-  - [Plugins per a Gestió del CMS](#plugins-per-a-gestió-del-cms)
-- [Multilingüisme al CMS](#multilingüisme-al-cms)
-
-### Conclusions
-- [Resultats Obtinguts](#resultats-obtinguts)
-- [Problemes trobats i solucions](#problemes-trobats-i-solucions)
-- [Potencials Millores Futures](#potencials-millores-futures)
-- [Conclusió final](#conclusió-final)
+### Desenvolupament del Projecte
+- [Instal·lació i Configuració](#installació-i-configuració)
+- [Configuració de la connexió a la base de dades](#configuració-de-la-connexió-a-la-base-de-dades)
+- [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
+  - [Procés d'Inserció d'un Professor per part del Conserge](#procés-dinserció-dun-professor-per-part-del-conserge)
+  - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
+- [Error 404](#error-404)
 
 <br><br><br>
 
@@ -91,6 +81,16 @@
 
 [Procés d'instal·lació](./LAMP.md)
 
+## Configuració de la connexió a la base de dades.
+
+<p>Establir una connexió gestionada a una base de dades MySQL utilitzant PDO (PHP Data Objects), una extensió de PHP.</p>
+
+<p>PDO és una eina poderosa per a la gestió de bases de dades en PHP. Proporciona una interfície consistent, segura i flexible per treballar amb múltiples bases de dades, millorant la seguretat i la portabilitat del codi.</p>
+
+<p>A continuació deixo un enllaç al php: </p>
+
+[connexio.php](./mas-files/comu/connexio.php)
+
 ## Estructura de Continguts i Dades
 
 ### Procés d'Inserció d'un Professor per part del Conserge
@@ -133,7 +133,9 @@
 
 <br>
 
-- **validacioCrearProfe.php:** Quan el conserge envia el formulari de creació de professors, les dades són processades per l'script validacioCrearProfe.php. Aquest script valida les dades introduïdes i comprova si ja existeix un professor amb les mateixes dades a la base de dades.
+- **validacioCrearProfe.php:** Quan el conserge envia el formulari de creació de professors, les dades són processades per l'script validacioCrearProfe.php. Aquest script valida les dades introduïdes i comprova si ja existeix un professor amb les mateixes dades a la base de dades. Quan les dades introduïdes son valides, insereix aquestes dades a la base de dades, i envia un correu electrònic amb el codi de validació al nou professor.
+
+    - Enllaç a validacióCrearProfe.php: [validacióCrearProfe.php](./mas-files/conserge/validacioCrearProfe.php)
 
     - Comprovació de Duplicats: Si el professor ja existeix, es redirigeix al conserge a la pàgina errorProfeRepetit.html, que informa de l'error de duplicat.
 
@@ -152,7 +154,7 @@
     - En cas de que no hi hagin els errors anomenats, es mostre un missatge conforme s'han introduit correctament les dades amb el fitxer --> dadesCorrectesConserge.html.
 
         - Enllaç a dadesCorrectesConserge.html: [dadesCorrectesConserge.html](./mas-files/conserge/dadesCorrectesConserge.html)
-        - Imatge de dadesCorrectesConserge.html
+        - Imatge de dadesCorrectesConserge.html:
 
         ![dadesCorrectesConserge.html](../.Images/webs1/dadesCorrectesConserge.html.png)
 
@@ -161,6 +163,75 @@
 <p>Aquest procés garanteix que només els usuaris autoritzats puguin accedir al sistema i crear nous comptes de professor, assegurant la integritat i seguretat de les dades. A més, el sistema de validació i notificació per correu electrònic assegura que els professors completen correctament el seu registre.</p>
 <br><br>
 
-### sa
+### Procés d'Alta d'un Professor
 
+<p>Aquest diagrama il·lustra el procés complet que un professor ha de seguir per donar-se d'alta al sistema, des del moment en què rep el codi de validació fins que les seves dades són verificades i registrades correctament.</p>
 
+<br>
+
+![Esquema professor](../.Images/webs1/Esquema_profe.png)
+
+<br>
+
+- **codiValidacio.html:** El professor accedeix a la pàgina codiValidacio.html, on introdueix el codi de validació que ha rebut per correu electrònic amb l'enllaç incluit per accedir **(codiValidacio.html)**.
+
+    - Enllaç a codiValidacio.html: [codiValidacio.html](./mas-files/profe/codiValidacio.html)
+
+    ![codiValidacio.html](../.Images/webs1/codiValidacio.html.png)
+
+<br>
+
+- **verificacioCodi.php:** Quan el professor envia el codi de validació, les dades són enviades al servidor a través de **(verificacioCodi.php)**. Aquest script PHP comprova el codi de validació a la base de dades MySQL per verificar si és correcte.
+
+    - Enllaç a verificacioCodi.php: [verificacioCodi.php](./mas-files/profe/verifiacioCodi.php)
+
+    - Codi Incorrecte: Si el codi de validació no és correcte, el professor és redirigit a la pàgina **(errorCodi.html)**, que informa de l'error.
+        
+        - Enllaç a errorCodi.html: [errorCodi.html](./mas-files/errors/errorCodi.html)
+        - Imatge de errorCodi.html: 
+
+        ![errorCodi.html](../.Images/webs1/errorCodi.html.png)
+
+    - Professor Ja Registrat: Si el professor ja està registrat, és redirigit a **(errorProfeRepetit.html)**, indicant que el professor ja ha completat el procés de registre.
+
+        - Enllaç a errorProfeRepetit.html: [errorProfeRepetit.html](./mas-files/errors/errorProfeRepetit.html)
+        - Imatge errorProfeRepetit.html:
+
+        ![errorProfeRepetit.html](../.Images/webs1/errorProfeRepetit.html.png)
+
+<br>
+
+- **dadesAcademiques.php:** Si el codi de validació és correcte, el professor és redirigit a la pàgina dadesAcademiques.php. Aquesta pàgina conté un formulari on el professor pot introduir les seves dades acadèmiques.
+
+    - Enllaç a dadesAcademiques.php: [dadesAcademiques.php](./mas-files/profe/dadesAcademiques.php)
+    - Imatge de dadesAcademiques.php (té scroll): 
+    
+    ![dadesAcademiques.php](../.Images/webs1/dadesAcademiques.php.jpg) 
+
+<br>
+
+- **validarProfe.php:** Quan el professor envia el formulari de dades acadèmiques, les dades són processades per l'script validarProfe.php. Aquest script valida les dades introduïdes per assegurar que siguin correctes i completes.
+
+    - Enllaç a validarProfe.php: [validarProfe.php](./mas-files/profe/validarProfe.php)
+
+    - Dades Incorrectes: Si les dades introduïdes no són vàlides, es redirigeix el professor a una pàgina d'error específica. Aquest pas no es mostra explícitament al diagrama, però és un comportament esperat en una aplicació ben dissenyada.
+    
+    - Dades Correctes: Si les dades són correctes, validarProfe.php insereix les dades del professor a la base de dades MySQL.
+
+    - **dadesCorrectesProfe.html:** Un cop les dades acadèmiques són validades i registrades correctament a la base de dades, el professor és redirigit a la pàgina **(dadesCorrectesProfe.html)**. Aquesta pàgina confirma que el procés de registre s'ha completat correctament.
+
+        - Enllaç a dadesCorrectesProfe.html: [dadesCorrectesProfe.html](./mas-files/profe/dadesCorrectesProfe.html)
+        - Imatge de dadesCorrectesProfe.html:
+
+        ![dadesCorrectesProfe.html](../.Images/webs1/dadesCorrectesProfe.html.png) 
+
+<br>
+
+## Error 404
+
+<p>No ens vam matar molt y vam agafar un template per fer l'error 404 i el vam adaptar al nostre estil.</p>
+
+- Enllaç al codi: [Error 404](./mas-files/errors/404.html)
+- Imatge del error 404:
+
+![Error 404](../.Images/webs1/404Error.png)

@@ -72,4 +72,3 @@ try {
 catch(PDOException $e) {
     echo "Error en el select: " . $e->getMessage();
 }
-

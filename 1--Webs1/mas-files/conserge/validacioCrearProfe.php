@@ -7,12 +7,19 @@ require '../extensions/PHPMailer/PHPMailer.php';
 require '../extensions/PHPMailer/Exception.php';
 require '../extensions/PHPMailer/SMTP.php';
 
-$mail = new PHPMailer(true); // Crear l'objecte de PHPMailer
+// Es crea un nou objecte PHPMailer.
+$mail = new PHPMailer(true);
 
 try {
+
+    // Connexió a la Base de Dades: Es carrega el fitxer de connexió a la base de dades.
     require_once '../comu/connexio.php';
 
-    // Comprovem que tots el camps segueixin les expressions regulars
+    // Comprovem que tots el camps segueixen les següents expressions regulars.
+    // nom, cog1, cog2:Comprova que comencin amb una lletra majúscula i segueixin amb lletres minúscules.
+    // email: Comprova que tingui un format vàlid de correu electrònic.
+    // tel: Comprova que tingui exactament 9 dígits.
+
     if (preg_match("/^[A-Z][a-záéíóúñü]{0,39}$/",$_POST['nom']) &&
         preg_match("/^[A-Z][a-záéíóúñü]{0,39}$/",$_POST['cog1']) &&
         preg_match("/^[A-Z][a-záéíóúñü]{0,39}$/",$_POST['cog2']) &&
@@ -28,7 +35,10 @@ try {
             'mail' => $_POST['email'],
             'tel' => $_POST['tel'],
         ));
-    } else {
+    } 
+    
+    else {
+        // Si alguna validació falla, es llença una excepció amb el missatge "Datos erroneos".
         throw new Exception("Datos erroneos");
     }
 
@@ -43,8 +53,22 @@ try {
 } catch (Exception $e) {
     header("Location: /errorDades");
     exit;
-} finally {
-    // Si hi ha codi de validacio, envia el correu al profe
+} 
+
+finally {
+    // Si s'ha obtingut un codi de validació ($codiValidacio no està buit), s'envia un correu electrònic al professor amb el codi de validació i un enllaç per completar el procés de registre.
+
+    // Configuració del correu:
+        // isSMTP(): Utilitza el protocol SMTP per enviar el correu.
+        // Host: Defineix el servidor SMTP (en aquest cas, Gmail).
+        // SMTPAuth: Activa l'autenticació SMTP.
+        // Username i Password: Credencials del compte de correu electrònic.
+        // Port: Port utilitzat per SMTP (587 per TLS).
+        // setFrom(): Defineix l'adreça de correu i el nom del remitent.
+        // addAddress(): Defineix l'adreça de correu del destinatari.
+        // Subject: Defineix l'assumpte del correu.
+        // msgHTML(): Defineix el contingut HTML del correu, que inclou el codi de validació i un enllaç al formulari de validació.
+
     if (!empty($codiValidacio)) {
         $mail->isSMTP();
         $mail->Host         = 'smtp.gmail.com';
@@ -59,5 +83,7 @@ try {
                         <p>Introdueix el codi de validacio (" . $codiValidacio['codi_validacio'] . ") al següent <a href='https://maspr.sapalomera.cat/profe'>formulari</a></p>");
         $mail->send();
     }
+
+    // Un cop enviat el correu, es redirigeix el conserge a dadesCorrectes.html, confirmant que el procés ha estat completat correctament.
     header("Location: /conserge/dadesCorrectes");
 }

@@ -2,7 +2,7 @@
 <html lang="cat">
 
 
-<!---->
+
 <head>
   <!-- Titol i etiquetes meta -->
     <meta charset="UTF-8">
@@ -14,22 +14,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
-<!---->
+
 <body>
     
+    <!--Div per crear les rodones flotants-->
     <div class="background">
         <div class="shape1"></div>
         <div class="shape2"></div>
     </div>
     
+    <!--Defineix el formulari amb el mètode POST per enviar les dades a validacioCrearProfe.php per a la seva validació i processament.-->
     <form method="POST" action="validacioCrearProfe.php">
+        
         <!--Logo professor-->
         <img src="../imagenes/fotoProfe.png" alt="professor">
 
         <!--Titol-->
         <h3>Registre professorat</h3>
        
-        <!--Inputs formulari (Nom complet, email, telèfon)--> 
+        <!--
+        Inputs formulari (Nom complet, email, telèfon)
+        
+        pattern: Patró de validació per assegurar que el nom comença amb una lletra majúscula seguida de fins a 39 lletres minúscules.
+        
+        oninput="setCustomValidity('');": Esborra el missatge d'error personalitzat quan l'usuari està introduint dades.
+
+        oninvalid="setCustomValidity('Introdueix un nom vàlid');": Mostra un missatge d'error personalitzat si la validació del patró falla.
+        --> 
        <input   type="text" 
                 placeholder="Nom" 
                 title="Introdueix el nom" 
@@ -75,6 +86,7 @@
                 required>
         
        
+        <!--Botó per enviar les dades-->
         <input type="submit" value="Enviar dades">
     </form>
 </body>

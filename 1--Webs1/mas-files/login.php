@@ -16,15 +16,16 @@
 
 
 <body class="body_login">
-    <!----------------------------------------------------------------------------------------->
+    
+    <!--Div per crear les rodones flotants-->
     <div class="background">
         <div class="shape3"></div>
         <div class="shape4"></div>
     </div>
-    <!----------------------------------------------------------------------------------------->
+    
 
 
-    <!----------------------------------------------------------------------------------------->
+    
     <!--action="validacioLogin.php" defineix la pàgina on es processaran les dades del formulari.-->
     <form method="POST" id="formulari" action="validacioLogin.php">
         <!--Logo professor-->
@@ -67,6 +68,6 @@
             });
         </script>
     </form>
-    <!----------------------------------------------------------------------------------------->
+    
 </body>
 </html>

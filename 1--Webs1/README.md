@@ -61,6 +61,7 @@
 - **JavaScript (JS)** --> Per a la interactivitat i funcionalitat del client. JavaScript és un llenguatge de programació del costat del client que permet crear elements interactius dins d'una pàgina web.
 - **SQL** --> Per a la gestió de la base de dades. SQL (Structured Query Language) s'utilitza per gestionar i manipular bases de dades.
 - **Pila LAMP amb Apache** --> La infraestructura del servidor està basada en la pila LAMP, que inclou:
+
     - **Linux** --> És el sistema operatiu de base sobre el qual s'executa la resta de la pila LAMP. Linux és conegut per la seva estabilitat i seguretat.
     - **Apache** --> És el servidor web que serveix les pàgines web als usuaris. Apache és un dels servidors web més utilitzats al món i és conegut per la seva fiabilitat i flexibilitat.
     - **MySQL** --> És el sistema de gestió de bases de dades que utilitzem per emmagatzemar les dades dels professors. MySQL és un sistema de bases de dades relacional molt popular per la seva eficiència i robustesa.
@@ -96,11 +97,70 @@
 
 ![Esquema conserge](../.Images/webs1/Esquema_conserge.png)
 
+<br>
+
+<p>Aquest diagrama il·lustra el procés complet d'inserció d'un professor al sistema per part del conserge, des del moment en què el conserge inicia sessió fins que el professor rep una notificació per correu electrònic. A continuació, es descriu detalladament cada pas del procés:</p>
+
+<br>
+
 - **Login.php:** El conserge accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduides per el conserge. 
+
     - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/login.php)
     - Imatge de login.php
+
     ![login.php](../.Images/webs1/login.php.png)
-- **validacioLogin.php:** Quan el conserge envia el formulari, les dades són enviades al servidor a través del fitxer validacioLogin.php. Aquest script PHP comprova les credencials del conserge a la base de dades MySQL per verificar si són correctes. Si les credencials són vàlides, el conserge és redirigit a la pàgina de creació de professors **(crearProfe.html)**. Si hi ha algun error, es mostra un missatge d'error adequat.
-    - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/validacioLogin.php)
+
+<br>
+
+- **validacioLogin.js:** Aquest script JavaScript s'encarrega de validar el formulari d'inici de sessió abans que s'enviï al servidor. Comprova que els camps d'usuari i contrasenya no estiguin buits i que l'usuari tingui un format de correu electrònic vàlid. Si es troben errors, es mostren missatges d'error a l'usuari i s'evita l'enviament del formulari fins que tots els camps siguin vàlids.
+
+    - Enllaç on s'explica detalladament aquest fitxer: [validacioLogin.js](./mas-files/validarLogin.js)
+
+<br>
+
+- **validacioLogin.php:** Quan el conserge envia el formulari, després de pasar per **(validacioLogin.js)** les dades són enviades al servidor a través del fitxer validacioLogin.php. Aquest script PHP comprova les credencials del conserge a la base de dades MySQL per verificar si són correctes. Si les credencials són vàlides, el conserge és redirigit a la pàgina de creació de professors **(crearProfe.html)**. Si hi ha algun error, es mostra un missatge d'error adequat.
+    
+    - Enllaç on s'explica detalladament aquest fitxer: [validacioLogin.php](./mas-files/validacioLogin.php)
+
+<br>
+
 - **crearProfe.html:** Un cop autenticat, el conserge accedeix a la pàgina de creació de professors. Aquesta pàgina conté un formulari on el conserge pot introduir les dades del nou professor, com ara el nom, l'email i altres dades pertinents.
+    
+    - Enllaç on s'explica detalladament aquest fitxer: [crearProfe.html](./mas-files/conserge/crearProfe.html)
+    - Imatge de crearProfe.html
+
+    ![crearProfe.html](../.Images/webs1/crearProfe.html.png)
+
+<br>
+
+- **validacioCrearProfe.php:** Quan el conserge envia el formulari de creació de professors, les dades són processades per l'script validacioCrearProfe.php. Aquest script valida les dades introduïdes i comprova si ja existeix un professor amb les mateixes dades a la base de dades.
+
+    - Comprovació de Duplicats: Si el professor ja existeix, es redirigeix al conserge a la pàgina errorProfeRepetit.html, que informa de l'error de duplicat.
+
+        - Enllaç a errorProfeRepetit.html: [errorProfeRepetit.html](./mas-files/errors/errorProfeRepetit.html)
+        - Imatge de errorProfeRepetit.html
+
+        ![errorProfeRepetit.html](../.Images/webs1/errorProfeRepetit.html.png)
+    
+    - Validació de Dades: Si les dades introduïdes no són vàlides, es redirigeix al conserge a la pàgina errorDadesProfe.html, que especifica els errors en les dades introduïdes.
+        
+        - Enllaç a errorDadesProfe.html: [errorDadesProfe.html](./mas-files/errors/errorDadesProfe.html)
+        - Imatge de errorDadesProfe.html
+
+        ![errorDadesProfe.html](../.Images/webs1/errorDadesProfe.html.png)
+
+    - En cas de que no hi hagin els errors anomenats, es mostre un missatge conforme s'han introduit correctament les dades amb el fitxer --> dadesCorrectesConserge.html.
+
+        - Enllaç a dadesCorrectesConserge.html: [dadesCorrectesConserge.html](./mas-files/conserge/dadesCorrectesConserge.html)
+        - Imatge de dadesCorrectesConserge.html
+
+        ![dadesCorrectesConserge.html](../.Images/webs1/dadesCorrectesConserge.html.png)
+
+<br>
+
+<p>Aquest procés garanteix que només els usuaris autoritzats puguin accedir al sistema i crear nous comptes de professor, assegurant la integritat i seguretat de les dades. A més, el sistema de validació i notificació per correu electrònic assegura que els professors completen correctament el seu registre.</p>
+<br><br>
+
+### sa
+
 

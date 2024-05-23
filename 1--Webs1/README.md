@@ -18,6 +18,15 @@
   - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
 - [Error 404](#error-404)
 
+### Conclusions
+- [Resultats Obtinguts](#resultats-obtinguts)
+- [Problemes trobats i solucions](#problemes-trobats-i-solucions)
+- [Potencials Millores Futures](#potencials-millores-futures)
+- [Conclusió final](#conclusió-final)
+
+### Fitxa Tècnica
+- [Fitxa Tècnica](#fitxa-tècnica)
+
 <br><br><br>
 
 # Introducció
@@ -201,7 +210,7 @@
 
 <br>
 
-- **dadesAcademiques.php:** Si el codi de validació és correcte, el professor és redirigit a la pàgina dadesAcademiques.php. Aquesta pàgina conté un formulari on el professor pot introduir les seves dades acadèmiques.
+- **dadesAcademiques.php:** Aquest codi PHP i HTML combinat és part d'una pàgina web que permet als professors introduir les seves dades personals, de contacte i acadèmiques després d'haver validat el seu codi de validació. 
 
     - Enllaç a dadesAcademiques.php: [dadesAcademiques.php](./mas-files/profe/dadesAcademiques.php)
     - Imatge de dadesAcademiques.php (té scroll): 
@@ -235,3 +244,51 @@
 - Imatge del error 404:
 
 ![Error 404](../.Images/webs1/404Error.png)
+
+<br>
+
+## Conclusions
+
+### Resultats Obtinguts
+
+<p>El projecte desenvolupat per MASDEV per al centre educatiu ha demostrat ser una solució eficaç i segura per a la gestió dels professors. L'aplicació web implementada ha permès automatitzar processos que abans es feien manualment, augmentant l'eficiència administrativa i reduint significativament els errors humans.</p>
+
+<p>El procés de registre i validació dels professos, que inclou el login del conserge, la creació de comptes per als professors, i la validació de les dades personals, s'ha optimitzat gràcies a l'ús de tecnologies modernes com PHP, JavaScript, HTML, CSS i una base de dades MySQL. A més, l'ús de la pila LAMP amb Apache ha garantit una infraestructura robusta i fiable.</p>
+
+### Potencials Millores Futures
+
+- **Integració amb altres sistemes educatius**: Connectar l'aplicació amb altres sistemes utilitzats pel centre educatiu per facilitar encara més la gestió de dades.
+- **Funcionalitats addicionals**: Implementar noves funcionalitats, com ara notificacions automàtiques per als professors i informes detallats per als administradors.
+
+### Conclusió final
+
+El projecte ha complert amb èxit els objectius plantejats, proporcionant una eina sòlida, segura i eficient per a la gestió dels professors al centre educatiu. La feina feta per MASDEV ha estat clau per aconseguir una solució adaptada a les necessitats específiques del client, demostrant el valor de l'experiència d'usuari i el compromís en el desenvolupament de solucions digitals personalitzades.
+
+<br>
+
+### Fitxa Tècnica
+
+**Nom del Projecte:** Gestió de Professors per al Centre Educatiu
+
+**Empresa Desenvolupadora:** MASDEV
+
+**Tecnologies Utilitzades:**
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Backend:** PHP 7.4
+- **Base de Dades:** MySQL 8.0
+- **Servidor Web:** Apache 2.4
+- **Sistema Operatiu del Servidor:** Ubuntu Server 22.04 LTS
+- **Libreries i Extensions:**
+  - PHPMailer per a l'enviament de correus electrònics
+  - PDO per a la gestió de la base de dades
+
+**Infraestructura:**
+- **Pila LAMP:**
+  - **Linux:** Sistema operatiu base.
+  - **Apache:** Servidor web per servir les pàgines i gestionar les peticions.
+  - **MySQL:** Base de dades relacional per emmagatzemar les dades dels professors.
+  - **PHP:** Llenguatge de programació del servidor per implementar la lògica de l'aplicació.
+
+**Seguretat:**
+- **Validació i Sanitització:** Controls d'errors en el frontend i backend per assegurar la integritat de les dades.
+- **Autenticació i Autorització:** Mecanismes d'autenticació robustos per garantir que només els usuaris autoritzats puguin accedir i modificar les dades.

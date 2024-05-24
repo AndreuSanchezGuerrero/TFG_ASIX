@@ -22,6 +22,6 @@
 <p>Finalment si anem a plugins podrem veure tots els plugins instal.lats
 </p>
 
-![Captura 6](../.Images/wordpress/plugins6.png)
+![Captura 6](../.Images/wordpress/plugin6.png)
 
 

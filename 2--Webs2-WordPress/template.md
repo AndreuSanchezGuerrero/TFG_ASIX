@@ -2,12 +2,12 @@
 
 <p>Al menú de l’esquerra de Wordpress seleccionarem “Apariencia”</p>
 
-![Captura 1 template](../.Images/wordpress/Template%201.png)
+![Captura 1 template](../.Images/wordpress/Template1.png)
 
 <p>En temas posarem: Afegir un nou</p>
 
-![Captura 2 template](../.Images/wordpress/Template%202.png)
+![Captura 2 template](../.Images/wordpress/Template2.png)
 
 <p>Finalment a la barra de la dreta podem posar noms de temes com a forma de filtrar</p>
 
-![Captura 3 template](../.Images/wordpress/Template%203.png)
+![Captura 3 template](../.Images/wordpress/Template3.png)

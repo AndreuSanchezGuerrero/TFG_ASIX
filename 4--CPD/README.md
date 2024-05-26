@@ -142,23 +142,23 @@ Segons aquesta distribució que ens ha facilitat l'empresa, podem extreure les s
 
 3. Departament d'investigació.
    - **Quantitat de dispositius finals per cable**: 
-     - 10.
-     - 1 d'aquestes 10 ips, està reservada per 1 **access point**.
+        - 10
+        - 1 d'aquestes 10 ips, està reservada per 1 **access point**.
 
 4. Administració i Finances
    - **Quantitat de dispositius finals per cable**:
-      - 15.
-      - 1 d'aquestes 15 ips, està reservada per 1 **access point**.
+        - 15
+        - 1 d'aquestes 15 ips, està reservada per 1 **access point**.
 
 5. Ventes i Màrqueting
    - **Quantitat de dispositius finals per cable**: 
-     - 18
-     - 1 d'aquestes 18 ips, està reservada per 1 **access point**.
+        - 18
+        - 1 d'aquestes 18 ips, està reservada per 1 **access point**.
 
 6. Departament IT
    - **Quantitat de dispositius finals per cable**: 
-     - 30.
-     - 1 d'aquestes 30 ips, està reservada per 1 **access point**. 
+        - 30
+        - 1 d'aquestes 30 ips, està reservada per 1 **access point**. 
 
 **Resum General**
 - **Total de dispositius finals per cable**:

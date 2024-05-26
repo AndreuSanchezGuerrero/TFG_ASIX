@@ -265,7 +265,7 @@ El projecte ha complert amb èxit els objectius plantejats, proporcionant una ei
 
 <br>
 
-### Fitxa Tècnica
+## Fitxa Tècnica
 
 **Nom del Projecte:** Gestió de Professors per al Centre Educatiu
 

@@ -1,4 +1,4 @@
-# Projecte CPD MAS
+# PART 1: Projecte CPD MAS
 
 ### Introducció
 - [Context del projecte](#context-del-projecte)
@@ -19,6 +19,23 @@
   - [Raons per Escollir Ubiquiti](#raons-per-escollir-ubiquiti)
   - [Equipament Seleccionat](#equipament-seleccionat)
 - [Esquema lògic de xarxa](#esquema-lògic-de-xarxa)
+- [Model de 3 capes](#model-de-3-capes)
+    - [Què és el Model de 3 Capes?](#què-és-el-model-de-3-capes)
+    - [Per què hem escollit el Model de 3 Capes?](#per-què-hem-escollit-el-model-de-3-capes)
+- [Evitar bucles amb RSTP](#evitar-bucles-amb-rstp)
+    - [Què és RSTP?](#què-és-rstp)
+    - [Ventatjas de RSTP](#ventatjas-de-rstp)
+- [Separació de la xarxa per subxarxes i VLANs](#separació-de-la-xarxa-per-subxarxes-i-vlans)
+    - [Què són les Subxarxes i les VLANs?](#què-són-les-subxarxes-i-les-vlans)
+    - [Implementació de Subxarxes i VLANs a EcoTech](#implementació-de-subxarxes-i-vlans-a-ecotech)
+    - [Esquema de Subxarxes i VLANs](#esquema-de-subxarxes-i-vlans)
+    - [Descripció de la Separació de la Xarxa](#descripció-de-la-separació-de-la-xarxa)
+- [Tria de Servidors i la seva Arquitectura](#tria-de-servidors-i-la-seva-arquitectura)
+    - [Tipus de Servidors](#tipus-de-servidors)
+    - [Tria de Servidors](#tria-de-servidors)
+
+    
+
 
 ### Conclusions
 
@@ -32,21 +49,21 @@
 
 ## Context del Projecte
 
-<p>El departament MASTECH de la nostra empresa MAS, i EcoTech, ens hem reunit per discutir les millors opcions que beneficiïn les dues companyies. Durant la reunió, van deixar clar la seva disposició a invertir calitat/preu en un Centre de Processament de Dades (CPD).
+El departament MASTECH de la nostra empresa MAS, i EcoTech, ens hem reunit per discutir les millors opcions que beneficiïn les dues companyies. Durant la reunió, van deixar clar la seva disposició a invertir calitat/preu en un Centre de Processament de Dades (CPD).
 
 Implementar un CPD proporcionaria a EcoTech una infraestructura tecnològica més sòlida, segura i escalable que respaldaria el seu creixement continu i el seu compromís amb la innovació i la sostenibilitat ambiental.
 
-En resposta a les seves necessitats, hem presentat la proposta següent:</p>
+En resposta a les seves necessitats, hem presentat la proposta següent:
 
 [Desenvolupament del projecte](#desenvolupament-del-projecte-1)
 
-<br>
+<br><br>
 
 ## Descripció del Projecte
 
-<p>El projecte de Centre de Processament de Dades (CPD) per a EcoTech consisteix en la planificació, instal·lació i configuració d'una infraestructura tecnològica robusta que pugui suportar el creixement continu de l'empresa. Aquest CPD està dissenyat per proporcionar una plataforma segura, fiable i escalable que permetrà a EcoTech gestionar les seves operacions de manera més eficient i innovadora.</p>
+El projecte de Centre de Processament de Dades (CPD) per a EcoTech consisteix en la planificació, instal·lació i configuració d'una infraestructura tecnològica robusta que pugui suportar el creixement continu de l'empresa. Aquest CPD està dissenyat per proporcionar una plataforma segura, fiable i escalable que permetrà a EcoTech gestionar les seves operacions de manera més eficient i innovadora.
 
-<br>
+<br><br>
 
 ## Components Principals del Projecte
 
@@ -75,7 +92,7 @@ En resposta a les seves necessitats, hem presentat la proposta següent:</p>
     - **Planificació per al Futur:** Disseny del CPD tenint en compte el creixement futur d'EcoTech, assegurant que la infraestructura pugui ser ampliada fàcilment.
     - **Tecnologies Innovadores:** Incorporació de tecnologies innovadores que suportin els objectius de sostenibilitat i eficiència d'EcoTech.
 
-<br>
+<br><br>
 
 ## Beneficis Esperats
     
@@ -93,22 +110,22 @@ En resposta a les seves necessitats, hem presentat la proposta següent:</p>
 
 ## Anàlisi de l'empresa que ens ha contractat
 
-<p>"EcoTech" és una empresa ficticia que es dedica a la producció i comercialització de tecnologies ecològiques.
+"EcoTech" és una empresa ficticia que es dedica a la producció i comercialització de tecnologies ecològiques.
 
 El seu enfocament principal radica en el desenvolupament i la venda de productes tecnològics dissenyats per promoure la sostenibilitat ambiental i l'eficiència energètica.
-</p>
 
-<br>
+
+<br><br>
 
 ## Distribució de l’empresa per sales
 
-<p>Aquesta secció descriu com es distribueixen les diferents sales dins de l'empresa.</p>
+Aquesta secció descriu com es distribueixen les diferents sales dins de l'empresa.
 
-<p>EcoTech ens ha deixat aquesta imatge com a referencia. És una imatge sencilla però clara d'entendre.</p>
+EcoTech ens ha deixat aquesta imatge com a referencia. És una imatge sencilla però clara d'entendre.
   
 ![Distribució per sales](../.Images/CPD/distribucio_per_sales.png)
 
-<p>Segons aquesta distribució que ens ha facilitat l'empresa, podem extreure les següents conclusions:</p>
+Segons aquesta distribució que ens ha facilitat l'empresa, podem extreure les següents conclusions:
 
 1. Sala del CPD.
    - **Racks**:
@@ -155,14 +172,14 @@ El seu enfocament principal radica en el desenvolupament i la venda de productes
   - Access Point 2 (Administració i Finances)
   - Access Point 3 (Investigació)
 
-<p>Aquesta distribució ajuda a visualitzar clarament la disposició de les sales, la ubicació dels servidors, els dispositius finals i els punts d'accés a l'empresa, facilitant la planificació per al muntatge del CPD.
+Aquesta distribució ajuda a visualitzar clarament la disposició de les sales, la ubicació dels servidors, els dispositius finals i els punts d'accés a l'empresa, facilitant la planificació per al muntatge del CPD.
 
 Considerem que una sola sala és suficient per allotjar els nostres equips en aquest moment. Com que estem operant amb un nombre limitat de racks, no veiem la necessitat immediata d'expandir-nos a múltiples sales. Aquesta simplificació a la infraestructura ens permet optimitzar l'ús de l'espai i els recursos disponibles.
 
 A més, en consolidar els racks en una sola sala, podem centrar els nostres esforços a enfortir la seguretat física d'aquest espai específic. Ens hem assegurat d'implementar mesures de seguretat robustes per protegir els equips i les dades que hi ha. Aquesta concentració ens permet maximitzar l'eficàcia de les nostres mesures de seguretat, cosa que inclou el control d'accés, la vigilància i la detecció d'intrusions.
 
 La infraestructura del nostre CPD compta amb la comunicació entre racks ToR i un ampli espai a la sala, cosa que la fa completament escalable.
-</p>
+
 
 
 
@@ -170,19 +187,19 @@ La infraestructura del nostre CPD compta amb la comunicació entre racks ToR i u
 
     [Clica per accedir per veure el vídeo](Enlace)
 
-<br>
+<br><br>
 
 ## Comunicació entre racks
 
-<p>En el nostre projecte de CPD, la comunicació entre racks és un aspecte crític per assegurar una xarxa eficient, fiable i escalable. Hem optat per una solució basada en la tecnologia Top of Rack (TOR) per gestionar aquesta comunicació. A continuació, es detallen els components i avantatges d'aquesta solució.</p>
+En el nostre projecte de CPD, la comunicació entre racks és un aspecte crític per assegurar una xarxa eficient, fiable i escalable. Hem optat per una solució basada en la tecnologia Top of Rack (TOR) per gestionar aquesta comunicació. A continuació, es detallen els components i avantatges d'aquesta solució.
 
 ### Què és Top of Rack (TOR)?
 
-<p>La tecnologia TOR consisteix en col·locar un switch a la part superior de cada rack. Aquest switch connecta tots els dispositius dins del rack i després s'interconnecta amb els switches d'altres racks mitjançant connexions d'alta velocitat. Això crea una xarxa eficient i fàcil de gestionar.</p>
+La tecnologia TOR consisteix en col·locar un switch a la part superior de cada rack. Aquest switch connecta tots els dispositius dins del rack i després s'interconnecta amb els switches d'altres racks mitjançant connexions d'alta velocitat. Això crea una xarxa eficient i fàcil de gestionar.
 
 ### Per què hem triat top of the rack?
 
-<p>Hem optat per l'opció de comunicació entre racks Top of Rack (ToR) a causa dels seus avantatges significatius:<p>
+Hem optat per l'opció de comunicació entre racks Top of Rack (ToR) a causa dels seus avantatges significatius:
 
 1. Eficàcia en la Gestió del Cablejat:
     - La solució ToR redueix la complexitat del cablejat dins del CPD. Amb els switchos situats a la part superior de cada rack, es redueix la longitud dels cables necessaris per connectar els dispositius dins del mateix rack. Això no només facilita la gestió del cablejat, sinó que també millora l'estètica i l'accessibilitat per a tasques de manteniment.
@@ -199,9 +216,11 @@ La infraestructura del nostre CPD compta amb la comunicació entre racks ToR i u
 5. Simplicitat en la Configuració i Gestió:
     - La configuració de switchos ToR és més senzilla comparada amb altres arquitectures de xarxa, ja que la major part del tràfic es maneja localment dins del rack. Això facilita la gestió de la xarxa, redueix el temps de configuració i minimitza els errors humans.
 
+<br><br>
+
 ## Distribució dels dispositius dintre del rack
 
-<p>Apartat que detalla com es col·loquen els dispositius dins de cada rack per optimitzar l'espai, la refrigeració i l'accessibilitat per al manteniment.</p>
+Apartat que detalla com es col·loquen els dispositius dins de cada rack per optimitzar l'espai, la refrigeració i l'accessibilitat per al manteniment.
 
 ### Rack de comunicacions
 
@@ -209,7 +228,7 @@ La infraestructura del nostre CPD compta amb la comunicació entre racks ToR i u
 
 #### Elecció de l'Equipament de Xarxa
 
-<p>Ens hem decantat per la marca Ubiquiti per la seva excel·lent relació qualitat-preu i la seva reputació en oferir productes fiables i de rendiment superior. Hem treballat amb Ubiquiti en nombrosos projectes anteriors i sempre hem obtingut resultats excel·lents.</p>
+Ens hem decantat per la marca Ubiquiti per la seva excel·lent relació qualitat-preu i la seva reputació en oferir productes fiables i de rendiment superior. Hem treballat amb Ubiquiti en nombrosos projectes anteriors i sempre hem obtingut resultats excel·lents.
 
 #### Raons per Escollir Ubiquiti
 1. Qualitat i Fiabilitat:
@@ -224,71 +243,247 @@ La infraestructura del nostre CPD compta amb la comunicació entre racks ToR i u
 #### Equipament Seleccionat
 1. CloudGateway (Dream Machine Pro Max):
     - Hem seleccionat dos unitats de Ubiquiti Dream Machine Pro Max per realitzar les funcions de router i firewall. Aquest dispositiu integrat ofereix una combinació potent de funcionalitats de routing, seguretat i gestió de xarxa, adaptant-se perfectament a les necessitats del nostre CPD.
-    2. Switchos Standard 48:
-        - Hem seleccionat tres Ubiquiti Standard 48 per connectar els dispositius finals dins del CPD. Aquests switchos ofereixen una alta capacitat de ports i un rendiment consistent, fent-los ideals per gestionar una gran quantitat de connexions.
-            - Alta Capacitat de Ports.
-            - Velocitat Gigabit.
-            - Compatibilitat amb PoE.
-    3. Hi-Capacity Aggregation Switches:
-        - Hem seleccionat dos Ubiquiti Hi-Capacity Aggregation Switches per connectar els switchos Standard 48 i els servidors mitjançant connexions de fibra òptica. Aquests switchos són essencials per agregar tràfic de múltiples switchos i proporcionar una ruta de dades d'alta velocitat.
-    4. Monitor KVM amb Elevador
-        - Per a la gestió centralitzada i el control dels servidors, hem seleccionat un monitor KVM (Keyboard, Video, Mouse) amb elevador. Aquest dispositiu permet l'accés i el control de múltiples servidors des d'un únic punt, facilitant les tasques d'administració i manteniment.
-    5. Sistemes d'Alimentació Ininterrompuda (SAI).
-        - Per garantir la continuïtat del servei i protegir els equips de possibles interrupcions elèctriques, hem inclòs dos Sistemes d'Alimentació Ininterrompuda (SAI) a la part inferior del rack. Aquests dispositius proporcionen una font d'alimentació segura i fiable en cas de fallades de subministrament elèctric.
 
-<br>
+2. Switchos Standard 48:
+    - Hem seleccionat tres Ubiquiti Standard 48 per connectar els dispositius finals dins del CPD. Aquests switchos ofereixen una alta capacitat de ports i un rendiment consistent, fent-los ideals per gestionar una gran quantitat de connexions.
+        - Alta Capacitat de Ports.
+        - Velocitat Gigabit.
+        - Compatibilitat amb PoE.
+
+3. Hi-Capacity Aggregation Switches:
+    - Hem seleccionat dos Ubiquiti Hi-Capacity Aggregation Switches per connectar els switchos Standard 48 i els servidors mitjançant connexions de fibra òptica. Aquests switchos són essencials per agregar tràfic de múltiples switchos i proporcionar una ruta de dades d'alta velocitat.
+
+4. Monitor KVM amb Elevador
+    - Per a la gestió centralitzada i el control dels servidors, hem seleccionat un monitor KVM (Keyboard, Video, Mouse) amb elevador. Aquest dispositiu permet l'accés i el control de múltiples servidors des d'un únic punt, facilitant les tasques d'administració i manteniment.
+5. Sistemes d'Alimentació Ininterrompuda (SAI).
+
+    - Per garantir la continuïtat del servei i protegir els equips de possibles interrupcions elèctriques, hem inclòs dos Sistemes d'Alimentació Ininterrompuda (SAI) a la part inferior del rack. Aquests dispositius proporcionen una font d'alimentació segura i fiable en cas de fallades de subministrament elèctric.
+
+<br><br>
 
 ## Esquema lògic de xarxa
 
-<p>Es presenta un esquema lògic de la xarxa que mostra com es connecten els dispositius dins del CPD.</p>
+Es presenta un esquema lògic de la xarxa que mostra com es connecten els dispositius dins del CPD.
+
+![Llegenda](../.Images/CPD/llegenda1.png)
+
+Tenim dues lineas ISP cadascuna d’un proveïdor diferent, cada línea va conectada a un "cloud gateway" que fan les funcions de routing i firewall.
+
+Cada "cloud gateway" te dos ports SFP+ (in/out), per aquest motiu no podem fer tota la redundancia per fibra. Estaran connectats per fibra a un switch de capa 3 (cadascun a un diferent) i estaran connectats a l’altre switch de capa 3 per ethernet.
+
+Els "cloud gateways" estaran connectats per ethernet entre ells amb el port deshabilitat, fem això per si algún dia l'empresa decideix fer balanceig de càrrega. Encara que nosaltres no ho recomenem.
+
+Tota la resta de swithcos estan connectats entre ells amb fibra i tot amb redundancia.
+
+![Esquema lògic de xarxa](../.Images/CPD/esquema_logic_de_xarxa.png)
+
+<br><br>
+
+## Model de 3 capes
+
+<p>Imatge clara on identifiquem les capen en el nostre esquema lògic de xarxa.</p>
 
 ![Llegenda](../.Images/CPD/llegenda.png)
 
-### Model de 3 capes
+![Model de 3 capes](../.Images/CPD/model3capes.png)
 
-<p>Explicació del model de xarxa de 3 capes utilitzat, que inclou la capa d'accés, la capa de distribució i la capa de nucli.</p>
+En el disseny de la xarxa del CPD d'EcoTech, hem optat pel model de xarxa de 3 capes. Aquest model proporciona una estructura jeràrquica que facilita la gestió, escalabilitat i eficiència de la xarxa.
 
-### ISP Orange
+### Què és el Model de 3 Capes?
 
-<p>Detalls sobre la connexió a internet a través del proveïdor ISP Orange.</p>
+El model de 3 capes és una arquitectura de xarxa que divideix la infraestructura en tres nivells o capes:
 
-### ISP Movistar
+1. Capa d'Accés:
+    - És la capa més baixa i connecta els dispositius finals (ordinadors, servidors, impressores, etc.) a la xarxa. Els switchos d'accés gestionen la connexió dels dispositius d'usuari final.
 
-<p>Detalls sobre la connexió a internet a través del proveïdor ISP Movistar.</p>
+2. Capa de Distribució:
+    - Aquesta capa actua com un pont entre la capa d'accés i la capa de nucli. Els switchos de distribució agreguen el tràfic de múltiples switchos d'accés i l'envien a la capa de nucli. També poden aplicar polítiques de seguretat i filtratge de tràfic.
 
-## Organització de xarxa
+3. Capa de Nucli:
+    - És la capa superior i s'encarrega de l'encaminament ràpid del tràfic de xarxa dins del centre de dades. Els switchos de nucli proporcionen connexions d'alta velocitat i baix retard entre les diverses parts de la xarxa.
 
-### Evitar bucles amb RSTP
+### Per què hem escollit el Model de 3 Capes?
 
-<p>Com evitem els bucles que produeix la redundància a la xarxa mitjançant l'ús del protocol RSTP (Rapid Spanning Tree Protocol).</p>
+1. Escalabilitat:
+    - El model de 3 capes permet una fàcil expansió de la xarxa a mesura que les necessitats de l'empresa creixen. Afegir nous dispositius a la capa d'accés no afecta significativament el rendiment de les capes superiors.
 
-### Separació de la xarxa per subxarxes i VLANs
+2. Rendiment:
+    - Aquesta arquitectura permet un tràfic de dades ràpid i eficient, ja que cada capa està optimitzada per a la seva funció específica.
 
-<p>Descripció de com es divideix la xarxa en subxarxes i VLANs per als diferents departaments de l'empresa utilitzant 802.1Q VLAN Tagging.</p>
+3. Gestió Senzilla:
+    - La divisió en tres capes facilita la gestió de la xarxa, ja que cada capa es pot administrar i monitoritzar de manera independent. Això permet una localització ràpida de problemes i una gestió més eficient dels recursos.
 
-## Servidors que fem servir
+<br><br>
+
+## Evitar bucles amb RSTP
+
+En la configuració de la xarxa del CPD d'EcoTech, és crucial assegurar-nos de que no es produeixen bucles de xarxa, ja que aquests poden causar una degradació significativa del rendiment de la xarxa i, en alguns casos, poden provocar la caiguda total de la xarxa. Per evitar aquests problemes, utilitzem el protocol **Rapid Spanning Tree Protocol (RSTP)**.
+
+### Què és RSTP?
+
+Rapid Spanning Tree Protocol (RSTP) és una evolució del protocol original Spanning Tree Protocol (STP), dissenyat per millorar la velocitat de la xarxa en situacions de canvi de topologia, com ara la fallada d'un enllaç o l'addició d'un nou switch.
+
+### Ventatjas de RSTP
+
+1. Detecció de Bucles:
+    - RSTP detecta de manera automàtica els bucles de xarxa i crea una topologia d'arbre que evita la formació de bucles. Això es fa bloquejant certs enllaços redundants fins que siguin necessaris.
+
+2. Convergència Ràpida:
+    - Una de les principals avantatges de RSTP és la seva capacitat de convergir ràpidament després d'un canvi de topologia. Això significa que pot adaptar-se ràpidament a les fallades de la xarxa, recuperant-se molt més ràpidament que el STP original.
+
+3. Ports Ràpids:
+    - RSTP introdueix el concepte de ports ràpids (Edge Ports), que poden passar a l'estat de reenviament immediatament sense esperar els temporitzadors STP tradicionals. Això és especialment útil per als ports connectats directament a estacions de treball o servidors.
+
+<br><br>
+
+Enllaç dels switchos on es poden veure les seves especificacions i que efectivament soporten aquesta tecnòlogia.
+
+[Hi-Capacity Aggregation](https://eu.store.ui.com/eu/en/pro/products/usw-pro-aggregation)
+
+[Switch Standrad 48](https://eu.store.ui.com/eu/en/pro/category/all-switching/products/usw-48)
+
+<br>
+
+## Separació de la xarxa per subxarxes i VLANs
+
+La separació de la xarxa en subxarxes i VLANs (Virtual Local Area Networks) és essencial per garantir una gestió eficient, millorar la seguretat i optimitzar el rendiment. A continuació es detallen les raons per les quals hem implementat aquesta estratègia i els beneficis associats.
+
+### Què són les Subxarxes i les VLANs?
+
+1. **Subxarxes:**
+    - Una subxarxa és una subdivisió lògica d'una xarxa IP més gran. Permet dividir una xarxa gran en segments més petits, millorant la gestió i la seguretat del trànsit de dades.
+
+2. **VLANs:**
+    - Una VLAN és una xarxa local virtual que permet agrupar dispositius dins d'una mateixa xarxa física com si estiguessin en una mateixa xarxa lògica. Això es fa mitjançant la configuració dels switchos, i permet segmentar la xarxa en funció de les necessitats operatives i de seguretat.
+
+### Implementació de Subxarxes i VLANs a EcoTech
+
+1. **Divisió en subxarxes:**
+    - Hem dividit la xarxa principal d'EcoTech en diverses subxarxes per segmentar el trànsit i millorar la gestió de la xarxa. Cada departament té la seva pròpia subxarxa, lo qual permet una gestió més específica i controlada del trànsit de dades. Hem utilitzat l'adreçament IP 172.16.0.0/16, dividint-lo en subxarxes /24.
+
+2. **Configuració de VLANs:**
+    - Utilitzant la tecnologia VLAN, hem creat diferents VLANs per a cada departament i funció específica dins de l'empresa. Això ens permet separar l'accés i el trànsit de dades de manera lògica, fins i tot si els dispositius estan físicament propers.
+
+### Esquema de Subxarxes i VLANs
+
+| Departament                        | VLAN | Subxarxa            | Rang d'IPs                | Gateway          |
+|------------------------------------|------|---------------------|--------------------------|-----------------------|
+| **Departament d’Informàtica**      | 10   | 172.16.10.0/24      | 172.16.10.1 - 172.16.10.254 | 172.16.10.1         |
+| **Departament de Vendes i Màrqueting** | 20 | 172.16.20.0/24      | 172.16.20.1 - 172.16.20.254 | 172.16.20.1         |
+| **Departament d’Administració i Finances** | 30 | 172.16.30.0/24      | 172.16.30.1 - 172.16.30.254 | 172.16.30.1         |
+| **Departament d’Investigació**     | 40   | 172.16.40.0/24      | 172.16.40.1 - 172.16.40.254 | 172.16.40.1         |
+| **Dispositius de Seguretat**       | 100   | 172.16.50.0/24      | 172.16.50.1 - 172.16.50.254 | 172.16.50.1         |
+| **Gestió i Administració de Xarxa** | 110   | 172.16.60.0/24      | 172.16.60.1 - 172.16.60.254 | 172.16.60.1         |
+
+### Descripció de la Separació de la Xarxa
+
+1. **VLAN 10: Departament d’Informàtica**:
+   - **Subxarxa**: 172.16.10.0/24
+   - **Rang d'IPs**: 172.16.10.1 - 172.16.10.254
+   - **Gateway**: 172.16.10.1
+   - **Funció**: Dedicada a tots els dispositius gestionats pel departament d’Informàtica.
+
+2. **VLAN 20: Departament de Vendes i Màrqueting**:
+   - **Subxarxa**: 172.16.20.0/24
+   - **Rang d'IPs**: 172.16.20.1 - 172.16.20.254
+   - **Gateway**: 172.16.20.1
+   - **Funció**: Assignada als dispositius del departament de Vendes i Màrqueting.
+
+3. **VLAN 30: Departament d’Administració i Finances**:
+   - **Subxarxa**: 172.16.30.0/24
+   - **Rang d'IPs**: 172.16.30.1 - 172.16.30.254
+   - **Gateway**: 172.16.30.1
+   - **Funció**: Destinada als dispositius del departament d’Administració i Finances.
+
+4. **VLAN 40: Departament d’Investigació**:
+   - **Subxarxa**: 172.16.40.0/24
+   - **Rang d'IPs**: 172.16.40.1 - 172.16.40.254
+   - **Gateway**: 172.16.40.1
+   - **Funció**: Assignada als dispositius del departament d’Investigació.
+
+5. **VLAN 100: Dispositius de Seguretat**:
+   - **Subxarxa**: 172.16.50.0/24
+   - **Rang d'IPs**: 172.16.50.1 - 172.16.50.254
+   - **Gateway**: 172.16.50.1
+   - **Funció**: Dedicada als dispositius de seguretat, com ara sistemes de monitoratge i vigilància.
+
+6. **VLAN 110: Gestió i Administració de Xarxa**:
+   - **Subxarxa**: 172.16.60.0/24
+   - **Rang d'IPs**: 172.16.60.1 - 172.16.60.254
+   - **Gateway**: 172.16.60.1
+   - **Funció**: Destinada a la gestió i administració dels elements de xarxa i servidors.
+
+<br><br>
+
+## Tria de Servidors i la seva Arquitectura
+
+En aquesta secció, detallarem la tria de servidors, considerant l'ús de servidors dedicats i virtuals, així com els beneficis associats a cada opció.
+
+### Tipus de Servidors
+
+Hem optat per una combinació de servidors dedicats i virtuals per aprofitar els avantatges de cada tipus i satisfer les necessitats específiques d'EcoTech.
+
+1. **Servidors Dedicats**:
+   - Són màquines físiques dedicades a una sola aplicació o servei. Ofereixen el màxim rendiment i control sobre els recursos de maquinari.
+
+2. **Servidors Virtuals (VMs)**:
+   - Són instàncies virtuals que s'executen en un entorn de virtualització sobre servidors físics. Permeten una millor utilització dels recursos i una major flexibilitat.
+
+### Tria de Servidors
+
+Per a EcoTech, hem seleccionat els següents servidors per a la seva arquitectura híbrida:
+
+1. **Servidors Dedicats**:
+    - Model: Dell PowerEdge R740
+    - Característiques:
+        - CPU: 2 x Intel Xeon Silver 4214 (12 cores cada un, 2.2GHz)
+        - RAM: 128GB DDR4
+        - Emmagatzematge: 4 x 1TB SSD (RAID 10)
+        - Ús: Bases de dades crítiques, aplicacions de rendiment alt, serveis que requereixen temps de resposta mínims.
+
+2. **Servidors Virtuals (VMs)**:
+    - Utilitzem VMware vSphere com a plataforma de virtualització per gestionar les màquines virtuals (VMs). Això permet una millor utilització dels recursos i facilita la gestió dels servidors.
+    - Ús:
+        - Aplicacions Menys Crítiques: Les aplicacions que no requereixen un rendiment extremadament alt s'executen en VMs, proporcionant flexibilitat i eficiència en la utilització dels recursos.
+
+        - Entorns de Desenvolupament i Proves: Els entorns de desenvolupament i proves també s'allotgen en VMs, permetent als desenvolupadors crear i provar aplicacions en un entorn controlat.
+
+### Beneficis de la Combinació de Servidors Dedicats i Virtuals
+
+- **Rendiment**:
+  - Els servidors dedicats ofereixen el màxim rendiment per a aplicacions crítiques i processament de grans volums de dades, mentre que els servidors virtuals proporcionen flexibilitat i eficiència en la utilització dels recursos.
+
+- **Escalabilitat**:
+  - La combinació de servidors dedicats i virtuals permet una escalabilitat fàcil, ja que es poden afegir noves VMs o ampliar els recursos dels servidors dedicats segons les necessitats.
+
+- **Seguretat**:
+  - La separació de les aplicacions i dades en servidors dedicats i virtuals permet aplicar polítiques de seguretat específiques per a cada entorn, millorant la protecció global de la infraestructura.
+
+### Conclusió
+
+La tria de servidors dedicats i virtuals per al CPD d'EcoTech proporciona una infraestructura equilibrada que combina el rendiment i el control dels servidors dedicats amb la flexibilitat i l'eficiència dels servidors virtuals. Aquesta combinació assegura que l'empresa pugui satisfer les seves necessitats actuals i futures de manera eficient i escalable.
 
 ### Descripció del sistema
 
-<p>Tenim 3 servidors HP DL360 GEN10 8SFF № 140.E-5766 amb tecnologia reacondicionada. Aquests servidors es configuren en un cluster per optimitzar el rendiment i la disponibilitat dels serveis.</p>
+Tenim 3 servidors HP DL360 GEN10 8SFF № 140.E-5766 amb tecnologia reacondicionada. Aquests servidors es configuren en un cluster per optimitzar el rendiment i la disponibilitat dels serveis.
 
 ### Procediment de Backup
 
-<p>Detall del procediment automatitzat de còpies de seguretat diàries per garantir la integritat i disponibilitat de les dades.</p>
+Detall del procediment automatitzat de còpies de seguretat diàries per garantir la integritat i disponibilitat de les dades.
 
 ## Seguretat del CPD
 
 ### Ubicació física del CPD
 
-<p>Detalls sobre la ubicació física del CPD i les mesures preses per protegir-lo.</p>
+Detalls sobre la ubicació física del CPD i les mesures preses per protegir-lo.
 
 ### Accés a la sala del CPD
 
-<p>Mesures de control d'accés a la sala del CPD per garantir que només el personal autoritzat pugui accedir-hi.</p>
+Mesures de control d'accés a la sala del CPD per garantir que només el personal autoritzat pugui accedir-hi.
 
 ### Seguretat física del CPD
 
-<p>Mesures de seguretat física implementades per protegir els equips dins del CPD.</p>
+Mesures de seguretat física implementades per protegir els equips dins del CPD.
 
 <br><br><br>
 
@@ -296,7 +491,7 @@ La infraestructura del nostre CPD compta amb la comunicació entre racks ToR i u
 
 ## Conclusió final
 
-<p>El projecte CPD MAS ha complert amb èxit els objectius plantejats, proporcionant una infraestructura robusta i segura per a l'empresa. Les mesures implementades asseguren la continuïtat del servei i la protecció de les dades.</p>
+El projecte CPD MAS ha complert amb èxit els objectius plantejats, proporcionant una infraestructura robusta i segura per a l'empresa. Les mesures implementades asseguren la continuïtat del servei i la protecció de les dades.
 
 <br><br><br>
 

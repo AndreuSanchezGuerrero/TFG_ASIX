@@ -1,4 +1,5 @@
-# PART 1: Projecte CPD MAS
+
+### PART 1
 
 ### Introducció
 - [Context del projecte](#context-del-projecte)
@@ -33,14 +34,16 @@
 - [Tria de Servidors i la seva Arquitectura](#tria-de-servidors-i-la-seva-arquitectura)
     - [Tipus de Servidors](#tipus-de-servidors)
     - [Tria de Servidors](#tria-de-servidors)
-
-    
-
+    - [Beneficis de la Combinació de Servidors Dedicats i Virtuals](#beneficis-de-la-combinació-de-servidors-dedicats-i-virtuals)
+- [Seguretat física de l'empresa](#seguretat-física-de-lempresa)
 
 ### Conclusions
 
-
 ### Fitxa Tècnica
+
+### Part 2.
+
+
 
 
 <br><br><br>
@@ -459,7 +462,73 @@ Per a EcoTech, hem seleccionat els següents servidors per a la seva arquitectur
 - **Seguretat**:
   - La separació de les aplicacions i dades en servidors dedicats i virtuals permet aplicar polítiques de seguretat específiques per a cada entorn, millorant la protecció global de la infraestructura.
 
-### Conclusió
+<br>
+
+## Seguretat física de l'empresa
+
+Aquesta secció descriu les mesures i protocols de seguretat física implementats per assegurar la integritat, la disponibilitat i la confidencialitat dels recursos físics del CPD.
+
+1. **Control d'Accés**
+   - **Accés Restrictiu**: L'accés al CPD està restringit a personal autoritzat mitjançant l'ús de targetes d'identificació amb tecnologia RFID.
+   - **Biometria**: S'han instal·lat escàners biomètrics (empremtes digitals) per a una seguretat addicional en àrees crítiques.
+   - **Registre d'Entrades i Sortides**: Totes les entrades i sortides són registrades electrònicament, mantenint un registre per a qualsevol revisió de seguretat necessària.
+
+2. **Videovigilància**
+   - **Càmeres de Seguretat**: Càmeres de seguretat d'alta resolució amb cobertura 24/7 són instal·lades en tots els accessos, passadissos i àrees crítiques del CPD.
+   - **Monitoratge Remot**: Les imatges de les càmeres són monitoritzades en temps real per un equip de seguretat dedicat i també es poden revisar remotament.
+   - **Emmagatzematge de Vídeos**: Els enregistraments de seguretat es guarden durant un període determinat per a possibles revisions futures.
+
+3. **Protecció contra Incendis**
+   - **Sistemes de Detecció d'Incendis**: Sensors de fum i calor són instal·lats en tot el CPD per detectar qualsevol indici d'incendi de manera precoç.
+   - **Extintors i Sistemes d'Extinció**: Extintors accessibles i sistemes d'extinció automàtica (per exemple, sistemes d'aspersió i de gas inert) són distribuïts estratègicament.
+   - **Plans d'Evacuació**: Plans d'evacuació ben senyalitzats i simulacres d'incendi regulars per assegurar que tot el personal sàpiga com actuar en cas d'emergència.
+
+4. **Control Ambiental**
+   - **Sistemes de ventilació**: Sistemes de calefacció, ventilació i aire condicionat per mantenir una temperatura i humitat òptimes dins del CPD.
+   - **Monitors Ambientals**: Sensors per monitoritzar la temperatura, la humitat i altres factors ambientals crítics en temps real.
+   - **Alarmes**: Alarmes per alertar en cas de condicions ambientals fora dels paràmetres establerts.
+
+5. **Protecció contra Intrusos**
+   - **Tanques de Seguretat**: Tanques perimetrals amb sensors de moviment per detectar i dissuadir intrusos.
+   - **Portes de Seguretat**: Portes reforçades amb mecanismes de bloqueig automàtic en àrees sensibles.
+   - **Sistemes d'Alarma**: Sistemes d'alarma per alertar el personal de seguretat en cas de qualsevol intent d'intrusió.
+
+6. **Sistemes d'Alimentació Ininterrompuda (SAI)**
+   - **SAI**: Sistemes d'alimentació ininterrompuda per assegurar que els servidors i altres equips crítics continuïn funcionant en cas de tall d'energia.
+   - **Generadors de Reserva**: Generadors de reserva que es posen en marxa automàticament en cas de fallada de l'energia principal.
+
+7. **Sistema de Refredament per Líquid**
+    - Utilitzarem sistemes de refredament per líquid en els racks de servidors d'alta densitat per dissipar la calor de manera més eficient.
+
+8. **Polítiques i Procediments**
+   - **Polítiques de Seguretat**: Polítiques clares de seguretat física que defineixen els protocols d'accés, les responsabilitats del personal i els procediments d'emergència.
+   - **Formació del Personal**: Formació regular del personal en matèria de seguretat física, incloent protocols d'emergència i bones pràctiques de seguretat.
+   - **Auditories de Seguretat**: Auditories periòdiques per avaluar l'eficàcia de les mesures de seguretat i identificar àrees de millora.
+
+![Llegenda](../.Images/CPD/leyendaSegu.png)
+![Llegenda](../.Images/CPD/leyendaSegu2.png)
+
+![Esquema](../.Images/CPD/seguCPD.png)
+
+### Mesures de Seguretat Lògica
+
+1. **Control d'Accés i Autenticació**
+   - **Autenticació Multifactor (MFA)**: Implementació de l'autenticació multifactor per assegurar que només el personal autoritzat pugui accedir als sistemes i dades sensibles.
+   - **Gestió de Privilegis**: Assignació de permisos d'accés basats en rols per limitar l'accés als recursos segons les necessitats del treballador.
+   - **Polítiques de Contrasenya**: Polítiques estrictes de contrasenyes que inclouen requisits de complexitat, canvi regular de contrasenyes i prohibició de reutilització de contrasenyes antigues.
+
+2. **Xarxes Segures**
+   - **Segmentació de Xarxa**: Separació de la xarxa en subxarxes i VLANs per limitar la propagació d'amenaces i facilitar la gestió del trànsit de xarxa.
+   - **Firewalls**: Utilització de firewalls de nova generació per monitoritzar i controlar el trànsit entrant i sortint basant-se en polítiques de seguretat definides.
+
+3. **Protecció de Dades**
+   - **Xifrat de Dades**: Xifrat de dades en trànsit i en repòs per protegir la informació sensible contra accessos no autoritzats.
+   - **Còpies de Seguretat Regulars**: Realització de còpies de seguretat freqüents i automatitzades de totes les dades crítiques. Farem servir TreuNAS.
+
+4. **Monitorització i Auditories**
+   - **Monitorització Contínua**: Utilització d'eines de monitorització com Zabix per a la supervisió contínua de l'activitat de la xarxa, els sistemes i les aplicacions.
+
+## Conclusió
 
 La tria de servidors dedicats i virtuals per al CPD d'EcoTech proporciona una infraestructura equilibrada que combina el rendiment i el control dels servidors dedicats amb la flexibilitat i l'eficiència dels servidors virtuals. Aquesta combinació assegura que l'empresa pugui satisfer les seves necessitats actuals i futures de manera eficient i escalable.
 

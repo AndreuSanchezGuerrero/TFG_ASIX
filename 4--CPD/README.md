@@ -44,11 +44,6 @@
 
 - [Fitxa Tècnica](#fitxa-tècnica-1)
 
-### Part 2.
-
-
-
-
 <br><br><br>
 
 # Introducció
@@ -289,9 +284,9 @@ Tota la resta de swithcos estan connectats entre ells amb fibra i tot amb redund
 
 <p>Imatge clara on identifiquem les capen en el nostre esquema lògic de xarxa.</p>
 
-![Llegenda](../.Images/CPD/llegenda.png)
+<img src="../.Images/CPD/llegenda.png" width="700"/>
 
-![Model de 3 capes](../.Images/CPD/model3capes.png)
+<img src="../.Images/CPD/model3capes.png" width="700"/>
 
 En el disseny de la xarxa del CPD d'EcoTech, hem optat pel model de xarxa de 3 capes. Aquest model proporciona una estructura jeràrquica que facilita la gestió, escalabilitat i eficiència de la xarxa.
 
@@ -510,10 +505,9 @@ Aquesta secció descriu les mesures i protocols de seguretat física implementat
    - **Formació del Personal**: Formació regular del personal en matèria de seguretat física, incloent protocols d'emergència i bones pràctiques de seguretat.
    - **Auditories de Seguretat**: Auditories periòdiques per avaluar l'eficàcia de les mesures de seguretat i identificar àrees de millora.
 
-![Llegenda](../.Images/CPD/leyendaSegu.png)
-![Llegenda](../.Images/CPD/leyendaSegu2.png)
-
-![Esquema](../.Images/CPD/seguCPD.png)
+<img src="../.Images/CPD/leyendaSegu.png" width="700"/>
+<img src="../.Images/CPD/leyendaSegu2.png" width="700"/>
+<img src="../.Images/CPD/seguCPD.png" width="700"/>
 
 <br><br>
 

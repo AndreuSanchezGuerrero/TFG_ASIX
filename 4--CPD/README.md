@@ -1,3 +1,5 @@
+![Portada](../.Images/CPD/portada.png)
+
 ### Introducció
 - [Context del projecte](#context-del-projecte)
 - [Descripció del projecte](#descripció-del-projecte)

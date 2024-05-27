@@ -1,6 +1,3 @@
-
-### PART 1
-
 ### Introducció
 - [Context del projecte](#context-del-projecte)
 - [Descripció del projecte](#descripció-del-projecte)
@@ -35,11 +32,17 @@
     - [Tipus de Servidors](#tipus-de-servidors)
     - [Tria de Servidors](#tria-de-servidors)
     - [Beneficis de la Combinació de Servidors Dedicats i Virtuals](#beneficis-de-la-combinació-de-servidors-dedicats-i-virtuals)
-- [Seguretat física de l'empresa](#seguretat-física-de-lempresa)
+- [Mesures de Seguretat física](#mesures-de-seguretat-física)
+- [Mesures de Seguretat Lògica](#mesures-de-seguretat-lògica)
+- [Pressupost](#pressupost)
 
-### Conclusions
+### Conclusió
+
+- [Conclusió](#conclusió-1)
 
 ### Fitxa Tècnica
+
+- [Fitxa Tècnica](#fitxa-tècnica-1)
 
 ### Part 2.
 
@@ -337,7 +340,7 @@ Rapid Spanning Tree Protocol (RSTP) és una evolució del protocol original Span
 3. Ports Ràpids:
     - RSTP introdueix el concepte de ports ràpids (Edge Ports), que poden passar a l'estat de reenviament immediatament sense esperar els temporitzadors STP tradicionals. Això és especialment útil per als ports connectats directament a estacions de treball o servidors.
 
-<br><br>
+<br>
 
 Enllaç dels switchos on es poden veure les seves especificacions i que efectivament soporten aquesta tecnòlogia.
 
@@ -405,15 +408,15 @@ La separació de la xarxa en subxarxes i VLANs (Virtual Local Area Networks) és
    - **Funció**: Assignada als dispositius del departament d’Investigació.
 
 5. **VLAN 100: Dispositius de Seguretat**:
-   - **Subxarxa**: 172.16.50.0/24
-   - **Rang d'IPs**: 172.16.50.1 - 172.16.50.254
-   - **Gateway**: 172.16.50.1
+   - **Subxarxa**: 172.16.100.0/24
+   - **Rang d'IPs**: 172.16.100.1 - 172.16.100.254
+   - **Gateway**: 172.16.100.1
    - **Funció**: Dedicada als dispositius de seguretat, com ara sistemes de monitoratge i vigilància.
 
 6. **VLAN 110: Gestió i Administració de Xarxa**:
-   - **Subxarxa**: 172.16.60.0/24
-   - **Rang d'IPs**: 172.16.60.1 - 172.16.60.254
-   - **Gateway**: 172.16.60.1
+   - **Subxarxa**: 172.16.110.0/24
+   - **Rang d'IPs**: 172.16.110.1 - 172.16.110.254
+   - **Gateway**: 172.16.110.1
    - **Funció**: Destinada a la gestió i administració dels elements de xarxa i servidors.
 
 <br><br>
@@ -421,6 +424,8 @@ La separació de la xarxa en subxarxes i VLANs (Virtual Local Area Networks) és
 ## Tria de Servidors i la seva Arquitectura
 
 En aquesta secció, detallarem la tria de servidors, considerant l'ús de servidors dedicats i virtuals, així com els beneficis associats a cada opció.
+
+![Rack de servidors](../.Images/CPD/rack_servidors.png)
 
 ### Tipus de Servidors
 
@@ -437,11 +442,11 @@ Hem optat per una combinació de servidors dedicats i virtuals per aprofitar els
 Per a EcoTech, hem seleccionat els següents servidors per a la seva arquitectura híbrida:
 
 1. **Servidors Dedicats**:
-    - Model: Dell PowerEdge R740
+    - Model: HPE ProLiant DL360 Gen10
     - Característiques:
-        - CPU: 2 x Intel Xeon Silver 4214 (12 cores cada un, 2.2GHz)
-        - RAM: 128GB DDR4
-        - Emmagatzematge: 4 x 1TB SSD (RAID 10)
+        - CPU: XEON 6226R 16-core
+        - RAM: 12 x 32GB DIMM
+        - Emmagatzematge: 2 x 960GB SATA SSD
         - Ús: Bases de dades crítiques, aplicacions de rendiment alt, serveis que requereixen temps de resposta mínims.
 
 2. **Servidors Virtuals (VMs)**:
@@ -464,7 +469,7 @@ Per a EcoTech, hem seleccionat els següents servidors per a la seva arquitectur
 
 <br>
 
-## Seguretat física de l'empresa
+## Mesures de Seguretat física
 
 Aquesta secció descriu les mesures i protocols de seguretat física implementats per assegurar la integritat, la disponibilitat i la confidencialitat dels recursos físics del CPD.
 
@@ -510,7 +515,9 @@ Aquesta secció descriu les mesures i protocols de seguretat física implementat
 
 ![Esquema](../.Images/CPD/seguCPD.png)
 
-### Mesures de Seguretat Lògica
+<br><br>
+
+## Mesures de Seguretat Lògica
 
 1. **Control d'Accés i Autenticació**
    - **Autenticació Multifactor (MFA)**: Implementació de l'autenticació multifactor per assegurar que només el personal autoritzat pugui accedir als sistemes i dades sensibles.
@@ -528,62 +535,29 @@ Aquesta secció descriu les mesures i protocols de seguretat física implementat
 4. **Monitorització i Auditories**
    - **Monitorització Contínua**: Utilització d'eines de monitorització com Zabix per a la supervisió contínua de l'activitat de la xarxa, els sistemes i les aplicacions.
 
-## Conclusió
+<br><br>
 
-La tria de servidors dedicats i virtuals per al CPD d'EcoTech proporciona una infraestructura equilibrada que combina el rendiment i el control dels servidors dedicats amb la flexibilitat i l'eficiència dels servidors virtuals. Aquesta combinació assegura que l'empresa pugui satisfer les seves necessitats actuals i futures de manera eficient i escalable.
+## Pressupost
 
-### Descripció del sistema
-
-Tenim 3 servidors HP DL360 GEN10 8SFF № 140.E-5766 amb tecnologia reacondicionada. Aquests servidors es configuren en un cluster per optimitzar el rendiment i la disponibilitat dels serveis.
-
-### Procediment de Backup
-
-Detall del procediment automatitzat de còpies de seguretat diàries per garantir la integritat i disponibilitat de les dades.
-
-## Seguretat del CPD
-
-### Ubicació física del CPD
-
-Detalls sobre la ubicació física del CPD i les mesures preses per protegir-lo.
-
-### Accés a la sala del CPD
-
-Mesures de control d'accés a la sala del CPD per garantir que només el personal autoritzat pugui accedir-hi.
-
-### Seguretat física del CPD
-
-Mesures de seguretat física implementades per protegir els equips dins del CPD.
+<img src="../.Images/CPD/Factura.png" alt="Pressupost" width="500" height="700"/>
 
 <br><br><br>
 
-# Conclusions
+# Conclusió
 
-## Conclusió final
-
-El projecte CPD MAS ha complert amb èxit els objectius plantejats, proporcionant una infraestructura robusta i segura per a l'empresa. Les mesures implementades asseguren la continuïtat del servei i la protecció de les dades.
+El CPD implementat per la nostre empresa, MASTECH, per a EcoTech no només compleix amb els objectius inicials del projecte, sinó que també proporciona una base sòlida per al creixement futur. Les tecnologies avançades i les mesures de seguretat robustes asseguren que EcoTech pugui manejar els seus processos amb confiança i eficiència, proporcionant alhora una experiència segura i fiable per als seus clients i empleats. Amb aquesta infraestructura, EcoTech està ben posicionada per afrontar els reptes futurs i continuar sent un líder en el seu sector.
 
 <br><br><br>
 
 # Fitxa Tècnica
 
-**Nom del Projecte:** Projecte CPD MAS
-
-**Empresa Desenvolupadora:** MASDEV
-
-**Tecnologies Utilitzades:**
-- **Servidors:** HP DL360 GEN10 8SFF
-- **Switchos:** Amb suport per a RSTP
-- **Protocol de xarxa:** 802.1Q VLAN Tagging
-- **Programari de Virtualització:** Detall del programari utilitzat per gestionar els servidors virtualitzats
-- **Sistemes de Backup:** NAS (Network Attached Storage)
-- **Procediments de Backup:** Automatitzats amb cron jobs
-
-**Descripció del Sistema:**
-- **Infraestructura de Xarxa:** Model de 3 capes amb connexions a ISP Orange i ISP Movistar
-- **Servidors:** Configurats en cluster per a alta disponibilitat i escalabilitat
-- **Seguretat:** Implementació de mesures de seguretat física i lògica per protegir els equips i les dades
-
-**Enllaços Relacionats:**
-- [Detalls del Switch de Capa 3](enllaç-a-switch-capa-3)
-- [Detalls del Switch de Capa 2](enllaç-a-switch-capa-2)
-- [Captura de RSTP](enllaç-a-captura-rstp)
+| **Component** | **Detalls** |
+|---------------|-------------|
+| **Projecte** | Implementació d'un Centre de Processament de Dades (CPD) |
+| **Empresa** | EcoTech |
+| **Desenvolupador** | MASTECH |
+| **Tecnologies Usades** | Servidors dedicats (HPE ProLiant DL360 Gen10), Servidors virtuals (VMware vSphere), Mesures de seguretat física i lògica |
+| **Adreçament IP** | Xarxa: 172.16.0.0/16, Subxarxes /24 per departaments |
+| **VLANs** | VLAN 10: IT (172.16.10.0/24), VLAN 20: Vendes i Màrqueting (172.16.20.0/24), VLAN 30: Administració i Finances (172.16.30.0/24), VLAN 40: Investigació (172.16.40.0/24), VLAN 100: Seguretat (172.16.100.0/24), VLAN 110: Gestió i Administració (172.16.110.0/24) |
+| **Seguretat Física** | Control d'accés, videovigilància, protecció contra incendis, control ambiental, protecció contra intrusos, SAI |
+| **Seguretat Lògica** | Autenticació multifactor, segmentació de xarxa, firewalls, xifrat de dades, còpies de seguretat, monitorització contínua, formació i conscienciació del personal |

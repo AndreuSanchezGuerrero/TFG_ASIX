@@ -29,10 +29,11 @@ Si preferim veure un grafic, fem clic al nom del item i en el menú que es deple
 
 
 ## Caracteristiques dels altres parametres
+
 ### Utilització de Memòria
 - Tipus: Agent Zabbix
 - Clau: `vm.memory.size[available]`
-- Tipus d'informació: Numeric (amb decimals)
+- Tipus d'informació: Numerica (amb decimals)
 - Unitats: MB
 - Preprocessament:
   - Multiplicador personalitzat: 0.00000095367431640625 (Per passar de bytes a megabytes)
@@ -48,7 +49,7 @@ Si preferim veure un grafic, fem clic al nom del item i en el menú que es deple
 ### Ús de Xarxa (Entrada i Sortida)
 - Tipus: Agent Zabbix
 - Clau: `net.if.(in|out)[enp0s3]`
-- Tipus d'informació: Numeric (sense decimals)
+- Tipus d'informació: Numerica (sense decimals)
 - Unitats: Bps
 
 ### Estat de l'API Server
@@ -94,7 +95,7 @@ Totes les comandes van al node master.
 
 5. Afegim el token al host
    
-   En l'interficie web anem a `Configuration -> Hosts -> Kubernetes master -> Macros -> Host macros`, creem una macro anomenada `{$KUBE.API.TOKEN}` i posem com a valor el resultat de la comanda anterior.
+   En l'interficie web anem a `Configuration -> Hosts -> kubernetes master -> Macros -> Host macros`, creem una macro anomenada `{$KUBE.API.TOKEN}` i posem com a valor el resultat de la comanda anterior.
 
 Una vegada afegida la macro, ja podem crear l'item.
 
@@ -153,3 +154,17 @@ Una vegada definida la clau, ja podem crear l'item en si
 - Clau: `pods.state`
 - Tipus d'informació: Text
 
+### Pods en estat "Running"
+Aquest item complementa al anterior, mostrant la quantitat de pods que hi han en estat "Running"
+
+- Tipus: Dependecia
+- Key: `count.running.pods`
+- Tipus d'informació: Numerica (sense decimals)
+- Item del que depén: `kubernetes master: Estat pods`
+- Preprocessament:
+  - JavaScript: 
+      ```js
+      var data = value;
+      var matches = data.match(/Running/g);
+      return matches ? matches.length : 0;
+      ```

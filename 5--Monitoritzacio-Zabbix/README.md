@@ -94,8 +94,15 @@ En el següent enllaç es detalla com es crean les alertes
 
 Una llista de les alertes creades en les dues maquines
 
-![triggers_list_master](../.Images/zabbix/trigger_list_master.png) <br>
+![triggers_list_master](../.Images/zabbix/trigger_list_master.png) <br> 
 ![triggers_list_worker](../.Images/zabbix/trigger_list_worker.png)
 
 
-## Accions que es realizaran cuan salti un avís
+## Accions que s'executaran quan salti un avís
+
+A part de indicar com crear una alerta pas a pas, hem utilitzat el `Media type` de Discord que ja inclou el mateix Zabbix perque aixi envii un missatge a un canal determinat cada vegada que salta un avís. 
+
+En el següent enllaç es detalla tot lo mencionat anteriorment.
+
+[Creació d'accions](trigger_actions.md)
+

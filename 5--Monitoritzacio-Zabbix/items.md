@@ -1,9 +1,9 @@
 # Creació de parametres a monitoritzar
 
 ## Com crear un parametre (item)
-En aquest cas crearem el de `utilització de CPU`
-Anem a `Configuration -> Hosts -> <host> -> Items -> Create item` i omplenem els camps seguint les caracteristiques rellevants
+En aquest cas crearem el de `utilització de CPU`. Anem a `Configuration -> Hosts -> <host> -> Items -> Create item` i omplenem els camps seguint les caracteristiques rellevants
 
+- Nom: Carrega CPU (inactiva)
 - Tipus: Agent Zabbix
 - Clau: `system.cpu.util[,idle]`
 - Tipus d'informació: Numerica (amb decimals)
@@ -28,9 +28,12 @@ Si preferim veure un grafic, fem clic al nom del item i en el menú que es deple
 ![item_graph](../.Images/zabbix/item_graph.png)
 
 
-## Caracteristiques dels altres parametres
+## Creació dels altres parametres
 
-### Utilització de Memòria
+### Comuns en ambues maquines
+
+#### Utilització de Memòria
+- Nom: Memoria disponible
 - Tipus: Agent Zabbix
 - Clau: `vm.memory.size[available]`
 - Tipus d'informació: Numerica (amb decimals)
@@ -38,7 +41,8 @@ Si preferim veure un grafic, fem clic al nom del item i en el menú que es deple
 - Preprocessament:
   - Multiplicador personalitzat: 0.00000095367431640625 (Per passar de bytes a megabytes)
   
-### Ús del Disc
+#### Ús del Disc
+- Nom: Disc disponible
 - Tipus: Agent Zabbix
 - Clau: `vfs.fs.size[/,free]`
 - Tipus d'informació: Numeric (amb decimals)
@@ -46,13 +50,16 @@ Si preferim veure un grafic, fem clic al nom del item i en el menú que es deple
 - Preprocessament:
   - Multiplicador personalitzat: 0.00000095367431640625 (Per passar de bytes a megabytes)
 
-### Ús de Xarxa (Entrada i Sortida)
+#### Ús de Xarxa (Entrada i Sortida)
+- Trafic xarxa enp0s3 (entrada|sortida)
 - Tipus: Agent Zabbix
 - Clau: `net.if.(in|out)[enp0s3]`
 - Tipus d'informació: Numerica (sense decimals)
 - Unitats: Bps
 
-### Estat de l'API Server
+### Exclusius del node master
+
+#### Estat de l'API Server
 Abans de crear aquest item, hem de generar un token per accedir a la API de Kubernetes desde el Zabbix.
 
 Totes les comandes van al node master.
@@ -99,6 +106,7 @@ Totes les comandes van al node master.
 
 Una vegada afegida la macro, ja podem crear l'item.
 
+- Nom: Estat API server
 - Tipus: Agent HTTP
 - Clau: `kube.api.status` (personalitzada)
 - Tipus d'informació: Text
@@ -107,7 +115,7 @@ Una vegada afegida la macro, ja podem crear l'item.
 - Headers:
   - Authorization: Bearer `{$KUBE.API.TOKEN}`
 
-### Estat dels Pods
+#### Estat dels Pods
 Abans de poder crear aquest item, hem de crear un script i definir una clau personalitzada.
 
 Totes les comandes s'han d'executar en el node master.
@@ -150,13 +158,15 @@ Totes les comandes s'han d'executar en el node master.
 
 Una vegada definida la clau, ja podem crear l'item en si
 
+- Nom: Estat pods
 - Tipus: Agent Zabbix
 - Clau: `pods.state`
 - Tipus d'informació: Text
 
-### Pods en estat "Running"
+#### Pods en estat "Running"
 Aquest item complementa al anterior, mostrant la quantitat de pods que hi han en estat "Running"
 
+- Nom: Pods en estat "Running"
 - Tipus: Dependecia
 - Key: `count.running.pods`
 - Tipus d'informació: Numerica (sense decimals)

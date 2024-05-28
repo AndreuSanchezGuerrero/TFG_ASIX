@@ -50,6 +50,12 @@ En el següent enllaç es detalla com hem creat els items.
 
 [Creacio d'items](items.md)
 
+Una llista dels parametres creats en ambdues maquines
+
+![item_list_master](../.Images/zabbix/item_list_master.png) <br>
+![item_list_worker](../.Images/zabbix/item_list_worker.png)
+
+
 ## Avisos sobre parametres controlats
 Hem creat alertes per els diferents items i aixi avisar-nos per si passes alguna cosa
 
@@ -81,7 +87,15 @@ Hem creat alertes per els diferents items i aixi avisar-nos per si passes alguna
   - En un entorn de serveis, és essencial que els processos crítics estiguin en funcionament. Tenir pocs processos en estat "Running" pot indicar problemes amb la disponibilitat dels serveis. Això pot ser causat per fallades en les aplicacions, problemes de recursos en el servidor o configuracions incorrectes. Monitoritzar l'estat dels processos i rebre alertes quan hi ha pocs en estat "Running" permet als administradors prendre mesures ràpides per restaurar l'operativitat dels serveis i assegurar la continuïtat del servei.
   
 
-## Creacio alertes (triggers)
+### Creacio alertes (triggers)
 En el següent enllaç es detalla com es crean les alertes
 
 [Creacio d'alertes](triggers.md)
+
+Una llista de les alertes creades en les dues maquines
+
+![triggers_list_master](../.Images/zabbix/trigger_list_master.png) <br>
+![triggers_list_worker](../.Images/zabbix/trigger_list_worker.png)
+
+
+## Accions que es realizaran cuan salti un avís

@@ -156,7 +156,7 @@ Totes les comandes s'han d'executar en el node master.
    sudo systemctl restart zabbix-agent.service
    ```
 
-Una vegada definida la clau, ja podem crear l'item en si
+Una vegada definida la clau, ja podem començar a crear l'item.
 
 - Nom: Estat pods
 - Tipus: Agent Zabbix

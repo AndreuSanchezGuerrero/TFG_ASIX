@@ -100,9 +100,23 @@ Una llista de les alertes creades en les dues maquines
 
 ## Accions que s'executaran quan salti un avís
 
-A part de indicar com crear una alerta pas a pas, hem utilitzat el `Media type` de Discord que ja inclou el mateix Zabbix perque aixi envii un missatge a un canal determinat cada vegada que salta un avís. 
+A part de indicar com crear una alerta pas a pas, hem utilitzat el `Media type` de Discord que ja inclou el mateix Zabbix perque aixi envii un missatge a un canal determinat cada vegada que salta un trigger. 
+
+![discord_messages](../.Images/zabbix/discord_messages.png)
 
 En el següent enllaç es detalla tot lo mencionat anteriorment.
 
 [Creació d'accions](trigger_actions.md)
 
+
+## Taulers per centralitzar l'informació
+
+Per facilitarnos la feina a l'hora de revisar les ultimes dades rebudes dels items, hem creat un dashboard 
+
+![dashboard_1](../.Images/zabbix/dashboard_1.png)
+![dashboard_2](../.Images/zabbix/dashboard_2.png)
+![dashboard_3](../.Images/zabbix/dashboard_3.png)
+
+En el següent enllaç es detalla la creació de taulers (dshbioards)
+
+[Creacio de dashboards](dahboards.md)

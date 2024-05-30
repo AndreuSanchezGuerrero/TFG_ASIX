@@ -79,3 +79,117 @@ Enllaç on es documenta el procés de hardening realitzat al sistema.
 
 [Hardening del sistema](./hardening.md)
 
+## Configuració bàsica d'ansible
+
+Per defecte, ansible crea un directori a /etc/ansible que conté els seguents fitxers:
+
+![Configuració bàsica](../.Images/ansible/defaultConf.png)
+
+<br>
+
+Al fitxer ansible.cfg indiquem on es mostre l'inventari
+
+![Configuració bàsica](../.Images/ansible/basic_ansible_cfg.png)
+
+<br>
+
+Al fitxer de hosts indiquem les ips amb els seus hostnames i al grup que pertany.
+
+![Configuració host](../.Images/ansible/basic_hosts.png)
+
+<br>
+
+Comprovem que la sintaxi està ben feta, ens retorna un json on ens diu que ‘all’, te un fill que es diu ungrouped (perquè encara no hem creat el grup)i més abaix podem veure que ungrouped te els hosts de les nostres maquines manejades.
+
+![Comprovació bàsica](../.Images/ansible/ansible_comprovacio_basica.png)
+
+<br>
+
+Fem ping per comprovar que podem comunicarnos des del ansible tower als nodes manejats via ansible.
+
+![ping 1](../.Images/ansible/ping1.png)
+
+<br>
+
+També podriem fer ping amb el grup que hem especificat.
+
+![ping 2](../.Images/ansible/ping_2.png)
+
+## Exemple 1 --> Escalar privilegis
+
+En aquest cas canviem l'arxiu de ansible.cfg per el seguent:
+
+**'privilege_escalation'**
+
+Aquest apartat configura la manera en què Ansible gestionarà l'escalat de privilegis.
+
+```ini
+[defaults]
+inventory = ./hosts
+
+[privilege_escalation]
+become=True
+become_method=sudo
+become_user=root
+become_ask_pass=True
+
+```
+
+- **become=True -->** Aquest paràmetre habilita l'ús de become, una característica d'Ansible que permet executar tasques amb privilegis elevats.
+- **become_method=sudo -->** Especifica que sudo serà la metodologia utilitzada per a escalar privilegis. sudo permet a un usuari ordinari executar comandes amb privilegis de superusuari.
+- **become_user=root -->** Indica que l'usuari a través del qual s'executaran les tasques amb privilegis elevats serà root. 
+- **become_ask_pass=True -->** Aquest paràmetre fa que Ansible demani la contrasenya de sudo abans d'executar qualsevol tasca que requereixi privilegis elevats. 100% necesaria.
+
+<br>
+
+Ara si executem la comanda:     ```bash ansible lxc_containers -m ping``` ens demanarà la contrasenya de la màquina amb la que podrem escalar privilegis fins convertirnos en root.
+
+![Escalar privilegis](../.Images/ansible/ejemplo1_become.png)
+
+<br><br>
+
+## Exemple 2
+
+Creem inventory-groups i afegim lo seguent:
+
+```ini
+[all:children]
+ubuntu
+webservers
+
+[ubuntu]
+u1 ansible_host=10.101.218.64
+u2 ansible_host=10.101.218.132
+[webservers]
+u3 ansible_host=10.101.218.45
+```
+
+Definim un grup de grups, és a dir, tots els grups que s'inclouen a sota d'aquest títol seran considerats fills del grup 'all'. En aquest cas, els grups 'ubuntu' i 'webservers' formen part del grup 'all'.
+
+Dins de cada grup tenim diferents hosts marcat.
+
+**ubuntu**
+- u1 amb IP: 10.101.218.64
+- u2 amb IP: 10.101.218.132
+
+**webservers**
+- u3 amb IP: 10.101.218.45
+
+<br>
+
+Resultats obtinguts amb filtratge per grup.
+
+1. Filtratge de tots els grups
+
+    ![Ping1](../.Images/ansible/ejemplo2_ping.png)
+
+2. Filtratge del grup ubuntu.
+
+    ![Ping2](../.Images/ansible/ejemplo2_ping2.png)
+
+3. Filtratge del grup webservers.
+
+    ![Ping 3](../.Images/ansible/ejemplo2_ping3.png)
+
+<br><br>
+

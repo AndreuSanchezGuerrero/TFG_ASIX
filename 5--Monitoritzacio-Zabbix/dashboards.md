@@ -3,7 +3,7 @@
 ## Com crear un dashboard
 Anem a `Monitoring -> Dashboard -> Create dashboard` amb les següents caracteristiques
 
-- Prepietari: <usuari\>
+- Propietari: <usuari\>
 - Nom: Kubernetes cluster
 
 ![dashboard_create](../.Images/zabbix/dashboard_create.png)
@@ -50,4 +50,34 @@ Al finalitzar la creació, es mostrara el grafic al dashboard.
 
 ### Widget 6
 - Tipus: Valor d'item
-- item: `kubernetes master: Estat API server`
+- Item: `kubernetes master: Estat API server`
+
+### Widget 7
+- Tipus: Gràfic
+- Patró de host: `kubernetes master`
+- Patro d'item: `Carrega CPU (inactiva)`
+
+### Widget 8
+- Tipus: Gràfic
+- Patró de host: `kubernetes node1`
+- Patro d'item: `Carrega CPU (inactiva)`
+  
+### Widget 9
+- Tipus: Gràfic
+- Patró de host: `kubernetes master`
+- Patro d'item: `Disc disponible`
+
+### Widget 10
+- Tipus: Gràfic
+- Patró de host: `kubernetes node1`
+- Patro d'item: `Disc disponible`
+
+### Widget 11
+- Tipus: Gràfic
+- Patró de host: `kubernetes master`
+- Patro d'item: `Memoria disponible`
+
+### Widget 12
+- Tipus: Gràfic
+- Patró de host: `kubernetes node1`
+- Patro d'item: `Memoria disponible`

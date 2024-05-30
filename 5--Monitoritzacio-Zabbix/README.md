@@ -109,7 +109,7 @@ En el següent enllaç es detalla tot lo mencionat anteriorment.
 [Creació d'accions](trigger_actions.md)
 
 
-## Taulers per centralitzar l'informació
+## Taulers que ajuden a centralitzar l'informació
 
 Per facilitarnos la feina a l'hora de revisar les ultimes dades rebudes dels items, hem creat un dashboard 
 
@@ -117,6 +117,17 @@ Per facilitarnos la feina a l'hora de revisar les ultimes dades rebudes dels ite
 ![dashboard_2](../.Images/zabbix/dashboard_2.png)
 ![dashboard_3](../.Images/zabbix/dashboard_3.png)
 
-En el següent enllaç es detalla la creació de taulers (dshbioards)
+En el següent enllaç es detalla la creació de taulers (dashboards)
 
 [Creacio de dashboards](dahboards.md)
+
+## Informes periodics per estar al dia
+
+Utilitzant el dashboard anterior, hem programat l'enviament d'un informe sobre el tauler cada dilluns a les 10:30 del matí, que anirá destinat als 3 membres del grup
+
+Creació detallada del informe en el següent enllaç:
+
+[Creació d'informes](reports.md)
+
+
+

@@ -97,23 +97,25 @@
 
 <p>Aquest diagrama il·lustra el procés complet d'inserció d'un professor al sistema per part del conserge, des del moment en què el conserge inicia sessió fins que el professor rep una notificació per correu electrònic. A continuació, es descriu detalladament cada pas del procés:</p>
 
-<br>
-
-- **Login.php:** L'administrador accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduïdes pel conserge. Dins l'administrador podrà veure els professors inserits i les seves dades en una pàgina per tenir-ho d'una forma visual i fàcil d'entendre.
-
-    - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/admin/admin.php)
-    - Imatge de admin.php
-
-    ![login.php](../.Images/webs1/admin.php.png)
+<p>En aquesta primera part de l'aplicació, els usuaris tenen la possibilitat d'iniciar sessió amb credencials específiques que determinen el seu rol. Es pot iniciar sessió com a Administrador o com a Conserge, cadascun amb funcions i responsabilitats distintes.</p>
 
 <br>
 
-<br>
+- **Login.php:** L'administrador accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduïdes pel conserge.
 
 - **Login.php:** El conserge accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduides per el conserge. 
 
     - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/login.php)
     - Imatge de login.php
+
+    ![login.php](../.Images/webs1/login.php.png)
+
+<br>
+
+- **admin.php:** Dins l'administrador podrà veure els professors inserits i les seves dades en una pàgina per tenir-ho d'una forma visual i fàcil d'entendre.
+
+    - Enllaç on s'explica detalladament aquest fitxer: [admin.php](./mas-files/admin/admin.php)
+    - Imatge de admin.php
 
     ![login.php](../.Images/webs1/login.php.png)
 

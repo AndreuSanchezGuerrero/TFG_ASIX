@@ -53,7 +53,7 @@ Per a utilitzar Docker Compose haurem de realitzar 3 coses:
 
 ## Comandes bàsiques
 1. docker compose build  s’utilitza per a generar la imatge basada en les especificacions de l’arxiu .yml
-2. docker compose up (amb el build fet) en cas de no existir la imatge crea el contenidor i l’aixeca
+2. docker compose up (amb el build fet) en cas de no existir la imatge, la descarrega, crea el contenidor i l’aixeca
 3. docker compose start <nom> inicia el contenidor
 4. docker compose stop<nom> atura el contenidor
 5. docker compose down s’utilitza per eliminar els contenidors, xarxes i volums associats al projecte

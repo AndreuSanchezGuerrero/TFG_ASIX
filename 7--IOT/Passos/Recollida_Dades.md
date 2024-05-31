@@ -1,6 +1,6 @@
 ## Arxiu Recollida_Dades
 
-<img src="../../.images/IOT/Recollida_Dades.jpeg" alt="Final" style="width: 300px;"> <br><br>
+<img src="../../.Images/IOT/Recollida_Dades.jpeg" alt="Final" style="width: 300px;"> <br><br>
 
 **[Funcionament intern de l'arxiu Recollida_Dades](./../Passos/Recollida_Dades_Codi.md)**
 

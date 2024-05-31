@@ -1,5 +1,9 @@
 # Introducció
 
+<p align="center">
+  <img src="../.Images/zabbix/portada.png" alt="Portada Zabbix">
+</p>
+
 ## Context del projecte
 
 La monitorització dels sistemes informàtics s’ha convertit en una necessitat imprescindible per garantir la disponibilitat i el rendiment òptim de les infraestructures tecnològiques. Les empreses i organitzacions depenen cada vegada més dels seus sistemes informàtics, i qualsevol interrupció o baixada de rendiment pot tenir conseqüències greus, tant econòmiques com operatives. En aquest context, el projecte s'emmarca dins la necessitat de disposar d'eines eficients que permetin monitoritzar, gestionar i assegurar la continuïtat dels serveis tecnològics. Ho hem realitzat sobre un altre projecte, [projecte de docker](../8--Docker/README.md). En concret, la secció de Kubernetes.

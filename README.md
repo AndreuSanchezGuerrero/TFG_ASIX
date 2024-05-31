@@ -40,6 +40,12 @@ El departament de MASTech se centra en la infraestructura tecnològica física i
 
 - [**CPD (Centre de Processament de Dades)**](4--CPD/README.md): Disseny, implementació i manteniment de centres de processament de dades que asseguren la disponibilitat, seguretat i eficiència dels recursos informàtics. Garantim que les dades i aplicacions dels nostres clients estan ben protegides i accessibles.
 
+## Planificació del projecte
+
+Adjuntem un PDF que detalla la planificacio del projecte
+
+[Planificació](MAS_Project.pdf)
+
 ## Missió
 
 La nostra missió és oferir solucions tecnològiques avançades que permetin a les empreses millorar la seva eficiència operativa, desenvolupar aplicacions innovadores i adoptar tecnologies al núvol de manera segura i efectiva.

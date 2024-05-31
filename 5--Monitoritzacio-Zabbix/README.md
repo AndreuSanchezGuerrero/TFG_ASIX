@@ -26,7 +26,7 @@ Hem escollit Zabbix per diverses raons. Primer, és una eina de codi obert, la q
 
 ## Avantatges i desavantatges de Zabbix
 
-
+![pros_cons](../.Images/zabbix/pros_cons.jpeg)
 
 # Desenvolupament del projecte
 

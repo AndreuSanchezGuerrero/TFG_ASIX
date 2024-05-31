@@ -67,20 +67,10 @@
 
 ## Avantatges i Desavantatges
 
-<p>Avantatges:</p>
+![Avantatges i Desavantatges](../mas-files/imagenes/ventajasdesventajas.png)<br><br>
 
-- Automatització del procés de registre i validació, reduint la càrrega de treball manual per al conserge.
-- Millora de la seguretat en la gestió de dades personals dels professors.
-- Facilitat d'ús tant per al conserge com per als professors.
-- Reducció dels errors humans en el procés de registre i validació gràcies a un control d'errors tant en el frontend com en el backend.
-
-<p>Desavantatges:</p>
-
-- Dependència del correu electrònic per a la validació, que pot ser un inconvenient si els professors tenen problemes d'accés als seus correus.
-- Necessitat de mantenir la seguretat dels codis de validació per evitar accessos no autoritzats.
-
-<br><br><br>
-
+TFG_ASIX/1--Webs1/mas-files/imagenes
+/ventajasdesventajas.png
 # Desenvolupament del Projecte
 
 ## Instal·lació i Configuració

@@ -1,6 +1,6 @@
 ## Arxiu Dades_Principals
 
-<img src="../../.images/IOT/Dades_Principals.jpeg" alt="Dades_Principals" style="width: 300px;"> <br><br>
+<img src="../../.Images/IOT/Dades_Principals.jpeg" alt="Dades_Principals" style="width: 300px;"> <br><br>
 
 **[Funcionament intern de l'arxiu Dades_Principals](./../Passos/Dades_Principals_Codi.md)**
 

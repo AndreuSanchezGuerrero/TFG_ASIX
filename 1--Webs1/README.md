@@ -99,6 +99,17 @@
 
 <br>
 
+- **Login.php:** L'administrador accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduïdes pel conserge. Dins l'administrador podrà veure els professors inserits i les seves dades en una pàgina per tenir-ho d'una forma visual i fàcil d'entendre.
+
+    - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/admin/admin.php)
+    - Imatge de admin.php
+
+    ![login.php](../.Images/webs1/admin.php.png)
+
+<br>
+
+<br>
+
 - **Login.php:** El conserge accedeix a la pàgina de login (login.php) on introdueix el seu nom d'usuari i contrasenya. Aquest formulari de login està validat per un script de JavaScript **(validarLogin.js)** que assegura que els camps requerits estan correctament emplenats abans de permetre l'enviament del formulari. El formulari està enllaçat amb un altre PHP anomenat **(validaciLogin.php)** on es comproven les dades introduides per el conserge. 
 
     - Enllaç on s'explica detalladament aquest fitxer: [login.php](./mas-files/login.php)

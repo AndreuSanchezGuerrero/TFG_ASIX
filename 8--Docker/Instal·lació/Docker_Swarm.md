@@ -14,7 +14,7 @@ Com diu la guia de Docker, al seguir els passos de la instal·lació de Docker, 
 
 ![Inicialitzar Docker Swarm](../../.Images/Docker/inic.PNG) <br><br>
 
-2. Generem la comanda i la passem  al .txt
+2. Generem el token d'unió i la passem  al .txt
 ```bash
 docker swarm join-token worker > joinSwarm.txt
 ```
@@ -67,7 +67,7 @@ docker build -t imatge_web .
 
 imatge_web: Nom de la imatge.
 
-El punt és perquè estem en el mateix directori i buscarà qualsevol directori que hi hagi. Dockerfile en el nostre cas.
+El punt és perquè estem en el mateix directori i buscarà un arxiu anomenat Dockerfile.
 
 6. Procés de pujada de la imatge en Docker Hub perquè el Worker pugui accedir a la imatge
 

@@ -1,6 +1,6 @@
 ## Dades_Personals
 
-<img src="../../.images/IOT/Dades_Personals_Codi.PNG" alt="Dades_Personals" style="width: 900px;"> <br><br>
+<img src="../../.Images/IOT/Dades_Personals_Codi.PNG" alt="Dades_Personals" style="width: 900px;"> <br><br>
 
 ### Que pasa quant fas click a Enrere?
 Si dona clic a "Enrere" tornarà a Dades_Principals

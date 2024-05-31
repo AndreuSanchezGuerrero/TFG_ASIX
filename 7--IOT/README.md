@@ -49,7 +49,7 @@ L'Internet de les Coses, conegut com a IoT (Internet of Things), és un concepte
 
 ## Característiques i com funciona IoT
 
-Els dispositius IoT incorporen sensors que recullen dades del seu entorn. Aquestes dades es transmeten a través d'una xarxa, com Internet, a un sistema centralitzat que les processa i analitza. A partir d'aquesta anàlisi, es poden prendre decisions automatitzades o generar informació útil per als usuaris. 
+Els dispositius IoT incorporen sensors que recullen dades del seu entorn. Aquestes dades es transmeten a través d'una xarxa, com Internet, a un sistema centralitzat que les processa i analitza. A partir d'aquest anàlisi, es poden prendre decisions automatitzades o generar informació útil per als usuaris. 
 
 ### Components clau d'un sistema IoT:
 1. **Sensors i Dispositius:** Recullen dades específiques del seu entorn (temperatura, humitat, moviment, etc.).

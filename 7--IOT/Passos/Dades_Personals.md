@@ -1,6 +1,6 @@
 ## Arxiu Dades_Personals
 
-<img src="../../.images/IOT/Dades_Personals.jpeg" alt="Dades_Personals" style="width: 300px;"> <br><br>
+<img src="../../.Images/IOT/Dades_Personals.jpeg" alt="Dades_Personals" style="width: 300px;"> <br><br>
 
 **[Funcionament intern de l'arxiu Dades_Personals](./../Passos/Dades_Personals_Codi.md)**
 

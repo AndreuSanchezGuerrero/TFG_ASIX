@@ -1,6 +1,6 @@
 ## Arxiu Final
 
-<img src="../../.images/IOT/Final.jpeg" alt="Final" style="width: 300px;"> <br><br>
+<img src="../../.Images/IOT/Final.jpeg" alt="Final" style="width: 300px;"> <br><br>
 
 **[Funcionament intern de l'arxiu Final](./../Passos/Final_Codi.md)**
 

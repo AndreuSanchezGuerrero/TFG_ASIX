@@ -43,9 +43,6 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 8. Instal·lem els paquets de Docker
 ```bash
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-```
-```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
@@ -109,7 +106,7 @@ volumes:
 
 ```
 
-11. Utilitzarem les comandes docker compose build i docker compose up per crear la imatge i aixecar-la.
+11. Utilitzarem les comandes docker compose build i docker compose up per crear el grup de contenidors i aixecar-los.
 ```bash
 sudo nano docker-compose build
 ```

@@ -1,6 +1,6 @@
 ## Iniciar_Sessio
 
-<img src="../../.images/IOT/Inici_Sessio_Codi.PNG" alt="Iniciar_Sessio" style="width: 800px;"> <br><br>
+<img src="../../.Images/IOT/Inici_Sessio_Codi.PNG" alt="Iniciar_Sessio" style="width: 800px;"> <br><br>
 
 Si diu que "Sí" redirigirà a Dades_Personals
 

@@ -1,6 +1,6 @@
 ## Arxiu Iniciar_Sessio
 
-<img src="../../.images/IOT/Iniciar_Sessio.jpeg" alt="Iniciar Sessió" style="width: 300px;"> <br><br>
+<img src="../../.Images/IOT/Iniciar_Sessio.jpeg" alt="Iniciar Sessió" style="width: 300px;"> <br><br>
 
 **[Funcionament intern de l'arxiu d'Iniciar_Sessio](./../Passos/Iniciar_Sessio_Codi.md)**
 

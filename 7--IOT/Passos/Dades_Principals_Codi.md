@@ -1,6 +1,6 @@
 ## Dades_Principals
 
-<img src="../../.images/IOT/Dades_Principals_Codi.PNG" alt="Dades_Personals2" style="width: 900px;"> <br><br>
+<img src="../../.Images/IOT/Dades_Principals_Codi.PNG" alt="Dades_Personals2" style="width: 900px;"> <br><br>
 
 ### Que pasa quant fas click a Enrere?
 Si dona clic a "Enrere" tornarà a Iniciar_Sessio

@@ -11,12 +11,30 @@
 - [Avantatges i Desavantatges](#avantatges-i-desavantatges)
 
 ### Desenvolupament del Projecte
-- [Instal·lació i Configuració](#installació-i-configuració)
-- [Configuració de la connexió a la base de dades](#configuració-de-la-connexió-a-la-base-de-dades)
-- [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
-  - [Procés d'Inserció d'un Professor per part del Conserge](#procés-dinserció-dun-professor-per-part-del-conserge)
-  - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
-- [Error 404](#error-404)
+- [Projecte ASIX WEBS 1](#projecte-asix-webs-1)
+    - [Introducció](#introducció)
+    - [Desenvolupament del Projecte](#desenvolupament-del-projecte)
+    - [Conclusions](#conclusions)
+    - [Fitxa Tècnica](#fitxa-tècnica)
+- [Introducció](#introducció-1)
+  - [Context del Projecte](#context-del-projecte)
+  - [Descripció del projecte](#descripció-del-projecte)
+  - [Objectius del Projecte](#objectius-del-projecte)
+  - [Què és el nostre projecte?](#què-és-el-nostre-projecte)
+  - [Tecnologies Usades](#tecnologies-usades)
+  - [Avantatges i Desavantatges](#avantatges-i-desavantatges)
+- [Desenvolupament del Projecte](#desenvolupament-del-projecte-1)
+  - [Instal·lació i Configuració](#installació-i-configuració)
+  - [Configuració de la connexió a la base de dades.](#configuració-de-la-connexió-a-la-base-de-dades)
+  - [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
+    - [Procés d'Inserció d'un Professor per part del Conserge](#procés-dinserció-dun-professor-per-part-del-conserge)
+    - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
+  - [Error 404](#error-404)
+  - [Conclusions](#conclusions-1)
+    - [Resultats Obtinguts](#resultats-obtinguts)
+    - [Potencials Millores Futures](#potencials-millores-futures)
+    - [Conclusió final](#conclusió-final)
+  - [Fitxa Tècnica](#fitxa-tècnica-1)
 
 ### Conclusions
 - [Resultats Obtinguts](#resultats-obtinguts)
@@ -255,27 +273,19 @@ El projecte ha complert amb èxit els objectius plantejats, proporcionant una ei
 
 ## Fitxa Tècnica
 
-**Nom del Projecte:** Gestió de Professors per al Centre Educatiu
-
-**Empresa Desenvolupadora:** MASDEV
-
-**Tecnologies Utilitzades:**
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Backend:** PHP 7.4
-- **Base de Dades:** MySQL 8.0
-- **Servidor Web:** Apache 2.4
-- **Sistema Operatiu del Servidor:** Ubuntu Server 22.04 LTS
-- **Libreries i Extensions:**
-  - PHPMailer per a l'enviament de correus electrònics
-  - PDO per a la gestió de la base de dades
-
-**Infraestructura:**
-- **Pila LAMP:**
-  - **Linux:** Sistema operatiu base.
-  - **Apache:** Servidor web per servir les pàgines i gestionar les peticions.
-  - **MySQL:** Base de dades relacional per emmagatzemar les dades dels professors.
-  - **PHP:** Llenguatge de programació del servidor per implementar la lògica de l'aplicació.
-
-**Seguretat:**
-- **Validació i Sanitització:** Controls d'errors en el frontend i backend per assegurar la integritat de les dades.
-- **Autenticació i Autorització:** Mecanismes d'autenticació robustos per garantir que només els usuaris autoritzats puguin accedir i modificar les dades.
+| **Component**                   | **Detalls**                                                                                                            |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Nom del Projecte**            | Gestió de Professors per al Centre Educatiu                                                                            |
+| **Empresa**                     | MASDEV                                                                                                                 |
+| **Frontend**                    | HTML5, CSS3, JavaScript                                                                                                |
+| **Backend**                     | PHP 8.2                                                                                                                |
+| **Base de Dades**               | MySQL 8.0                                                                                                              |
+| **Servidor Web**                | Apache 2.4                                                                                                             |
+| **Sistema Operatiu**            | Ubuntu Server 22.04 LTS                                                                                                |
+| **Libreries i Ext.**            | PHPMailer per a l'enviament de correus electrònics, PDO per a la gestió de la base de dades                            |
+| **Linux**                       | Sistema operatiu base                                                                                                  |
+| **Apache**                      | Servidor web per servir les pàgines i gestionar les peticions                                                          |
+| **MySQL**                       | Base de dades relacional per emmagatzemar les dades dels professors                                                    |
+| **PHP**                         | Llenguatge de programació del servidor per implementar la lògica de l'aplicació                                        |
+| **Validació i Sanitització**    | Controls d'errors en el frontend i backend per assegurar la integritat de les dades                                    |
+| **Autenticació i Autorització** | Mecanismes d'autenticació robustos per garantir que només els usuaris autoritzats puguin accedir i modificar les dades |

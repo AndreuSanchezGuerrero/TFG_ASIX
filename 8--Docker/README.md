@@ -62,7 +62,7 @@ Per a utilitzar Docker Compose haurem de realitzar 3 coses:
 8. docker compose.yaml arxiu on estaran les instruccions i configuracions pels serveis.
 
 ### Estructura bàsica dins d'un arxiu .yaml
-```
+```yaml
 version: '3.8'
 services:
   nombre_del_servicio:

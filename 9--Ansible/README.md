@@ -57,6 +57,61 @@ Els contenidors Linux permeten a diverses aplicacions compartir el mateix sistem
 
 En aquest projecte, utilitzarem Ansible per automatitzar la creació, configuració i gestió de contenidors Linux, demostrant així la seva eficàcia en la gestió d'infraestructures modernes.
 
+## Com funciona Ansible?
+
+Ansible funciona mitjançant connexions SSH, eliminant la necessitat d'instal·lar qualsevol altre programari, excepte Python. 
+
+Operarem amb dos tipus de màquines:
+
+- El 'node de control', des d'on llançarem les tasques d'Ansible mitjançant Python. Aquest node central ens permet controlar els 'nodes gestionats'. 
+- 'Nodes gestionats' que són les màquines que desitgem administrar de forma remota amb Ansible.
+
+**Podem gestionar qualsevol màquina que estigui al núvol (AWS, Google Cloud….) sense problema.**
+
+Esquema de la connexió que estableix Ansible.
+
+![Ansible SSH](../.Images/ansible/funcionamentAnsible.jpg)
+
+## Arquitectura d'Ansible
+
+![Ansible arquitecture](../.Images/ansible/arquitectura.png)
+
+**Node de Control (Ansible Tower):** 
+
+- Servidor o màquina des de la qual s'executen les ordres d'Ansible.
+
+- Aquí és on s'escriuen els playbooks, s'emmagatzemen els inventaris i s'executen les ordres d'Ansible. 
+
+- El node de control requereix una instal·lació d'Ansible i connexió SSH als nodes gestionats.
+
+<br>
+
+**Nodes Manejats:**
+- Servidors o màquines que són gestionades per Ansible. 
+- Ansible es connecta a aquests nodes mitjançant SSH per executar ordres i realitzar configuracions.
+
+<br>
+
+**Inventari (Inventory):**
+
+- Fitxer o base de dades que conté una llista dels nodes gestionats per Ansible. 
+- Pot ser un fitxer de text simple, o una font d'inventari més avançada com una base de dades o un servei al núvol.
+
+**Mòduls (Mòduls):**
+
+- Petits programes que Ansible executa als nodes gestionats per realitzar tasques específiques.
+- Els mòduls poden estar escrits a Python o altres llenguatges i són la unitat bàsica d'automatització a Ansible.
+
+**Playbooks:**
+
+- Són fitxers YAML que defineixen una sèrie de tasques que Ansible ha de realitzar als nodes gestionats. 
+- Utilitzen mòduls per executar ordres als nodes. 
+
+**Plugins**
+
+- Son millores de les funcionalitats base d'Ansible.
+- Alertes per correu electronic serien un exemple.
+
 # Desenvolupament del Projecte
 
 ## Instal·lació i configuració de Linux containers (LXC)
@@ -148,7 +203,7 @@ Ara si executem la comanda:     ```bash ansible lxc_containers -m ping``` ens de
 
 <br><br>
 
-## Exemple 2
+## Exemple 2 --> Filtratge per grups
 
 Creem inventory-groups i afegim lo seguent:
 
@@ -193,3 +248,65 @@ Resultats obtinguts amb filtratge per grup.
 
 <br><br>
 
+## Exemple 3 --> Mode AdHoc
+
+El mode AdHoc és una manera d'executar tasques. No és la de manera més potent d'executar tasques, la que més ens interesa és crear playbooks. 
+
+Normalment solen fer ús d'algun mòdul per al seu funcionament. En totes les ordres haurem de trucar a l'executable d'ansible i seleccionar el grup que volem afectar.
+
+Modifiquem el fitxer ansible.cfg i fem que llegeixi l'inventory-groups. Recordem que en el fitxer d'inventory-groups tenim 3 hosts i 2 estan al grup d'ubunutu.
+
+```ini
+[defaults]
+inventory = ./inventory-groups
+[privilege_escalation]
+become=True
+become_method=sudo
+become_user=root
+become_ask_pass=True
+```
+
+Fem la creació del fitxer AdHoc.sh que seran les tasques que volem executar, en aquest cas només executarà les tasques sobre les màquines del grup ubuntu. 
+
+```bash
+#!/bin/bash
+
+# Mostrem el fitxer de configuració
+cat ansible.cfg
+
+# Mostrem el fitxer de inventory
+cat inventory-groups
+
+# Executem el mòdul ping 
+ansible ubuntu -m ping
+
+# Executem el mòdul copy sobre el grup ubuntu, li diem la ruta de destí i la ruta del fitxer que volem copiar
+ansible ubuntu -m copy -a "dest=/tmp/hosts src=/etc/hosts"
+
+# Executem el mòdul file sobre el grup ubuntu amb state=absent que significa eliminar i la ruta del fitxer que volem esborrar
+ansible ubuntu -m file -a "state=absent path=/tmp/hosts"
+```
+
+Executem el fitxer AdHoc.sh i veurem que segueix l'script pas a pas. En totes les comandes a altres màquines ens demana autenticació.
+
+![AdHoc](../.Images/ansible/adhoc1.png)
+
+![AdHoc](../.Images/ansible/adhoc2.png)
+
+![AdHoc](../.Images/ansible/adhoc3.png)
+
+![AdHoc](../.Images/ansible/adhoc4.png)
+
+![AdHoc](../.Images/ansible/adhoc5.png)
+
+<br><br>
+
+## Exemple 4 --> Introducció a playbooks
+
+Els playbooks són fixers escrits a YAML que ens permetran definir les tasques que volem executar.
+
+Per comprovar la sintaxis d'un fitxer YAML podem fer l'ús de la comanda seguent:
+
+```bash
+ansible-playbook -syntax-check ./playbook.yaml
+```

@@ -286,27 +286,19 @@ El projecte ha complert amb èxit els objectius plantejats, proporcionant una ei
 
 ## Fitxa Tècnica
 
-**Nom del Projecte:** Gestió de Professors per al Centre Educatiu
-
-**Empresa Desenvolupadora:** MASDEV
-
-**Tecnologies Utilitzades:**
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Backend:** PHP 7.4
-- **Base de Dades:** MySQL 8.0
-- **Servidor Web:** Apache 2.4
-- **Sistema Operatiu del Servidor:** Ubuntu Server 22.04 LTS
-- **Libreries i Extensions:**
-  - PHPMailer per a l'enviament de correus electrònics
-  - PDO per a la gestió de la base de dades
-
-**Infraestructura:**
-- **Pila LAMP:**
-  - **Linux:** Sistema operatiu base.
-  - **Apache:** Servidor web per servir les pàgines i gestionar les peticions.
-  - **MySQL:** Base de dades relacional per emmagatzemar les dades dels professors.
-  - **PHP:** Llenguatge de programació del servidor per implementar la lògica de l'aplicació.
-
-**Seguretat:**
-- **Validació i Sanitització:** Controls d'errors en el frontend i backend per assegurar la integritat de les dades.
-- **Autenticació i Autorització:** Mecanismes d'autenticació robustos per garantir que només els usuaris autoritzats puguin accedir i modificar les dades.
+| **Component**                   | **Detalls**                                                                                                            |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Nom del Projecte**            | Gestió de Professors per al Centre Educatiu                                                                            |
+| **Empresa**                     | MASDEV                                                                                                                 |
+| **Frontend**                    | HTML5, CSS3, JavaScript                                                                                                |
+| **Backend**                     | PHP 8.2                                                                                                                |
+| **Base de Dades**               | MySQL 8.0                                                                                                              |
+| **Servidor Web**                | Apache 2.4                                                                                                             |
+| **Sistema Operatiu**            | Ubuntu Server 22.04 LTS                                                                                                |
+| **Libreries i Ext.**            | PHPMailer per a l'enviament de correus electrònics, PDO per a la gestió de la base de dades                            |
+| **Linux**                       | Sistema operatiu base                                                                                                  |
+| **Apache**                      | Servidor web per servir les pàgines i gestionar les peticions                                                          |
+| **MySQL**                       | Base de dades relacional per emmagatzemar les dades dels professors                                                    |
+| **PHP**                         | Llenguatge de programació del servidor per implementar la lògica de l'aplicació                                        |
+| **Validació i Sanitització**    | Controls d'errors en el frontend i backend per assegurar la integritat de les dades                                    |
+| **Autenticació i Autorització** | Mecanismes d'autenticació robustos per garantir que només els usuaris autoritzats puguin accedir i modificar les dades |

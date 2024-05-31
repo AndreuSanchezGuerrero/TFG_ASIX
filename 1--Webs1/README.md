@@ -67,10 +67,8 @@
 
 ## Avantatges i Desavantatges
 
-![Avantatges i Desavantatges](../mas-files/imagenes/ventajasdesventajas.png)<br><br>
+![Avantatges i Desavantatges](mas-files/imagenes/ventajasdesventajas.png)<br><br>
 
-TFG_ASIX/1--Webs1/mas-files/imagenes
-/ventajasdesventajas.png
 # Desenvolupament del Projecte
 
 ## Instal·lació i Configuració

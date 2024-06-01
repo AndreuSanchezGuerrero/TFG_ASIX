@@ -370,7 +370,7 @@ Comprovarà que la instal·lació i l'activació del servei nginx s'ha fet corre
 
 ## Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes
 
-Enllaç del projecte: [Unió d'Ansible, Terraform, AWS i Kubernetes](../10--AWS-TERRAFORM-ANSIBLE-KUBERNETES/README.md)
+Enllaç del projecte: [Unió d'Ansible, Terraform, AWS i Kubernetes](../0--AWS-TERRAFORM-ANSIBLE-KUBERNETES/README.md)
 
 <br><br>
 

@@ -1,0 +1,3 @@
+# Unió d'Ansible, Terraform, AWS i Kubernetes
+
+PROJECTE SECRET PER EL DIA DE LA PRESENTACIÓ, ESPERO QUE HO DISFRUTEU.

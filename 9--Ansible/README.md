@@ -21,9 +21,10 @@
 - [Filtratge per grups](#filtratge-per-grups)
 - [Mode AdHoc](#mode-adhoc)
 - [Introducció a playbooks](#introducció-a-playbooks)
-- **[Projecte 1 --> Instal·lació i menteniment d'un servidor web Nginx](#projecte-1----installació-i-menteniment-dun-servidor-web-nginx)**
-    - []
-    - []
+- **[Projecte 1 --> Instal·lació i menteniment d'un servidor web Nginx](#projecte-bàsic----installació-i-menteniment-dun-servidor-web-nginx)**
+    - [Fitxers de configuració que hem fet servir](#fitxers-de-configuració-que-hem-fet-servir)
+    - [Execució del playbook i l'adhoc](#execució-del-playbook-i-ladhoc)
+- **[Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes](#projecte-gran----unió-dansible-terraform-aws-i-kubernetes)**
 
 ### Conclusions
 - [Resultats Obtinguts](#resultats-obtinguts)
@@ -36,7 +37,7 @@
 
 ## Context del projecte
 
-En els darrers anys, la gestió i automatització d'infraestructures informàtiques ha esdevingut una necessitat fonamental per a moltes organitzacions. En aquest context, Ansible ha emergit com una de les eines més potents i flexibles per a la gestió de configuracions, desplegament d'aplicacions i automatització de tasques repetitives. Ansible té la capacitat d'administrar múltiples nodes, i per provar la seva funcionalitat amb diverses màquines virtuals, hem optat per una solució eficient.
+En els darrers anys, la gestió i automatització d'infraestructures informàtiques ha esdevingut una necessitat fonamental per a moltes organitzacions. En aquest context, Ansible ha emergit com una de les eines més potents i flexibles per a la gestió de configuracions, desplegament d'aplicacions i automatització de tasques repetitives. Ansible té la capacitat d'administrar múltiples nodes, tant locals com remots i per provar la seva funcionalitat amb diverses màquines virtuals, hem optat per una solució eficient i segura.
 Com que els nostres recursos són limitats, utilitzar VMware o VirtualBox per a la virtualització ens limitaria al nombre de màquines que podem aixecar. Per aquesta raó, hem triat utilitzar LXC i LXD.
 
 ## Descripció del projecte
@@ -320,7 +321,7 @@ Els playbooks són fixers escrits a YAML que ens permetran definir les tasques q
 
 <br><br>
 
-## Projecte 1 --> Instal·lació i menteniment d'un servidor web Nginx
+## Projecte bàsic --> Instal·lació i menteniment d'un servidor web Nginx
 
 En aquest projecte farem l'instal·lació i manteniment d'un servidor **Nginx**.
 
@@ -340,7 +341,7 @@ Per la configuració del firewall farem servir UFW.
 
 <br>
 
-### Execució del playbook i l'adhoc.
+### Execució del playbook i l'adhoc
 
 **Execució del playbook 'installacioNginx.yaml'**
 
@@ -363,3 +364,9 @@ Comprovarà que la instal·lació i l'activació del servei nginx s'ha fet corre
 ![adhoc_nginx1](../.Images/ansible/adhoc_nginx1.png)
 
 ![adhoc_nginx2](../.Images/ansible/adhoc_nginx2.png)
+
+<br><br>
+
+## Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes
+
+Enllaç del projecte: [Unió d'Ansible, Terraform, AWS i Kubernetes](../10--AWS-TERRAFORM-ANSIBLE-KUBERNETES/README.md)

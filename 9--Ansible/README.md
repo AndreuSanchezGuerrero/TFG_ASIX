@@ -1,4 +1,4 @@
-
+![Portada](../.Images/ansible/portada.png)
 
 ### Introducció
 - [Context del Projecte](#context-del-projecte)
@@ -26,12 +26,12 @@
     - [Execució del playbook i l'adhoc](#execució-del-playbook-i-ladhoc)
 - **[Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes](#projecte-gran----unió-dansible-terraform-aws-i-kubernetes)**
 
-### Conclusions
+### Conclusió
 - [Resultats Obtinguts](#resultats-obtinguts)
 - [Potencials Millores Futures](#potencials-millores-futures)
 - [Conclusió final](#conclusió-final)
 
-
+<br><br>
 
 # Introducció
 
@@ -42,17 +42,18 @@ Com que els nostres recursos són limitats, utilitzar VMware o VirtualBox per a 
 
 ## Descripció del projecte
 
-Aquest projecte es centra en l'exploració i aplicació pràctica d'Ansible com a eina d'automatització. El treball inclou una visió general de les característiques clau d'Ansible, així com la descripció detallada de diversos casos d'ús pràctics. Aquests casos van complicant-se a mesura que avança el projecte. Per garantir la seguretat i eficiència en la gestió de les màquines, totes les màquines del projecte han estat configurades per permetre l'accés només mitjançant clau pública. Aquesta tècnica, coneguda com a hardening (enduriment), millora la seguretat del sistema en limitar les formes d'accés i reduir les vulnerabilitats. En aquest projecte, l'Ansible Tower és l'única màquina que ha distribuït la seva clau pública a tots els nodes gestionats, assegurant així un control centralitzat i segur.
+Aquest projecte es centra en l'exploració i aplicació pràctica d'Ansible com a eina d'automatització. El treball inclou una visió general de les característiques clau d'Ansible, així com la descripció detallada de diversos casos d'ús pràctics. Aquests casos van complicant-se a mesura que avança el projecte fins que finalment deixem un enllaç al nostre projecte final. Per garantir la seguretat i eficiència en la gestió de les màquines, totes les màquines del projecte han estat configurades per permetre l'accés només mitjançant clau pública. Aquesta tècnica, coneguda com a hardening (enduriment), millora la seguretat del sistema en limitar les formes d'accés i reduir les vulnerabilitats. En aquest projecte, l'Ansible Tower és l'única màquina que ha distribuït la seva clau pública a tots els nodes gestionats, assegurant així un control centralitzat i segur.
 
 ## Objectius del projecte
 
 Aquest treball té com a objectiu principal explorar les capacitats d'Ansible com a eina d'automatització. Els objectius específics inclouen:
 
+- Aprendre a instal·lar i configurar Linux Containers (LXC) en Ubuntu Server.
 - Proporcionar una visió general i comprensible d'Ansible, destacant les seves característiques i avantatges principals.
 - Implementar diversos casos pràctics que demostrin la versatilitat i eficàcia d'Ansible en diferents contextos.
-- Analitzar els resultats obtinguts a partir de les implementacions, destacant els beneficis i les limitacions trobades.
-- Oferir recomanacions per a futurs usos i desenvolupaments d'Ansible en entorns de producció.
-
+- Desenvolupar playbooks d'Ansible per a automatitzar la instal·lació i manteniment de serveis.
+- Integrar Ansible amb altres eines com Terraform, AWS i Kubernetes en un projecte avançat.
+    
 ## A què ho aplicarem?
 
 En aquest projecte, aplicarem Ansible en l'administració i gestió de **contenidors Linux**. Els contenidors Linux són una tecnologia que permet executar aplicacions de manera aïllada, garantint que cada aplicació tingui el seu propi entorn, incloent-hi biblioteques i altres dependències. Això facilita la consistència entre entorns de desenvolupament, proves i producció.
@@ -370,3 +371,27 @@ Comprovarà que la instal·lació i l'activació del servei nginx s'ha fet corre
 ## Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes
 
 Enllaç del projecte: [Unió d'Ansible, Terraform, AWS i Kubernetes](../10--AWS-TERRAFORM-ANSIBLE-KUBERNETES/README.md)
+
+<br><br>
+
+# Conclusió
+
+Durant aquest projecte, hem explorat l'ús d'Ansible per a la gestió de configuracions i desplegaments en un entorn de Linux Containers (LXC) sobre Ubuntu Server 22.04 LTS. Els objectius principals han estat aprendre a instal·lar i configurar LXC, desplegar i mantenir serveis utilitzant Ansible, i integrar diverses tecnologies en un entorn avançat.
+
+## Resultats Obtinguts
+
+- Hem aconseguit desplegar un servidor web Nginx en diversos contenidors Linux de manera eficient i automatitzada.
+- Hem après a utilitzar Ansible per a tasques de gestió de configuracions, escalant privilegis, executant comandes AdHoc i playbooks.
+- Hem integrat Ansible amb altres tecnologies, demostrant la seva capacitat per gestionar infraestructures complexes.
+
+<br><br>
+
+# Fitxa tècnica
+
+| **Component**                   | **Detalls**                                                                                                            |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Nom del Projecte**            | Automatització de la Gestió de Configuracions amb Ansible                                                                  |
+| **Empresa**                     | MASOps                                                                                                                 |
+| **Sistema Operatiu**                    | Ubuntu Server 22.04 LTS                                                                                                |
+| **Contenidors**                     | Linux Containers (LXC)                                                                                                                |
+| **Eina d'Automatització**               | Ansible                                                                                                              | 

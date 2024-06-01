@@ -1,3 +1,37 @@
+# Introducció
+
+<p align="center">
+  <img src="../.Images/zabbix/portada.png" alt="Portada Zabbix">
+</p>
+
+## Context del projecte
+
+La monitorització dels sistemes informàtics s’ha convertit en una necessitat imprescindible per garantir la disponibilitat i el rendiment òptim de les infraestructures tecnològiques. Les empreses i organitzacions depenen cada vegada més dels seus sistemes informàtics, i qualsevol interrupció o baixada de rendiment pot tenir conseqüències greus, tant econòmiques com operatives. En aquest context, el projecte s'emmarca dins la necessitat de disposar d'eines eficients que permetin monitoritzar, gestionar i assegurar la continuïtat dels serveis tecnològics. Ho hem realitzat sobre un altre projecte, [projecte de docker](../8--Docker/README.md). En concret, la secció de Kubernetes.
+
+
+## Descripció del projecte
+
+Aquest projecte consisteix en la implementació i configuració de la plataforma de monitorització Zabbix per controlar el funcionament de diverses màquines i serveis d'una infraestructura informàtica. El projecte inclou la instal·lació de Zabbix, l’addició de màquines clients amb agents de Zabbix, la creació d’items per monitoritzar diferents aspectes de les màquines, la configuració de triggers per generar alertes, l’establiment d’accions en resposta a aquestes alertes, la creació de dashboards per centralitzar la informació i la generació d’informes periòdics. En concret, Zabbix s'ha utilitzat per monitoritzar les dues màquines membres del clúster de Kubernetes, amb l'objectiu de garantir que el clúster funcioni de manera òptima i sense interrupcions.
+
+## Objectius del projecte
+
+- Implementar una solució completa de monitorització utilitzant Zabbix.
+- Monitoritzar diversos aspectes crítics de les màquines i serveis de l’entorn informàtic.
+- Configurar alertes i accions automàtiques per garantir una resposta ràpida davant incidències.
+- Crear dashboards personalitzats per visualitzar dades en temps real.
+- Generar informes periòdics per avaluar el rendiment i la disponibilitat de les màquines monitoritzades.
+
+## Què és Zabbix?
+
+Zabbix és una eina de monitorització de codi obert dissenyada per supervisar i rastrejar el rendiment i la disponibilitat de servidors, dispositius de xarxa, aplicacions i altres components de TI. Zabbix ofereix una solució completa per a la recollida, el processament i la visualització de dades de monitorització, així com per generar alertes i informes. En aquest projecte, Zabbix s'ha utilitzat específicament per monitoritzar dues màquines que són membres d'un clúster de Kubernetes, garantint així que el clúster funcioni de manera òptima i sense interrupcions.
+Per què hem escollit Zabbix?
+
+Hem escollit Zabbix per diverses raons. Primer, és una eina de codi obert, la qual cosa permet una gran flexibilitat i personalització sense els costos associats a solucions comercials. Segon, Zabbix és conegut per la seva capacitat d'escalabilitat i robustesa, factors essencials per a la monitorització de clústers de Kubernetes. A més, Zabbix ofereix una àmplia gamma de funcions, com ara la creació d'alertes, accions automatitzades i informes detallats, que són fonamentals per mantenir la salut i el rendiment dels sistemes monitoritzats.
+
+## Avantatges i desavantatges de Zabbix
+
+![pros_cons](../.Images/zabbix/pros_cons.jpeg)
+
 # Desenvolupament del projecte
 
 ## Instal·lació

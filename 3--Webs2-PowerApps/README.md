@@ -4,12 +4,25 @@
 
 ### Introducció
 
-- [Context del Projecte](#context-del-projecte)
-- [Descripció del projecte](#descripció-del-projecte)
-- [Objectius del Projecte](#objectius-del-projecte)
-- [Qué és PowerApps?](#qué-és-powerapps)
-- [Característiques Principals de PowerApps](#característiques-principals-de-powerapps)
-- [Avantatges i Desavantatges de PowerApps](#avantatges-i-desavantatges-de-powerapps)
+- [Índice de Contenidos](#índice-de-contenidos)
+    - [Introducció](#introducció)
+    - [Desenvolupament del Projecte](#desenvolupament-del-projecte)
+    - [Conclusió](#conclusió)
+    - [Fitxa Tècnica](#fitxa-tècnica)
+- [Introducció](#introducció-1)
+  - [Context del Projecte](#context-del-projecte)
+  - [Descripció del Projecte](#descripció-del-projecte)
+  - [Objectius del Projecte](#objectius-del-projecte)
+  - [Qué és PowerApps?](#qué-és-powerapps)
+  - [Característiques Principals de PowerApps](#característiques-principals-de-powerapps)
+  - [Avantatges i desavantatges de PowerApps](#avantatges-i-desavantatges-de-powerapps)
+- [Desenvolupament del projecte](#desenvolupament-del-projecte-1)
+  - [Instal·lació i Configuració de PowerApps](#installació-i-configuració-de-powerapps)
+  - [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
+    - [LListes](#llistes)
+    - [Pantalles, interacció i navegació](#pantalles-interacció-i-navegació)
+- [Conclusió](#conclusió-1)
+- [Fitxa Tècnica](#fitxa-tècnica-1)
 
 ### Desenvolupament del Projecte
 
@@ -181,30 +194,11 @@ Aquest projecte no només millora la gestió administrativa de l'institut, sinó
 
 # Fitxa Tècnica 
 
-<p>Nom de l'Aplicació: Alta professorat</p>
-
-</p>Plataforma Utilitzada: Microsoft PowerApps</p>
-
-<p>Integracions:</p>
-
-- Llistes de SharePoint per a l'emmagatzematge de dades
-
-<p>Funcionalitats Principals:</p>
-
-- Registre i gestió de professors
-- Gestió de títols acadèmics
-- Navegació intuïtiva amb pantalles dedicades per a cada funcionalitat
-
-<p>Desenvolupament i Implementació:</p>
-
-- Creació de l'aplicació a través de PowerApps.
-- Utilització de formularis i galeries per a la visualització i entrada de dades.
-- Implementació de botons per a accions específiques (afegir, editar, eliminar, etc.).
-- Configuració de permisos i seguretat per a protegir la informació sensible.
-
-<p>Avantatges de l'Aplicació:</p>
-
-- Facilita la gestió centralitzada de la informació dels professors.
-- Millora l'eficiència dels processos administratius.
-- Proporciona una interfície d'usuari intuïtiva i fàcil d'utilitzar.
-- Assegura la integritat i seguretat de les dades gràcies a que l'aplicació és de Microsoft.
+| **Component**                       | **Detalls**|
+| ----------------------------------- |------------|
+| **Nom de l'Aplicació**              | Alta professorat |
+| **Plataforma Utilitzada**           | Microsoft PowerApps |
+| **Integracions**                    | Llistes de SharePoint per a l'emmagatzematge de dades |
+| **Funcionalitats Principals**       | - Registre i gestió de professors<br>- Gestió de títols acadèmics<br>- Navegació intuïtiva amb pantalles dedicades per a cada funcionalitat |
+| **Desenvolupament i Implementació** | - Creació de l'aplicació a través de PowerApps<br>- Utilització de formularis i galeries per a la visualització i entrada de dades<br>- Implementació de botons per a accions específiques (afegir, editar, eliminar, etc.)<br>- Configuració de permisos i seguretat per a protegir la informació sensible |
+| **Avantatges de l'Aplicació**       | - Facilita la gestió centralitzada de la informació dels professors<br>- Millora l'eficiència dels processos administratius<br>- Proporciona una interfície d'usuari intuïtiva i fàcil d'utilitzar<br>- Assegura la integritat i seguretat de les dades gràcies a que l'aplicació és de Microsoft  |

@@ -5,14 +5,25 @@
 - [Descripció del projecte](#descripció-del-projecte)
 - [Objectius del Projecte](#objectius-del-projecte)
 - [Avantatges i Desavantatges](#avantatges-i-desavantatges)
+- [A què ho aplicarem?](#a-què-ho-aplicarem)
+- [Linux Containers](#linux-containers)
+- [Beneficis dels contenidors Linux](#beneficis-dels-contenidors-linux)
+- [Com funciona Ansible?](#com-funciona-ansible)
+- [Arquitectura d'Ansible](#arquitectura-dansible)
+
 
 ### Desenvolupament del Projecte
-- [Instal·lació](#installació)
-- [Configuració de la connexió a la base de dades](#configuració-de-la-connexió-a-la-base-de-dades)
-- [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
-  - [Procés d'Inserció d'un Professor per part del Conserge](#procés-dinserció-dun-professor-per-part-del-conserge)
-  - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
-- [Error 404](#error-404)
+- [Instal·lació i configuració de Linux containers (LXC)](#installació-i-configuració-de-linux-containers-lxc)
+- [Instal·lació d'ansible](#installació-dansible)
+- [Hardening del sistema](#hardening-del-sistema)
+- [Configuració bàsica d'ansible](#configuració-bàsica-dansible)
+- [Escalar privilegis](#escalar-privilegis)
+- [Filtratge per grups](#filtratge-per-grups)
+- [Mode AdHoc](#mode-adhoc)
+- [Introducció a playbooks](#introducció-a-playbooks)
+- **[Projecte 1 --> Instal·lació i menteniment d'un servidor web Nginx](#projecte-1----installació-i-menteniment-dun-servidor-web-nginx)**
+    - []
+    - []
 
 ### Conclusions
 - [Resultats Obtinguts](#resultats-obtinguts)
@@ -170,7 +181,7 @@ També podriem fer ping amb el grup que hem especificat.
 
 ![ping 2](../.Images/ansible/ping_2.png)
 
-## Exemple 1 --> Escalar privilegis
+## Escalar privilegis
 
 En aquest cas canviem l'arxiu de ansible.cfg per el seguent:
 
@@ -203,7 +214,7 @@ Ara si executem la comanda:     ```bash ansible lxc_containers -m ping``` ens de
 
 <br><br>
 
-## Exemple 2 --> Filtratge per grups
+## Filtratge per grups
 
 Creem inventory-groups i afegim lo seguent:
 
@@ -248,7 +259,7 @@ Resultats obtinguts amb filtratge per grup.
 
 <br><br>
 
-## Exemple 3 --> Mode AdHoc
+## Mode AdHoc
 
 El mode AdHoc és una manera d'executar tasques. No és la de manera més potent d'executar tasques, la que més ens interesa és crear playbooks. 
 
@@ -301,12 +312,54 @@ Executem el fitxer AdHoc.sh i veurem que segueix l'script pas a pas. En totes le
 
 <br><br>
 
-## Exemple 4 --> Introducció a playbooks
+## Introducció a playbooks
 
 Els playbooks són fixers escrits a YAML que ens permetran definir les tasques que volem executar.
 
-Per comprovar la sintaxis d'un fitxer YAML podem fer l'ús de la comanda seguent:
+[Característiques principals d'un fitxer yaml](./caracteristiquesYAML.md) com per exemple la sitaxi bàsica o fer comprovacions i execucions de diferents formes.
 
-```bash
-ansible-playbook -syntax-check ./playbook.yaml
-```
+<br><br>
+
+## Projecte 1 --> Instal·lació i menteniment d'un servidor web Nginx
+
+En aquest projecte farem l'instal·lació i manteniment d'un servidor **Nginx**.
+
+Per la configuració del firewall farem servir UFW.
+
+### Fitxers de configuració que hem fet servir
+
+1. **[ansible.cfg](./ConfiguracioImantenimentNginx/ansible.cfg)**
+    - El deixem exacte a l'última configuració.
+2. **[inventory-groups](./ConfiguracioImantenimentNginx/inventory-groups)**
+    - Afegim el grup: ``` [webservers-nginx] ```
+    - Dintre del grup les màquines u2 i u3.
+3. **[installacioNginx.yaml](./ConfiguracioImantenimentNginx/installacioNginx.yaml)**
+    - En aquest fitxer que està configurat de manera molt llegible, es detalla el playbook que executarem per fer primer l'instal·lació de nginx i després habilitar el servei.
+4. **[AdHoc_NginxStatus.sh](./ConfiguracioImantenimentNginx/AdHoc_NginxStatus.sh)**
+    - En aquest fitxer executem un simple 'systemctl status nginx' per comprovar que el servei està actiu a les màquines que hem definit al inventory-groups.
+
+<br>
+
+### Execució del playbook i l'adhoc.
+
+**Execució del playbook 'installacioNginx.yaml'**
+
+Aquest fitxer farà l'instal·lació d'nginx a les màquines definides a 'inventory-groups' que son u2 i u3 que pertanyen al grup 'webservers-nginx'.
+
+![Execució installacioNginx.yaml](../.Images/ansible/execute_ansible.png)
+
+<br>
+
+**Execució del AdHoc 'AdHoc_NginxStatus.sh'**
+
+Aquest fitxer executarà la comanda:
+
+ ```bash 
+ ansible webservers-nginx -m shell -a "systemctl status nginx" -b 
+ ```
+
+Comprovarà que la instal·lació i l'activació del servei nginx s'ha fet correctament amb un status d'nginx.
+
+![adhoc_nginx1](../.Images/ansible/adhoc_nginx1.png)
+
+![adhoc_nginx2](../.Images/ansible/adhoc_nginx2.png)

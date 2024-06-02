@@ -11,31 +11,13 @@
 - [Avantatges i Desavantatges](#avantatges-i-desavantatges)
 
 ### Desenvolupament del Projecte
-- [Projecte ASIX WEBS 1](#projecte-asix-webs-1)
-    - [Introducció](#introducció)
-    - [Desenvolupament del Projecte](#desenvolupament-del-projecte)
-    - [Conclusions](#conclusions)
-    - [Fitxa Tècnica](#fitxa-tècnica)
-- [Introducció](#introducció-1)
-  - [Context del Projecte](#context-del-projecte)
-  - [Descripció del projecte](#descripció-del-projecte)
-  - [Objectius del Projecte](#objectius-del-projecte)
-  - [Què és el nostre projecte?](#què-és-el-nostre-projecte)
-  - [Tecnologies Usades](#tecnologies-usades)
-  - [Avantatges i Desavantatges](#avantatges-i-desavantatges)
-- [Desenvolupament del Projecte](#desenvolupament-del-projecte-1)
   - [Instal·lació i Configuració](#installació-i-configuració)
   - [Configuració de la connexió a la base de dades.](#configuració-de-la-connexió-a-la-base-de-dades)
   - [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
     - [Procés d'Inserció d'un Professor per part del Conserge](#procés-dinserció-dun-professor-per-part-del-conserge)
     - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
   - [Error 404](#error-404)
-  - [Conclusions](#conclusions-1)
-    - [Resultats Obtinguts](#resultats-obtinguts)
-    - [Potencials Millores Futures](#potencials-millores-futures)
-    - [Conclusió final](#conclusió-final)
-  - [Fitxa Tècnica](#fitxa-tècnica-1)
-
+    
 ### Conclusions
 - [Resultats Obtinguts](#resultats-obtinguts)
 - [Potencials Millores Futures](#potencials-millores-futures)

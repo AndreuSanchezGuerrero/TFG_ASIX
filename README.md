@@ -31,7 +31,7 @@ El departament de MASDev està dedicat al desenvolupament de programari innovado
 
 ### MASCloud
 
-El departament de MASCloud està especialitzat en solucions de computació al núvol, amb un enfocament particular en AWS (Amazon Web Services). Els projectes principals inclouen:
+El departament de MASCloud està especialitzat en solucions d'infraestructura al núvol, amb un enfocament particular en AWS (Amazon Web Services). Els projectes principals inclouen:
 
 - [**AWS**](6--Cloud/README.md): Migració, gestió i optimització de serveis al núvol utilitzant la infraestructura robusta i flexible d'AWS. Això inclou serveis com EC2, S3, RDS i altres serveis gestionats per AWS. Ens assegurem que els nostres clients aprofitin al màxim les capacitats del núvol.
 

@@ -248,7 +248,7 @@ Ens hem decantat per la marca Ubiquiti per la seva excel·lent relació qualitat
     - Hem seleccionat dos unitats de Ubiquiti Dream Machine Pro Max per realitzar les funcions de router i firewall. Aquest dispositiu integrat ofereix una combinació potent de funcionalitats de routing, seguretat i gestió de xarxa, adaptant-se perfectament a les necessitats del nostre CPD.
 
 2. Switchos Standard 48:
-    - Hem seleccionat tres Ubiquiti Standard 48 per connectar els dispositius finals dins del CPD. Aquests switchos ofereixen una alta capacitat de ports i un rendiment consistent, fent-los ideals per gestionar una gran quantitat de connexions.
+    - Hem seleccionat cinc Ubiquiti Standard 48 per connectar els dispositius finals dins del CPD. Aquests switchos ofereixen una alta capacitat de ports i un rendiment consistent, fent-los ideals per gestionar una gran quantitat de connexions.
         - Alta Capacitat de Ports.
         - Velocitat Gigabit.
         - Compatibilitat amb PoE.

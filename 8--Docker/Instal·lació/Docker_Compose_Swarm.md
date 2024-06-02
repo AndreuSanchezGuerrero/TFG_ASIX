@@ -1,17 +1,32 @@
-1. Canviarem dins de la taula wp_options les variables "siteurl" i "home" de la BD, haurem de posar la IP la qual accedirem al WordPress
+1. Configuració del HAProxy per la nostra pàgina web → haproxy.cfg
+```bash
+defaults
+  mode http
+  balance roundrobin
+
+frontend webs
+  bind :80
+  default_backend nodes
+
+backend nodes
+  server mas1 192.168.1.1:8080 check
+  server mas2 192.168.1.101:8080 check
+```
+
+2. Canviarem dins de la taula wp_options les variables "siteurl" i "home" de la BD, haurem de posar la IP la qual accedirem al WordPress
 
 ![Canvi variables](../../.Images/Docker/canviv.PNG) <br><br>
 
-2. Exportem la BD
+3. Exportem la BD
 
 ![Exportació de la BD](../../.Images/Docker/exportbd.PNG) <br><br>
 
-3. Enviem l'arxiu .sql amb l'exportació al node Mànager amb la comanda scp
+4. Enviem l'arxiu .sql amb l'exportació al node Mànager amb la comanda scp
 ```bash
 scp C:\Users\eonie\Downloads\db.sql mas@192.168.1.134:/home/mas/docker
 ```
 
-4. Com a mesura de seguretat guardarem tots els arxius del contenidor de WordPress al nostre PC per tindre una còpia de seguretat amb la comanda scp
+5. Com a mesura de seguretat guardarem tots els arxius del contenidor de WordPress al nostre PC per tindre una còpia de seguretat amb la comanda scp
 ```bash
 scp -r <usuari>@<ip>:  <ruta_del_contenidor> <ruta_del_nostre_pc>
 ```
@@ -19,9 +34,9 @@ scp -r <usuari>@<ip>:  <ruta_del_contenidor> <ruta_del_nostre_pc>
 scp -r root@192.168.201.14:/var/lib/docker/volumes/docker_wordpressVol/_data/* "C:\Users\eonie\Downloads\wordpress"
 ```
 
-5. Guardem l'arxiu en .zip per ser més manejable
+6. Guardem l'arxiu en .zip per ser més manejable
 
-6. Ara enviarem el .zip de la informació del contenidor de WordPress al nostre node Mànager
+7. Ara enviarem el .zip de la informació del contenidor de WordPress al nostre node Mànager
 ```bash
 scp -r <ruta_de_l'arxiu_en_el_pc> <usuari>@<ip>:<ruta_on_deixar_el_contenidor> 
 ```
@@ -29,7 +44,7 @@ scp -r <ruta_de_l'arxiu_en_el_pc> <usuari>@<ip>:<ruta_on_deixar_el_contenidor>
 scp -r "C:\Users\eonie\Downloads\wordpress.zip" mas@192.168.1.134:/home/mas/docker/
 ```
 
-7. Afegim etiqueta als nostres nodes
+8. Afegim etiqueta als nostres nodes
 ```bash
 docker node update mas-swarmanager --label-add serveis=wordpress mas-swarmanager
 ```
@@ -37,7 +52,7 @@ docker node update mas-swarmanager --label-add serveis=wordpress mas-swarmanager
 docker node update mas-swarmworker1 --label-add serveis=wordpress mas-swarmworker1
 ```
 
-8. Arxiu del docker-compose.yaml
+9. Arxiu del docker-compose.yaml
 - Serveis
 ```yaml
 mysql:
@@ -60,6 +75,7 @@ mysql:
 wordpress:
   depends_on:
     - mysql
+    - haproxy
   image: wordpress:latest
   environment:
     WORDPRESS_DB_HOST: mysql:3306
@@ -94,17 +110,21 @@ phpmyadmin:
         - node.role == manager
 ```
 
-- Xarxa i volums
+- Xarxa, configuracions i volums
 ```yaml
 networks:
   frontend:
   backend:
 
+configs:
+  haproxy.cfg:
+    file: ./haproxy.cfg
+
 volumes:
   mysql_data:
 ```
 
-9. Utilitzem la comanda docker stack, Docker Stack és una comanda que s'utilitza per desplegar el servei amb Docker Swarm utilitzant un arxiu de Docker Compose
+10. Utilitzem la comanda docker stack, Docker Stack és una comanda que s'utilitza per desplegar el servei amb Docker Swarm utilitzant un arxiu de Docker Compose
 ```bash
 docker stack deploy -d -c docker-compose.yaml MASTECH
 ```

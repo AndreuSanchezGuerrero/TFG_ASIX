@@ -22,7 +22,7 @@ El departament de MASOps se centra en l'automatització d'operacions, la gestió
 
 ### MASDev
 
-El departament de MASDev està dedicat al desenvolupament de programari que atenguin diferents necessitats del mercat. Els projectes principals inclouen:
+El departament de MASDev està dedicat al desenvolupament de programari innovador que atengui diferents necessitats del mercat. Els projectes principals inclouen:
 
 - [**IoT (Internet de les Coses)**](7--IOT/README.md): Desenvolupament de solucions i dispositius connectats que permeten la recopilació i anàlisi de dades en temps real. Això facilita la creació de sistemes intel·ligents i eficients.
 - [**Aplicació Web (WEBS 1)**](1--Webs1/README.md): Creació d'aplicacions web personalitzades i responsives que ofereixen una experiència d'usuari superior. Ens centrem en el disseny intuïtiu i la funcionalitat robusta.

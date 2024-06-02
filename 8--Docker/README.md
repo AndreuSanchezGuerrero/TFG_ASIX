@@ -118,6 +118,12 @@ Hem utilitzat l'eina Docker Swarm gestionada per una màquina Manager i un altre
 
 ## Migració del projecte de multicontenidor de Docker Compose a Docker Swarm
 
+Utilització de HAProxy per fer la migració a Docker Swarm.
+
+Qué ès el HAProxy?
+
+HAProxy és un software de codi obert que actua com a proxy invers i balancejador de càrrega per aplicacions webs i altres serveis. S'utilitza per implementar el rendiment, la disponibilitat i l'escalabilitat de la nostra pàgina web i els serveis en xarxa.
+
 **[Prem aquí per viatjar a la migració del multicontenidor](./Instal·lació/Docker_Compose_Swarm.md)**
 
 ## Millores al clúster i al desplegament

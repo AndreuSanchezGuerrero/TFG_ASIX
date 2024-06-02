@@ -22,7 +22,7 @@ El departament de MASOps se centra en l'automatització d'operacions, la gestió
 
 ### MASDev
 
-El departament de MASDev està dedicat al desenvolupament de solucions de programari innovadores que atenguin diferents necessitats del mercat. Els projectes principals inclouen:
+El departament de MASDev està dedicat al desenvolupament de programari innovador que atengui diferents necessitats del mercat. Els projectes principals inclouen:
 
 - [**IoT (Internet de les Coses)**](7--IOT/README.md): Desenvolupament de solucions i dispositius connectats que permeten la recopilació i anàlisi de dades en temps real. Això facilita la creació de sistemes intel·ligents i eficients.
 - [**Aplicació Web (WEBS 1)**](1--Webs1/README.md): Creació d'aplicacions web personalitzades i responsives que ofereixen una experiència d'usuari superior. Ens centrem en el disseny intuïtiu i la funcionalitat robusta.
@@ -31,12 +31,12 @@ El departament de MASDev està dedicat al desenvolupament de solucions de progra
 
 ### MASCloud
 
-El departament de MASCloud està especialitzat en solucions de computació al núvol, amb un enfocament particular en AWS (Amazon Web Services). Els projectes principals inclouen:
+El departament de MASCloud està especialitzat en solucions d'infraestructura al núvol, amb un enfocament particular en AWS (Amazon Web Services). Els projectes principals inclouen:
 
 - [**AWS**](6--Cloud/README.md): Migració, gestió i optimització de serveis al núvol utilitzant la infraestructura robusta i flexible d'AWS. Això inclou serveis com EC2, S3, RDS i altres serveis gestionats per AWS. Ens assegurem que els nostres clients aprofitin al màxim les capacitats del núvol.
 
 ### MASTech
-El departament de MASTech se centra en la infraestructura tecnològica física i la gestió de centres de processament de dades (CPD). Els projectes principals inclouen:
+El departament de MASTech es centra en la infraestructura tecnològica física. Els projectes principals inclouen:
 
 - [**CPD (Centre de Processament de Dades)**](4--CPD/README.md): Disseny, implementació i manteniment de centres de processament de dades que asseguren la disponibilitat, seguretat i eficiència dels recursos informàtics. Garantim que les dades i aplicacions dels nostres clients estan ben protegides i accessibles.
 

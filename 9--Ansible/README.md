@@ -1,46 +1,59 @@
-
+![Portada](../.Images/ansible/portada.png)
 
 ### Introducció
 - [Context del Projecte](#context-del-projecte)
 - [Descripció del projecte](#descripció-del-projecte)
 - [Objectius del Projecte](#objectius-del-projecte)
 - [Avantatges i Desavantatges](#avantatges-i-desavantatges)
+- [A què ho aplicarem?](#a-què-ho-aplicarem)
+- [Linux Containers](#linux-containers)
+- [Beneficis dels contenidors Linux](#beneficis-dels-contenidors-linux)
+- [Com funciona Ansible?](#com-funciona-ansible)
+- [Arquitectura d'Ansible](#arquitectura-dansible)
+
 
 ### Desenvolupament del Projecte
-- [Instal·lació](#installació)
-- [Configuració de la connexió a la base de dades](#configuració-de-la-connexió-a-la-base-de-dades)
-- [Estructura de Continguts i Dades](#estructura-de-continguts-i-dades)
-  - [Procés d'Inserció d'un Professor per part del Conserge](#procés-dinserció-dun-professor-per-part-del-conserge)
-  - [Procés d'Alta d'un Professor](#procés-dalta-dun-professor)
-- [Error 404](#error-404)
+- [Instal·lació i configuració de Linux containers (LXC)](#installació-i-configuració-de-linux-containers-lxc)
+- [Instal·lació d'ansible](#installació-dansible)
+- [Hardening del sistema](#hardening-del-sistema)
+- [Configuració bàsica d'ansible](#configuració-bàsica-dansible)
+- [Escalar privilegis](#escalar-privilegis)
+- [Filtratge per grups](#filtratge-per-grups)
+- [Mode AdHoc](#mode-adhoc)
+- [Introducció a playbooks](#introducció-a-playbooks)
+- **[Projecte 1 --> Instal·lació i menteniment d'un servidor web Nginx](#projecte-bàsic----installació-i-menteniment-dun-servidor-web-nginx)**
+    - [Fitxers de configuració que hem fet servir](#fitxers-de-configuració-que-hem-fet-servir)
+    - [Execució del playbook i l'adhoc](#execució-del-playbook-i-ladhoc)
+- **[Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes](#projecte-gran----unió-dansible-terraform-aws-i-kubernetes)**
 
-### Conclusions
+### Conclusió
 - [Resultats Obtinguts](#resultats-obtinguts)
 - [Potencials Millores Futures](#potencials-millores-futures)
 - [Conclusió final](#conclusió-final)
 
-
+<br><br>
 
 # Introducció
 
 ## Context del projecte
 
-En els darrers anys, la gestió i automatització d'infraestructures informàtiques ha esdevingut una necessitat fonamental per a moltes organitzacions. En aquest context, Ansible ha emergit com una de les eines més potents i flexibles per a la gestió de configuracions, desplegament d'aplicacions i automatització de tasques repetitives. Ansible té la capacitat d'administrar múltiples nodes, i per provar la seva funcionalitat amb diverses màquines virtuals, hem optat per una solució eficient.
+En els darrers anys, la gestió i automatització d'infraestructures informàtiques ha esdevingut una necessitat fonamental per a moltes organitzacions. En aquest context, Ansible ha emergit com una de les eines més potents i flexibles per a la gestió de configuracions, desplegament d'aplicacions i automatització de tasques repetitives. Ansible té la capacitat d'administrar múltiples nodes, tant locals com remots i per provar la seva funcionalitat amb diverses màquines virtuals, hem optat per una solució eficient i segura.
 Com que els nostres recursos són limitats, utilitzar VMware o VirtualBox per a la virtualització ens limitaria al nombre de màquines que podem aixecar. Per aquesta raó, hem triat utilitzar LXC i LXD.
 
 ## Descripció del projecte
 
-Aquest projecte es centra en l'exploració i aplicació pràctica d'Ansible com a eina d'automatització. El treball inclou una visió general de les característiques clau d'Ansible, així com la descripció detallada de diversos casos d'ús pràctics. Aquests casos van complicant-se a mesura que avança el projecte. Per garantir la seguretat i eficiència en la gestió de les màquines, totes les màquines del projecte han estat configurades per permetre l'accés només mitjançant clau pública. Aquesta tècnica, coneguda com a hardening (enduriment), millora la seguretat del sistema en limitar les formes d'accés i reduir les vulnerabilitats. En aquest projecte, l'Ansible Tower és l'única màquina que ha distribuït la seva clau pública a tots els nodes gestionats, assegurant així un control centralitzat i segur.
+Aquest projecte es centra en l'exploració i aplicació pràctica d'Ansible com a eina d'automatització. El treball inclou una visió general de les característiques clau d'Ansible, així com la descripció detallada de diversos casos d'ús pràctics. Aquests casos van complicant-se a mesura que avança el projecte fins que finalment deixem un enllaç al nostre projecte final. Per garantir la seguretat i eficiència en la gestió de les màquines, totes les màquines del projecte han estat configurades per permetre l'accés només mitjançant clau pública. Aquesta tècnica, coneguda com a hardening (enduriment), millora la seguretat del sistema en limitar les formes d'accés i reduir les vulnerabilitats. En aquest projecte, l'Ansible Tower és l'única màquina que ha distribuït la seva clau pública a tots els nodes gestionats, assegurant així un control centralitzat i segur.
 
 ## Objectius del projecte
 
 Aquest treball té com a objectiu principal explorar les capacitats d'Ansible com a eina d'automatització. Els objectius específics inclouen:
 
+- Aprendre a instal·lar i configurar Linux Containers (LXC) en Ubuntu Server.
 - Proporcionar una visió general i comprensible d'Ansible, destacant les seves característiques i avantatges principals.
 - Implementar diversos casos pràctics que demostrin la versatilitat i eficàcia d'Ansible en diferents contextos.
-- Analitzar els resultats obtinguts a partir de les implementacions, destacant els beneficis i les limitacions trobades.
-- Oferir recomanacions per a futurs usos i desenvolupaments d'Ansible en entorns de producció.
-
+- Desenvolupar playbooks d'Ansible per a automatitzar la instal·lació i manteniment de serveis.
+- Integrar Ansible amb altres eines com Terraform, AWS i Kubernetes en un projecte avançat.
+    
 ## A què ho aplicarem?
 
 En aquest projecte, aplicarem Ansible en l'administració i gestió de **contenidors Linux**. Els contenidors Linux són una tecnologia que permet executar aplicacions de manera aïllada, garantint que cada aplicació tingui el seu propi entorn, incloent-hi biblioteques i altres dependències. Això facilita la consistència entre entorns de desenvolupament, proves i producció.
@@ -170,7 +183,7 @@ També podriem fer ping amb el grup que hem especificat.
 
 ![ping 2](../.Images/ansible/ping_2.png)
 
-## Exemple 1 --> Escalar privilegis
+## Escalar privilegis
 
 En aquest cas canviem l'arxiu de ansible.cfg per el seguent:
 
@@ -203,7 +216,7 @@ Ara si executem la comanda:     ```bash ansible lxc_containers -m ping``` ens de
 
 <br><br>
 
-## Exemple 2 --> Filtratge per grups
+## Filtratge per grups
 
 Creem inventory-groups i afegim lo seguent:
 
@@ -248,7 +261,7 @@ Resultats obtinguts amb filtratge per grup.
 
 <br><br>
 
-## Exemple 3 --> Mode AdHoc
+## Mode AdHoc
 
 El mode AdHoc és una manera d'executar tasques. No és la de manera més potent d'executar tasques, la que més ens interesa és crear playbooks. 
 
@@ -301,12 +314,84 @@ Executem el fitxer AdHoc.sh i veurem que segueix l'script pas a pas. En totes le
 
 <br><br>
 
-## Exemple 4 --> Introducció a playbooks
+## Introducció a playbooks
 
 Els playbooks són fixers escrits a YAML que ens permetran definir les tasques que volem executar.
 
-Per comprovar la sintaxis d'un fitxer YAML podem fer l'ús de la comanda seguent:
+[Característiques principals d'un fitxer yaml](./caracteristiquesYAML.md) com per exemple la sitaxi bàsica o fer comprovacions i execucions de diferents formes.
 
-```bash
-ansible-playbook -syntax-check ./playbook.yaml
-```
+<br><br>
+
+## Projecte bàsic --> Instal·lació i menteniment d'un servidor web Nginx
+
+En aquest projecte farem l'instal·lació i manteniment d'un servidor **Nginx**.
+
+Per la configuració del firewall farem servir UFW.
+
+### Fitxers de configuració que hem fet servir
+
+1. **[ansible.cfg](./ConfiguracioImantenimentNginx/ansible.cfg)**
+    - El deixem exacte a l'última configuració.
+2. **[inventory-groups](./ConfiguracioImantenimentNginx/inventory-groups)**
+    - Afegim el grup: ``` [webservers-nginx] ```
+    - Dintre del grup les màquines u2 i u3.
+3. **[installacioNginx.yaml](./ConfiguracioImantenimentNginx/installacioNginx.yaml)**
+    - En aquest fitxer que està configurat de manera molt llegible, es detalla el playbook que executarem per fer primer l'instal·lació de nginx i després habilitar el servei.
+4. **[AdHoc_NginxStatus.sh](./ConfiguracioImantenimentNginx/AdHoc_NginxStatus.sh)**
+    - En aquest fitxer executem un simple 'systemctl status nginx' per comprovar que el servei està actiu a les màquines que hem definit al inventory-groups.
+
+<br>
+
+### Execució del playbook i l'adhoc
+
+**Execució del playbook 'installacioNginx.yaml'**
+
+Aquest fitxer farà l'instal·lació d'nginx a les màquines definides a 'inventory-groups' que son u2 i u3 que pertanyen al grup 'webservers-nginx'.
+
+![Execució installacioNginx.yaml](../.Images/ansible/execute_ansible.png)
+
+<br>
+
+**Execució del AdHoc 'AdHoc_NginxStatus.sh'**
+
+Aquest fitxer executarà la comanda:
+
+ ```bash 
+ ansible webservers-nginx -m shell -a "systemctl status nginx" -b 
+ ```
+
+Comprovarà que la instal·lació i l'activació del servei nginx s'ha fet correctament amb un status d'nginx.
+
+![adhoc_nginx1](../.Images/ansible/adhoc_nginx1.png)
+
+![adhoc_nginx2](../.Images/ansible/adhoc_nginx2.png)
+
+<br><br>
+
+## Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes
+
+Enllaç del projecte: [Unió d'Ansible, Terraform, AWS i Kubernetes](../0--AWS-TERRAFORM-ANSIBLE-KUBERNETES/README.md)
+
+<br><br>
+
+# Conclusió
+
+Durant aquest projecte, hem explorat l'ús d'Ansible per a la gestió de configuracions i desplegaments en un entorn de Linux Containers (LXC) sobre Ubuntu Server 22.04 LTS. Els objectius principals han estat aprendre a instal·lar i configurar LXC, desplegar i mantenir serveis utilitzant Ansible, i integrar diverses tecnologies en un entorn avançat.
+
+## Resultats Obtinguts
+
+- Hem aconseguit desplegar un servidor web Nginx en diversos contenidors Linux de manera eficient i automatitzada.
+- Hem après a utilitzar Ansible per a tasques de gestió de configuracions, escalant privilegis, executant comandes AdHoc i playbooks.
+- Hem integrat Ansible amb altres tecnologies, demostrant la seva capacitat per gestionar infraestructures complexes.
+
+<br><br>
+
+# Fitxa tècnica
+
+| **Component**                   | **Detalls**                                                                                                            |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Nom del Projecte**            | Automatització de la Gestió de Configuracions amb Ansible                                                                  |
+| **Empresa**                     | MASOps                                                                                                                 |
+| **Sistema Operatiu**                    | Ubuntu Server 22.04 LTS                                                                                                |
+| **Contenidors**                     | Linux Containers (LXC)                                                                                                                |
+| **Eina d'Automatització**               | Ansible                                                                                                              | 

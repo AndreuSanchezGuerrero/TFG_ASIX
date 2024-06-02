@@ -284,7 +284,7 @@ El projecte ha complert amb èxit els objectius plantejats, proporcionant una ei
 
 <br>
 
-## Fitxa Tècnica
+# Fitxa Tècnica
 
 | **Component**                   | **Detalls**                                                                                                            |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |

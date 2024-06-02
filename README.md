@@ -36,7 +36,7 @@ El departament de MASCloud està especialitzat en solucions d'infraestructura al
 - [**AWS**](6--Cloud/README.md): Migració, gestió i optimització de serveis al núvol utilitzant la infraestructura robusta i flexible d'AWS. Això inclou serveis com EC2, S3, RDS i altres serveis gestionats per AWS. Ens assegurem que els nostres clients aprofitin al màxim les capacitats del núvol.
 
 ### MASTech
-El departament de MASTech se centra en la infraestructura tecnològica física i la gestió de centres de processament de dades (CPD). Els projectes principals inclouen:
+El departament de MASTech es centra en la infraestructura tecnològica física. Els projectes principals inclouen:
 
 - [**CPD (Centre de Processament de Dades)**](4--CPD/README.md): Disseny, implementació i manteniment de centres de processament de dades que asseguren la disponibilitat, seguretat i eficiència dels recursos informàtics. Garantim que les dades i aplicacions dels nostres clients estan ben protegides i accessibles.
 

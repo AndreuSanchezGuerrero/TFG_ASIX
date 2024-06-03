@@ -27,9 +27,11 @@
 - **[Projecte gran --> Unió d'Ansible, Terraform, AWS i Kubernetes](#projecte-gran----unió-dansible-terraform-aws-i-kubernetes)**
 
 ### Conclusió
+- [Conclusió](#conclusió)
 - [Resultats Obtinguts](#resultats-obtinguts)
-- [Potencials Millores Futures](#potencials-millores-futures)
-- [Conclusió final](#conclusió-final)
+
+### Fitxa Tècnica
+- [Fitxa Tècnica](#fitxa-tècnica-1)
 
 <br><br>
 

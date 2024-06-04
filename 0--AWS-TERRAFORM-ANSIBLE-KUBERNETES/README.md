@@ -22,7 +22,12 @@
 - [Fitxers del projecte](#fitxers-del-projecte)
 - [Execució de les comandes](#execució-de-les-comandes)
     - [Comprovem que no tenim ninguna instancia creada a AWS](#comprovem-que-no-tenim-ninguna-instancia-creada-a-aws)
-
+    - [Terraform init](#terraform-init)
+    - [Terraform plan](#terraform-plan)
+    - [Terraform apply](#terraform-apply)
+    - [Comprovem que les 3 instancies s'han creat](#comprovem-que-les-3-instancies-shan-creat)
+    - [Ens connectem per SSH a les instancies d'AWS](#ens-connectem-per-ssh-a-les-instancies-dAWS)
+    - [Comprovem els logs on podem veure que se estan realitzant les instal·lacions](#Comprovem-els-logs-on-podem-veure-que-se-estan-realitzant-les-installacions)
 <br><br>
 
 # Introducció

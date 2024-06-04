@@ -23,11 +23,6 @@
 - [Execució de les comandes](#execució-de-les-comandes)
     - [Comprovem que no tenim ninguna instancia creada a AWS](#comprovem-que-no-tenim-ninguna-instancia-creada-a-aws)
 
-### Conclusió
-- [Resultats Obtinguts](#resultats-obtinguts)
-- [Potencials Millores Futures](#potencials-millores-futures)
-- [Conclusió final](#conclusió-final)
-
 <br><br>
 
 # Introducció

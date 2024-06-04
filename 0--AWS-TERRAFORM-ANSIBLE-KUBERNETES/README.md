@@ -129,15 +129,15 @@ Les instàncies AWS poden utilitzar dades d'usuari (user data) per realitzar con
 
 ## Fitxers del projecte
 
-[id-rsa](./config-files/id_rsa) --> Clau privada del client que es conectarà a la màquina.
+[id-rsa](./id_rsa) --> Clau privada del client que es conectarà a la màquina.
 
-[id_rsa.pub](./config-files/id_rsa.pub) --> Clau pública que copiem a les instancies d'AWS.
+[id_rsa.pub](./id_rsa.pub) --> Clau pública que copiem a les instancies d'AWS.
 
-[terraform.tfvars](./config-files/terraform.tfvars) --> Els valors definits en el fitxer .tfvars són utilitzats per substituir les variables definides en el fitxer principal de Terraform (main.tf). Això permet que les configuracions es puguin personalitzar fàcilment canviant només el fitxer .tfvars sense necessitat de modificar el codi de Terraform.
+[terraform.tfvars](./terraform.tfvars) --> Els valors definits en el fitxer .tfvars són utilitzats per substituir les variables definides en el fitxer principal de Terraform (main.tf). Això permet que les configuracions es puguin personalitzar fàcilment canviant només el fitxer .tfvars sense necessitat de modificar el codi de Terraform.
 
-[userdata_agent.sh](./config-files/userdata_agent.sh) i [userdata_server.sh](./config-files/userdata_server.sh) --> Aquests scripts automatitzen la configuració d'una instància EC2 d'AWS per convertir-la en un node agent de RKE (Rancher Kubernetes Engine). Els passos inclouen la instal·lació de Git, Python, Ansible, la clonació d'un repositori de GitHub amb exemples d'Ansible, i l'execució d'un playbook d'Ansible per configurar la instància. 
+[userdata_agent.sh](.userdata_agent.sh) i [userdata_server.sh](./config-files/userdata_server.sh) --> Aquests scripts automatitzen la configuració d'una instància EC2 d'AWS per convertir-la en un node agent de RKE (Rancher Kubernetes Engine). Els passos inclouen la instal·lació de Git, Python, Ansible, la clonació d'un repositori de GitHub amb exemples d'Ansible, i l'execució d'un playbook d'Ansible per configurar la instància. 
 
-[main.tf](./config-files/main.tf) --> Fitxer principal on s'executen les comandes terraform i es crida als fitxers comentats anteriorment creant tota l'estructura.
+[main.tf](./main.tf) --> Fitxer principal on s'executen les comandes terraform i es crida als fitxers comentats anteriorment creant tota l'estructura.
 
 <br><br>
 
